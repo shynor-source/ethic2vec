@@ -18,12 +18,21 @@ def _resolve_credentials_path() -> Path:
     return backend_root / candidate
 
 
+_db = None
+
+
 def get_db():
-    """Return the shared Firestore client, initializing the app once."""
+    """Return the shared Firestore client, initializing the app once.
+
+    Initialization is lazy so importing this module never crashes when the
+    service account file is absent (e.g. health checks in an image built
+    without secrets). The first real Firestore call raises a clear error.
+    """
+    global _db
+    if _db is not None:
+        return _db
     if not firebase_admin._apps:
         cred = credentials.Certificate(str(_resolve_credentials_path()))
         firebase_admin.initialize_app(cred)
-    return firestore.client()
-
-
-db = get_db()
+    _db = firestore.client()
+    return _db
