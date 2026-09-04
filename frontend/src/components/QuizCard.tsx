@@ -1,6 +1,7 @@
 import type { Choice, Scenario } from "../lib/api";
-import { scenarioEmoji } from "../lib/format";
+import { scenarioEmoji, scenarioName } from "../lib/format";
 import { useLang } from "../lib/i18n";
+
 interface QuizCardProps {
   scenario: Scenario;
   index: number;
@@ -29,39 +30,44 @@ export default function QuizCard({
     lang === "vi" ? (scenario.choice_a_vi ?? scenario.choice_a) : scenario.choice_a;
   const textB =
     lang === "vi" ? (scenario.choice_b_vi ?? scenario.choice_b) : scenario.choice_b;
+  const emojiA = scenario.side_a_emoji ?? "🅰️";
+  const emojiB = scenario.side_b_emoji ?? "🅱️";
+  const progress = Math.round(((index + (selected ? 1 : 0)) / total) * 100);
+
   return (
     <section className="quiz">
       <div className="quiz-top">
         <span className="muted">
           {t("dilemmaOf")} {index + 1} {t("dilemmaOfTotal")} {total}
         </span>
-        <div className="dots">
-          {Array.from({ length: total }, (_, i) => (
-            <span
-              key={i}
-              className={i < index ? "dot done" : i === index ? "dot now" : "dot"}
-            />
-          ))}
-        </div>
+        <span className="tag">
+          {scenarioEmoji(scenario.scenario_type)}{" "}
+          {scenarioName(lang, scenario.scenario_type)}
+        </span>
       </div>
-      <div className="dilemma-emoji">{scenarioEmoji(scenario.scenario_type)}</div>
+      <div className="progress thick">
+        <div className="progress-bar" style={{ width: `${progress}%` }} />
+      </div>
       <h2 className="dilemma-title">{t("dilemmaTitle")}</h2>
-      <div className="choices big">
+      <div className="vs-grid">
         <button
           type="button"
-          className={selected === "A" ? "choice selected" : "choice"}
+          className={selected === "A" ? "vs-card selected" : "vs-card"}
           onClick={() => onSelect("A")}
         >
-          <span className="choice-tag">A</span>
-          <span>{textA}</span>
+          <span className="vs-emoji">{emojiA}</span>
+          <span className="vs-text">{textA}</span>
+          <span className="vs-key">A</span>
         </button>
+        <div className="vs-badge">VS</div>
         <button
           type="button"
-          className={selected === "B" ? "choice selected" : "choice"}
+          className={selected === "B" ? "vs-card selected" : "vs-card"}
           onClick={() => onSelect("B")}
         >
-          <span className="choice-tag">B</span>
-          <span>{textB}</span>
+          <span className="vs-emoji">{emojiB}</span>
+          <span className="vs-text">{textB}</span>
+          <span className="vs-key">B</span>
         </button>
       </div>
       <div className="quiz-nav">

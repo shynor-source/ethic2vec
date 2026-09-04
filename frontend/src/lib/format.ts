@@ -1,5 +1,5 @@
 import { COUNTRY_META } from "./countryMeta";
-import type { RadarPoint } from "./api";
+import type { BlindSpot, RadarPoint } from "./api";
 import type { Lang } from "./i18n";
 
 export function countryName(code: string): string {
@@ -9,7 +9,7 @@ export function countryName(code: string): string {
 export function flagUrl(code: string): string {
   const iso2 = COUNTRY_META[code]?.iso2;
   if (!iso2) return "";
-  return `https://flagcdn.com/w80/${iso2.toLowerCase()}.png`;
+  return `/flags/${iso2.toLowerCase()}.png`;
 }
 
 const SCENARIO_EMOJI: Record<string, string> = {
@@ -185,18 +185,74 @@ export function traitSentences(lang: Lang, radar: RadarPoint[]): string[] {
   return sentences.slice(0, 4);
 }
 
-export function friendlyBlindSpot(
+const SCENARIO_NAMES: Record<Lang, Record<string, string>> = {
+  en: {
+    Age: "Age",
+    Fitness: "Fitness",
+    Gender: "Gender",
+    "Social Status": "Status",
+    Species: "Species",
+    Utilitarian: "Numbers",
+  },
+  vi: {
+    Age: "Tuổi tác",
+    Fitness: "Thể chất",
+    Gender: "Giới tính",
+    "Social Status": "Địa vị",
+    Species: "Giống loài",
+    Utilitarian: "Số lượng",
+  },
+};
+
+export function scenarioName(lang: Lang, scenarioType?: string): string {
+  if (!scenarioType) return "";
+  return SCENARIO_NAMES[lang][scenarioType] ?? scenarioType;
+}
+
+export interface BlindSpotCard {
+  title: string;
+  verdict: string;
+  userPct: number | null;
+  matchPct: number | null;
+  globalPct: number | null;
+}
+
+export function blindSpotCard(
   lang: Lang,
-  dimension: string,
-  note: string,
-): string {
-  const info = dimensionInfo(dimension);
+  spot: BlindSpot,
+  twinName: string,
+): BlindSpotCard {
+  const info = dimensionInfo(spot.dimension);
   const label = lang === "vi" ? info.vi : info.en;
-  const less = note.includes("less often");
-  if (lang === "vi") {
-    return `${info.emoji} ${label}: bạn can thiệp ${less ? "ít" : "nhiều"} hơn phần lớn thế giới.`;
+  const title = `${info.emoji} ${label}`;
+  const userPct = spot.user_pct ?? null;
+  const matchPct = spot.match_pct ?? null;
+  let verdict = spot.note ?? "";
+  if (userPct !== null && matchPct !== null) {
+    if (userPct > matchPct) {
+      verdict =
+        lang === "vi"
+          ? `Bạn ra tay cứu giúp ở nơi ${twinName} thường đứng nhìn.`
+          : `You step in where ${twinName} holds back.`;
+    } else if (userPct < matchPct) {
+      verdict =
+        lang === "vi"
+          ? `Bạn đứng nhìn ở nơi ${twinName} sẽ ra tay cứu giúp.`
+          : `You hold back where ${twinName} would step in.`;
+    } else {
+      verdict =
+        lang === "vi"
+          ? `Bạn và ${twinName} đồng thuận ở đây — nhưng cả hai đều lệch khỏi thế giới.`
+          : `You and ${twinName} agree here — but both differ from the world.`;
+    }
   }
-  return `${info.emoji} ${label}: you step in ${less ? "less" : "more"} often than most of the world.`;
+  return {
+    title,
+    verdict,
+    userPct,
+    matchPct,
+    globalPct: spot.global_pct ?? null,
+  };
 }
 
 export function shareText(

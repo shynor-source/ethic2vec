@@ -107,27 +107,37 @@ def build_radar(
 
 
 def detect_blind_spots(
-    user_raw: pd.Series, country_means: pd.Series, answered: list[str]
+    user_raw: pd.Series,
+    match_raw: pd.Series,
+    country_means: pd.Series,
+    answered: list[str],
 ) -> list[dict]:
-    """Flag answered dimensions where the user deviates most from average."""
+    """Find answered dimensions where the user differs most from their twin.
+
+    Each spot carries save-rate percentages for you, your top match, and the
+    global average so the frontend can render a side-by-side comparison.
+    """
     candidates = [dim for dim in answered if dim in user_raw.index]
-    deviations = sorted(
-        candidates, key=lambda d: abs(float(user_raw[d] - country_means[d])), reverse=True
+    gaps = sorted(
+        candidates,
+        key=lambda d: abs(float(user_raw[d] - match_raw[d])),
+        reverse=True,
     )[:3]
     spots = []
-    for dim in deviations:
-        direction = (
-            "save more often"
-            if float(user_raw[dim]) > float(country_means[dim])
-            else "save less often"
-        )
+    for dim in gaps:
+        user_pct = round(float(user_raw[dim]) * 100)
+        match_pct = round(float(match_raw[dim]) * 100)
+        global_pct = round(float(country_means[dim]) * 100)
         spots.append(
             {
                 "dimension": dim,
+                "user_pct": user_pct,
+                "match_pct": match_pct,
+                "global_pct": global_pct,
+                # Legacy note kept for backward compatibility.
                 "note": (
-                    f"You {direction} than the global average "
-                    f"({float(user_raw[dim]):.2f} vs "
-                    f"{float(country_means[dim]):.2f})."
+                    f"You {user_pct}% vs match {match_pct}% "
+                    f"(global {global_pct}%)."
                 ),
             }
         )
@@ -159,7 +169,8 @@ def analyze(answers: list[dict]) -> dict:
     demo_pc = pca.transform(demo_scaled)
 
     match_country = top_countries[0]["country"]
-    radar = build_radar(user_raw, country_vectors.loc[match_country])
+    match_raw = country_vectors.loc[match_country]
+    radar = build_radar(user_raw, match_raw)
 
     scatter_pc12 = [
         {"x": round(float(c[0]), 4), "y": round(float(c[1]), 4), "name": code, "kind": "country"}
@@ -185,7 +196,7 @@ def analyze(answers: list[dict]) -> dict:
     return {
         "top_countries": top_countries,
         "top_demographics": top_demographics,
-        "blind_spots": detect_blind_spots(user_raw, country_means, answered),
+        "blind_spots": detect_blind_spots(user_raw, match_raw, country_means, answered),
         "radar": radar,
         "scatter_pc12": scatter_pc12,
         "scatter_pc13": scatter_pc13,

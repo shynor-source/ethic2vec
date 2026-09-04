@@ -14,6 +14,8 @@ export interface Scenario {
   choice_b: string;
   choice_a_vi?: string;
   choice_b_vi?: string;
+  side_a_emoji?: string;
+  side_b_emoji?: string;
   scenario_type?: string;
   character_group?: string;
   country?: string;
@@ -47,10 +49,18 @@ export interface ScatterPoint {
   kind: "user" | "country" | "demo";
 }
 
+export interface BlindSpot {
+  dimension: string;
+  user_pct?: number;
+  match_pct?: number;
+  global_pct?: number;
+  note?: string;
+}
+
 export interface AnalyzeResult {
   topCountries: TopMatch[];
   topDemographics: TopMatch[];
-  blindSpots: string[];
+  blindSpots: BlindSpot[];
   radar: RadarPoint[];
   pc12: ScatterPoint[];
   pc13: ScatterPoint[];
@@ -90,15 +100,20 @@ function normalizeList(raw: unknown): TopMatch[] {
   });
 }
 
-function normalizeBlindSpots(raw: unknown): string[] {
+function normalizeBlindSpots(raw: unknown): BlindSpot[] {
   if (!Array.isArray(raw)) return [];
   return raw.map((item) => {
-    if (typeof item === "string") return item;
+    if (typeof item === "string") return { dimension: item };
     const entry = item as Record<string, unknown>;
-    const dimension =
-      typeof entry.dimension === "string" ? entry.dimension : "Unknown";
-    const note = typeof entry.note === "string" ? `: ${entry.note}` : "";
-    return `${dimension}${note}`;
+    const spot: BlindSpot = {
+      dimension:
+        typeof entry.dimension === "string" ? entry.dimension : "Unknown",
+    };
+    for (const key of ["user_pct", "match_pct", "global_pct"] as const) {
+      if (typeof entry[key] === "number") spot[key] = entry[key] as number;
+    }
+    if (typeof entry.note === "string") spot.note = entry.note;
+    return spot;
   });
 }
 

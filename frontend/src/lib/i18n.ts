@@ -91,6 +91,14 @@ const STRINGS = {
   countriesLegend: { en: "Countries", vi: "Các quốc gia" },
   youLegend: { en: "You", vi: "Bạn" },
   retry: { en: "🔄 Try again", vi: "🔄 Làm lại" },
+  worldBar: { en: "World", vi: "Thế giới" },
+  saveRateLabel: {
+    en: "Share of cases each side would save",
+    vi: "Tỉ lệ các trường hợp mỗi bên sẽ cứu",
+  },
+  statsDilemmas: { en: "hand-written dilemmas", vi: "tình huống soạn tay" },
+  statsCountries: { en: "countries compared", vi: "quốc gia so sánh" },
+  statsGroups: { en: "demographic groups", vi: "nhóm nhân khẩu" },
   loadError: {
     en: "Could not load scenarios. Check your connection and retry.",
     vi: "Không tải được tình huống. Kiểm tra mạng rồi thử lại.",

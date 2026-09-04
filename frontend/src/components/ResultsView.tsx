@@ -16,7 +16,7 @@ import {
 import type { AnalyzeResult } from "../lib/api";
 import {
   countryName,
-  friendlyBlindSpot,
+  blindSpotCard,
   humanizeDemoGroup,
   shareText,
   traitSentences,
@@ -85,9 +85,51 @@ export default function ResultsView({ result, onRestart }: ResultsViewProps) {
             {result.blindSpots.length > 0 ? (
               <ul className="spots">
                 {result.blindSpots.map((spot) => {
-                  const dimension = spot.split(":")[0];
+                  const card = blindSpotCard(
+                    lang,
+                    spot,
+                    countryName(result.matchName),
+                  );
+                  const rows = [
+                    {
+                      label: t("youLegend"),
+                      value: card.userPct,
+                      cls: "bar-you",
+                    },
+                    {
+                      label: countryName(result.matchName),
+                      value: card.matchPct,
+                      cls: "bar-twin",
+                    },
+                    {
+                      label: t("worldBar"),
+                      value: card.globalPct,
+                      cls: "bar-world",
+                    },
+                  ];
                   return (
-                    <li key={spot}>{friendlyBlindSpot(lang, dimension, spot)}</li>
+                    <li key={spot.dimension} className="spot">
+                      <strong className="spot-title">{card.title}</strong>
+                      <p className="spot-verdict">{card.verdict}</p>
+                      <div className="spot-bars">
+                        {rows.map(
+                          (row) =>
+                            row.value !== null && (
+                              <div key={row.label} className="spot-row">
+                                <span className="spot-label">{row.label}</span>
+                                <div className="spot-track">
+                                  <div
+                                    className={`spot-fill ${row.cls}`}
+                                    style={{ width: `${row.value}%` }}
+                                  />
+                                </div>
+                                <span className="spot-pct">{row.value}%</span>
+                              </div>
+                            ),
+                        )}
+                      </div>
+                      <p className="muted tiny">{t("saveRateLabel")}</p>
+                    </li>
                   );
                 })}
               </ul>

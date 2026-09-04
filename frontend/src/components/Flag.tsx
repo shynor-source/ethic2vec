@@ -7,7 +7,7 @@ interface FlagProps {
   size?: number;
 }
 
-/** Flag image (Windows cannot render flag emoji). Falls back to emoji. */
+/** Locally bundled flag image. Falls back to a neutral flag emoji. */
 export default function Flag({ code, size = 22 }: FlagProps) {
   const [failed, setFailed] = useState(false);
   const url = flagUrl(code);
@@ -26,7 +26,7 @@ export default function Flag({ code, size = 22 }: FlagProps) {
       height={size}
       loading="lazy"
       onError={() => setFailed(true)}
-      style={{ borderRadius: 3, objectFit: "cover" }}
+      style={{ borderRadius: 4, objectFit: "cover", display: "block" }}
     />
   );
 }

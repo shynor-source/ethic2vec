@@ -7,6 +7,34 @@ choice B saves the other side (scores 0).
 
 from __future__ import annotations
 
+# Emoji illustrating side A (saved by intervening) vs side B, for VS cards.
+SIDE_EMOJIS: dict[str, tuple[str, str]] = {
+    "age-old-1": ("👵👴", "🏃"),
+    "age-old-2": ("👵", "👨"),
+    "age-young-1": ("🧒🧒🧒", "👴"),
+    "age-young-2": ("🍼", "👵"),
+    "fitness-fat-1": ("👨", "🏃"),
+    "fitness-fat-2": ("👨👩", "🏃🏃"),
+    "fitness-fit-1": ("🏃‍♀️", "👩"),
+    "fitness-fit-2": ("🏃🏃", "👨"),
+    "gender-female-1": ("👩", "👨"),
+    "gender-female-2": ("👩‍⚕️", "🤵"),
+    "gender-male-1": ("👨", "👩"),
+    "gender-male-2": ("🧍", "👩"),
+    "status-high-1": ("🤵", "👨"),
+    "status-high-2": ("🩺", "🧺"),
+    "status-low-1": ("🧕", "🤵"),
+    "status-low-2": ("🧒", "👫"),
+    "species-hoomans-1": ("👨", "🐶🐶"),
+    "species-hoomans-2": ("🤰", "🐱"),
+    "species-pets-1": ("🐶🐶", "👨"),
+    "species-pets-2": ("🐱", "🦹"),
+    "util-less-1": ("🧒", "👷👷👷"),
+    "util-less-2": ("🚶", "🚌"),
+    "util-more-1": ("👷👷👷", "🚶"),
+    "util-more-2": ("🧒🧒", "🧍"),
+}
+
 
 def _entry(
     dimension: str,
@@ -21,6 +49,7 @@ def _entry(
     # "Social Status_High".rsplit -> ("Social Status", "High"). Good.
     if dimension.startswith("Social Status"):
         scenario_type, character_group = "Social Status", dimension.split("_")[-1]
+    side_a_emoji, side_b_emoji = SIDE_EMOJIS.get(slug, ("🅰️", "🅱️"))
     return {
         "dimension": dimension,
         "outcome_id": f"curated-{slug}",
@@ -31,6 +60,8 @@ def _entry(
         "choice_b": choice_b,
         "choice_a_vi": choice_a_vi,
         "choice_b_vi": choice_b_vi,
+        "side_a_emoji": side_a_emoji,
+        "side_b_emoji": side_b_emoji,
         "crossing_legality": 2,
         "is_passengers": is_passengers,
         "num_characters": 2,
