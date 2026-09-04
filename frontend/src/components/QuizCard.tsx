@@ -1,7 +1,6 @@
 import type { Choice, Scenario } from "../lib/api";
 import { scenarioEmoji } from "../lib/format";
 import { useLang } from "../lib/i18n";
-
 interface QuizCardProps {
   scenario: Scenario;
   index: number;
@@ -25,7 +24,11 @@ export default function QuizCard({
   isFirst,
   isLast,
 }: QuizCardProps) {
-  const { t } = useLang();
+  const { lang, t } = useLang();
+  const textA =
+    lang === "vi" ? (scenario.choice_a_vi ?? scenario.choice_a) : scenario.choice_a;
+  const textB =
+    lang === "vi" ? (scenario.choice_b_vi ?? scenario.choice_b) : scenario.choice_b;
   return (
     <section className="quiz">
       <div className="quiz-top">
@@ -50,7 +53,7 @@ export default function QuizCard({
           onClick={() => onSelect("A")}
         >
           <span className="choice-tag">A</span>
-          <span>{scenario.choice_a}</span>
+          <span>{textA}</span>
         </button>
         <button
           type="button"
@@ -58,7 +61,7 @@ export default function QuizCard({
           onClick={() => onSelect("B")}
         >
           <span className="choice-tag">B</span>
-          <span>{scenario.choice_b}</span>
+          <span>{textB}</span>
         </button>
       </div>
       <div className="quiz-nav">

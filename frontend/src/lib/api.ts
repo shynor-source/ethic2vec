@@ -12,6 +12,8 @@ export interface Scenario {
   outcome_id: string;
   choice_a: string;
   choice_b: string;
+  choice_a_vi?: string;
+  choice_b_vi?: string;
   scenario_type?: string;
   character_group?: string;
   country?: string;
