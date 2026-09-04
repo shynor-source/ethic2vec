@@ -1,0 +1,4914 @@
+[
+  {
+    "dimension": "Age_Old",
+    "outcome_id": "2fWykxDuG55KEn5Su",
+    "country": "AUT",
+    "scenario_type": "Age",
+    "character_group": "Old",
+    "choice_a": "Save old_man x1 (pedestrians; signal status unknown; people difference 0) or let the car continue.",
+    "choice_b": "Let the car continue without intervening.",
+    "present_characters": {
+      "old_man": 1
+    },
+    "crossing_legality": 2,
+    "is_passengers": false,
+    "num_characters": 1,
+    "diff_num_characters": 0
+  },
+  {
+    "dimension": "Age_Old",
+    "outcome_id": "29BPDYffYeayp2jnq",
+    "country": "USA",
+    "scenario_type": "Age",
+    "character_group": "Young",
+    "choice_a": "Save girl x1 (pedestrians; car continues straight; people difference 0) or let the car continue.",
+    "choice_b": "Let the car continue without intervening.",
+    "present_characters": {
+      "girl": 1
+    },
+    "crossing_legality": 0,
+    "is_passengers": false,
+    "num_characters": 1,
+    "diff_num_characters": 0
+  },
+  {
+    "dimension": "Age_Old",
+    "outcome_id": "2TBYQu2bAuGJpcCK5",
+    "country": "NZL",
+    "scenario_type": "Age",
+    "character_group": "Old",
+    "choice_a": "Save old_man x1 (pedestrians; car continues straight; people difference 0) or let the car continue.",
+    "choice_b": "Let the car continue without intervening.",
+    "present_characters": {
+      "old_man": 1
+    },
+    "crossing_legality": 0,
+    "is_passengers": false,
+    "num_characters": 1,
+    "diff_num_characters": 0
+  },
+  {
+    "dimension": "Age_Old",
+    "outcome_id": "2JsfRJn8nuZrsdhZe",
+    "country": "BRA",
+    "scenario_type": "Age",
+    "character_group": "Old",
+    "choice_a": "Save old_man x1 (pedestrians; car continues straight; people difference 0) or let the car continue.",
+    "choice_b": "Let the car continue without intervening.",
+    "present_characters": {
+      "old_man": 1
+    },
+    "crossing_legality": 0,
+    "is_passengers": false,
+    "num_characters": 1,
+    "diff_num_characters": 0
+  },
+  {
+    "dimension": "Age_Old",
+    "outcome_id": "2SFdHmFAZFtFak8jc",
+    "country": "USA",
+    "scenario_type": "Age",
+    "character_group": "Young",
+    "choice_a": "Save girl x1 (pedestrians; car continues straight; people difference 0) or let the car continue.",
+    "choice_b": "Let the car continue without intervening.",
+    "present_characters": {
+      "girl": 1
+    },
+    "crossing_legality": 0,
+    "is_passengers": false,
+    "num_characters": 1,
+    "diff_num_characters": 0
+  },
+  {
+    "dimension": "Age_Old",
+    "outcome_id": "2S4tXiJbZLrgGmGot",
+    "country": "USA",
+    "scenario_type": "Age",
+    "character_group": "Young",
+    "choice_a": "Save man x1 (pedestrians; car continues straight; people difference 0) or let the car continue.",
+    "choice_b": "Let the car continue without intervening.",
+    "present_characters": {
+      "man": 1
+    },
+    "crossing_legality": 0,
+    "is_passengers": false,
+    "num_characters": 1,
+    "diff_num_characters": 0
+  },
+  {
+    "dimension": "Age_Old",
+    "outcome_id": "2KYKRQrtqFFJReeNd",
+    "country": "BRA",
+    "scenario_type": "Age",
+    "character_group": "Old",
+    "choice_a": "Save old_man x1 (pedestrians; car continues straight; people difference 0) or let the car continue.",
+    "choice_b": "Let the car continue without intervening.",
+    "present_characters": {
+      "old_man": 1
+    },
+    "crossing_legality": 0,
+    "is_passengers": false,
+    "num_characters": 1,
+    "diff_num_characters": 0
+  },
+  {
+    "dimension": "Age_Old",
+    "outcome_id": "2cudq7ZfSZGeLiTKu",
+    "country": "USA",
+    "scenario_type": "Age",
+    "character_group": "Young",
+    "choice_a": "Save woman x1 (pedestrians; car continues straight; people difference 0) or let the car continue.",
+    "choice_b": "Let the car continue without intervening.",
+    "present_characters": {
+      "woman": 1
+    },
+    "crossing_legality": 0,
+    "is_passengers": false,
+    "num_characters": 1,
+    "diff_num_characters": 0
+  },
+  {
+    "dimension": "Age_Old",
+    "outcome_id": "23LudZejNwciEjNPG",
+    "country": "USA",
+    "scenario_type": "Age",
+    "character_group": "Old",
+    "choice_a": "Save old_man x1 (pedestrians; signal status unknown; people difference 0) or let the car continue.",
+    "choice_b": "Let the car continue without intervening.",
+    "present_characters": {
+      "old_man": 1
+    },
+    "crossing_legality": 2,
+    "is_passengers": false,
+    "num_characters": 1,
+    "diff_num_characters": 0
+  },
+  {
+    "dimension": "Age_Old",
+    "outcome_id": "2SxMy3MtexMHzdFxZ",
+    "country": "RUS",
+    "scenario_type": "Age",
+    "character_group": "Old",
+    "choice_a": "Save old_woman x1 (pedestrians; car continues straight; people difference 0) or let the car continue.",
+    "choice_b": "Let the car continue without intervening.",
+    "present_characters": {
+      "old_woman": 1
+    },
+    "crossing_legality": 0,
+    "is_passengers": false,
+    "num_characters": 1,
+    "diff_num_characters": 0
+  },
+  {
+    "dimension": "Age_Old",
+    "outcome_id": "238MuYf9x4ntavKxy",
+    "country": "POL",
+    "scenario_type": "Age",
+    "character_group": "Old",
+    "choice_a": "Save old_woman x1 (pedestrians; car continues straight; people difference 0) or let the car continue.",
+    "choice_b": "Let the car continue without intervening.",
+    "present_characters": {
+      "old_woman": 1
+    },
+    "crossing_legality": 0,
+    "is_passengers": false,
+    "num_characters": 1,
+    "diff_num_characters": 0
+  },
+  {
+    "dimension": "Age_Old",
+    "outcome_id": "2SLhuxXLjAG36GRwp",
+    "country": "USA",
+    "scenario_type": "Age",
+    "character_group": "Young",
+    "choice_a": "Save girl x1 (passengers; car continues straight; people difference 0) or let the car continue.",
+    "choice_b": "Let the car continue without intervening.",
+    "present_characters": {
+      "girl": 1
+    },
+    "crossing_legality": 0,
+    "is_passengers": true,
+    "num_characters": 1,
+    "diff_num_characters": 0
+  },
+  {
+    "dimension": "Age_Old",
+    "outcome_id": "2P6Ln7D5aGvKdRQJF",
+    "country": "DEU",
+    "scenario_type": "Age",
+    "character_group": "Old",
+    "choice_a": "Save old_man x1 (pedestrians; car continues straight; people difference 0) or let the car continue.",
+    "choice_b": "Let the car continue without intervening.",
+    "present_characters": {
+      "old_man": 1
+    },
+    "crossing_legality": 0,
+    "is_passengers": false,
+    "num_characters": 1,
+    "diff_num_characters": 0
+  },
+  {
+    "dimension": "Age_Old",
+    "outcome_id": "2D8gjM2Hss3q3njiN",
+    "country": "HKG",
+    "scenario_type": "Age",
+    "character_group": "Old",
+    "choice_a": "Save woman x1 (pedestrians; car continues straight; people difference 0) or let the car continue.",
+    "choice_b": "Let the car continue without intervening.",
+    "present_characters": {
+      "woman": 1
+    },
+    "crossing_legality": 0,
+    "is_passengers": false,
+    "num_characters": 1,
+    "diff_num_characters": 0
+  },
+  {
+    "dimension": "Age_Old",
+    "outcome_id": "29iMA4JiP3LKDcYQD",
+    "country": "USA",
+    "scenario_type": "Age",
+    "character_group": "Old",
+    "choice_a": "Save old_woman x1 (pedestrians; car swerves; people difference 0) or let the car continue.",
+    "choice_b": "Let the car continue without intervening.",
+    "present_characters": {
+      "old_woman": 1
+    },
+    "crossing_legality": 1,
+    "is_passengers": false,
+    "num_characters": 1,
+    "diff_num_characters": 0
+  },
+  {
+    "dimension": "Age_Old",
+    "outcome_id": "27PiM6ksd86GFF5P5",
+    "country": "USA",
+    "scenario_type": "Age",
+    "character_group": "Old",
+    "choice_a": "Save old_man x1 (pedestrians; car continues straight; people difference 0) or let the car continue.",
+    "choice_b": "Let the car continue without intervening.",
+    "present_characters": {
+      "old_man": 1
+    },
+    "crossing_legality": 0,
+    "is_passengers": false,
+    "num_characters": 1,
+    "diff_num_characters": 0
+  },
+  {
+    "dimension": "Age_Old",
+    "outcome_id": "2FicQgzECfjS52Neh",
+    "country": "ITA",
+    "scenario_type": "Age",
+    "character_group": "Old",
+    "choice_a": "Save woman x1 (pedestrians; signal status unknown; people difference 0) or let the car continue.",
+    "choice_b": "Let the car continue without intervening.",
+    "present_characters": {
+      "woman": 1
+    },
+    "crossing_legality": 2,
+    "is_passengers": false,
+    "num_characters": 1,
+    "diff_num_characters": 0
+  },
+  {
+    "dimension": "Age_Old",
+    "outcome_id": "24Rwt8hLLwwvKBpTY",
+    "country": "FRA",
+    "scenario_type": "Age",
+    "character_group": "Old",
+    "choice_a": "Save old_man x1 (pedestrians; signal status unknown; people difference 0) or let the car continue.",
+    "choice_b": "Let the car continue without intervening.",
+    "present_characters": {
+      "old_man": 1
+    },
+    "crossing_legality": 2,
+    "is_passengers": false,
+    "num_characters": 1,
+    "diff_num_characters": 0
+  },
+  {
+    "dimension": "Age_Old",
+    "outcome_id": "2bEFBkaE5rumD5nzK",
+    "country": "FIN",
+    "scenario_type": "Age",
+    "character_group": "Old",
+    "choice_a": "Save old_man x1 (pedestrians; car swerves; people difference 0) or let the car continue.",
+    "choice_b": "Let the car continue without intervening.",
+    "present_characters": {
+      "old_man": 1
+    },
+    "crossing_legality": 1,
+    "is_passengers": false,
+    "num_characters": 1,
+    "diff_num_characters": 0
+  },
+  {
+    "dimension": "Age_Old",
+    "outcome_id": "2fMkHaAsgQY2KqwMf",
+    "country": "USA",
+    "scenario_type": "Age",
+    "character_group": "Young",
+    "choice_a": "Save girl x1 (pedestrians; signal status unknown; people difference 0) or let the car continue.",
+    "choice_b": "Let the car continue without intervening.",
+    "present_characters": {
+      "girl": 1
+    },
+    "crossing_legality": 2,
+    "is_passengers": false,
+    "num_characters": 1,
+    "diff_num_characters": 0
+  },
+  {
+    "dimension": "Age_Old",
+    "outcome_id": "2EKWgDque5ekcxWk4",
+    "country": "nan",
+    "scenario_type": "Age",
+    "character_group": "Old",
+    "choice_a": "Save old_woman x1 (pedestrians; car continues straight; people difference 0) or let the car continue.",
+    "choice_b": "Let the car continue without intervening.",
+    "present_characters": {
+      "old_woman": 1
+    },
+    "crossing_legality": 0,
+    "is_passengers": false,
+    "num_characters": 1,
+    "diff_num_characters": 0
+  },
+  {
+    "dimension": "Age_Old",
+    "outcome_id": "2bpzcEgCqiYdvrTv6",
+    "country": "AUS",
+    "scenario_type": "Age",
+    "character_group": "Old",
+    "choice_a": "Save woman x1 (passengers; car continues straight; people difference 0) or let the car continue.",
+    "choice_b": "Let the car continue without intervening.",
+    "present_characters": {
+      "woman": 1
+    },
+    "crossing_legality": 0,
+    "is_passengers": true,
+    "num_characters": 1,
+    "diff_num_characters": 0
+  },
+  {
+    "dimension": "Age_Old",
+    "outcome_id": "2hsvoLKWQ3MXetBSZ",
+    "country": "GBR",
+    "scenario_type": "Age",
+    "character_group": "Young",
+    "choice_a": "Save boy x1 (passengers; car continues straight; people difference 0) or let the car continue.",
+    "choice_b": "Let the car continue without intervening.",
+    "present_characters": {
+      "boy": 1
+    },
+    "crossing_legality": 0,
+    "is_passengers": true,
+    "num_characters": 1,
+    "diff_num_characters": 0
+  },
+  {
+    "dimension": "Age_Old",
+    "outcome_id": "2NJTaCbBXBpzWR3qT",
+    "country": "CHL",
+    "scenario_type": "Age",
+    "character_group": "Old",
+    "choice_a": "Save old_woman x1 (pedestrians; signal status unknown; people difference 0) or let the car continue.",
+    "choice_b": "Let the car continue without intervening.",
+    "present_characters": {
+      "old_woman": 1
+    },
+    "crossing_legality": 2,
+    "is_passengers": false,
+    "num_characters": 1,
+    "diff_num_characters": 0
+  },
+  {
+    "dimension": "Age_Old",
+    "outcome_id": "2ggEPjRhkMJEsCqug",
+    "country": "POL",
+    "scenario_type": "Age",
+    "character_group": "Old",
+    "choice_a": "Save old_man x1 (pedestrians; car swerves; people difference 0) or let the car continue.",
+    "choice_b": "Let the car continue without intervening.",
+    "present_characters": {
+      "old_man": 1
+    },
+    "crossing_legality": 1,
+    "is_passengers": false,
+    "num_characters": 1,
+    "diff_num_characters": 0
+  },
+  {
+    "dimension": "Age_Young",
+    "outcome_id": "2fWykxDuG55KEn5Su",
+    "country": "AUT",
+    "scenario_type": "Age",
+    "character_group": "Old",
+    "choice_a": "Save old_man x1 (pedestrians; signal status unknown; people difference 0) or let the car continue.",
+    "choice_b": "Let the car continue without intervening.",
+    "present_characters": {
+      "old_man": 1
+    },
+    "crossing_legality": 2,
+    "is_passengers": false,
+    "num_characters": 1,
+    "diff_num_characters": 0
+  },
+  {
+    "dimension": "Age_Young",
+    "outcome_id": "29BPDYffYeayp2jnq",
+    "country": "USA",
+    "scenario_type": "Age",
+    "character_group": "Young",
+    "choice_a": "Save girl x1 (pedestrians; car continues straight; people difference 0) or let the car continue.",
+    "choice_b": "Let the car continue without intervening.",
+    "present_characters": {
+      "girl": 1
+    },
+    "crossing_legality": 0,
+    "is_passengers": false,
+    "num_characters": 1,
+    "diff_num_characters": 0
+  },
+  {
+    "dimension": "Age_Young",
+    "outcome_id": "2TBYQu2bAuGJpcCK5",
+    "country": "NZL",
+    "scenario_type": "Age",
+    "character_group": "Old",
+    "choice_a": "Save old_man x1 (pedestrians; car continues straight; people difference 0) or let the car continue.",
+    "choice_b": "Let the car continue without intervening.",
+    "present_characters": {
+      "old_man": 1
+    },
+    "crossing_legality": 0,
+    "is_passengers": false,
+    "num_characters": 1,
+    "diff_num_characters": 0
+  },
+  {
+    "dimension": "Age_Young",
+    "outcome_id": "2JsfRJn8nuZrsdhZe",
+    "country": "BRA",
+    "scenario_type": "Age",
+    "character_group": "Old",
+    "choice_a": "Save old_man x1 (pedestrians; car continues straight; people difference 0) or let the car continue.",
+    "choice_b": "Let the car continue without intervening.",
+    "present_characters": {
+      "old_man": 1
+    },
+    "crossing_legality": 0,
+    "is_passengers": false,
+    "num_characters": 1,
+    "diff_num_characters": 0
+  },
+  {
+    "dimension": "Age_Young",
+    "outcome_id": "2SFdHmFAZFtFak8jc",
+    "country": "USA",
+    "scenario_type": "Age",
+    "character_group": "Young",
+    "choice_a": "Save girl x1 (pedestrians; car continues straight; people difference 0) or let the car continue.",
+    "choice_b": "Let the car continue without intervening.",
+    "present_characters": {
+      "girl": 1
+    },
+    "crossing_legality": 0,
+    "is_passengers": false,
+    "num_characters": 1,
+    "diff_num_characters": 0
+  },
+  {
+    "dimension": "Age_Young",
+    "outcome_id": "2S4tXiJbZLrgGmGot",
+    "country": "USA",
+    "scenario_type": "Age",
+    "character_group": "Young",
+    "choice_a": "Save man x1 (pedestrians; car continues straight; people difference 0) or let the car continue.",
+    "choice_b": "Let the car continue without intervening.",
+    "present_characters": {
+      "man": 1
+    },
+    "crossing_legality": 0,
+    "is_passengers": false,
+    "num_characters": 1,
+    "diff_num_characters": 0
+  },
+  {
+    "dimension": "Age_Young",
+    "outcome_id": "2KYKRQrtqFFJReeNd",
+    "country": "BRA",
+    "scenario_type": "Age",
+    "character_group": "Old",
+    "choice_a": "Save old_man x1 (pedestrians; car continues straight; people difference 0) or let the car continue.",
+    "choice_b": "Let the car continue without intervening.",
+    "present_characters": {
+      "old_man": 1
+    },
+    "crossing_legality": 0,
+    "is_passengers": false,
+    "num_characters": 1,
+    "diff_num_characters": 0
+  },
+  {
+    "dimension": "Age_Young",
+    "outcome_id": "2cudq7ZfSZGeLiTKu",
+    "country": "USA",
+    "scenario_type": "Age",
+    "character_group": "Young",
+    "choice_a": "Save woman x1 (pedestrians; car continues straight; people difference 0) or let the car continue.",
+    "choice_b": "Let the car continue without intervening.",
+    "present_characters": {
+      "woman": 1
+    },
+    "crossing_legality": 0,
+    "is_passengers": false,
+    "num_characters": 1,
+    "diff_num_characters": 0
+  },
+  {
+    "dimension": "Age_Young",
+    "outcome_id": "23LudZejNwciEjNPG",
+    "country": "USA",
+    "scenario_type": "Age",
+    "character_group": "Old",
+    "choice_a": "Save old_man x1 (pedestrians; signal status unknown; people difference 0) or let the car continue.",
+    "choice_b": "Let the car continue without intervening.",
+    "present_characters": {
+      "old_man": 1
+    },
+    "crossing_legality": 2,
+    "is_passengers": false,
+    "num_characters": 1,
+    "diff_num_characters": 0
+  },
+  {
+    "dimension": "Age_Young",
+    "outcome_id": "2SxMy3MtexMHzdFxZ",
+    "country": "RUS",
+    "scenario_type": "Age",
+    "character_group": "Old",
+    "choice_a": "Save old_woman x1 (pedestrians; car continues straight; people difference 0) or let the car continue.",
+    "choice_b": "Let the car continue without intervening.",
+    "present_characters": {
+      "old_woman": 1
+    },
+    "crossing_legality": 0,
+    "is_passengers": false,
+    "num_characters": 1,
+    "diff_num_characters": 0
+  },
+  {
+    "dimension": "Age_Young",
+    "outcome_id": "238MuYf9x4ntavKxy",
+    "country": "POL",
+    "scenario_type": "Age",
+    "character_group": "Old",
+    "choice_a": "Save old_woman x1 (pedestrians; car continues straight; people difference 0) or let the car continue.",
+    "choice_b": "Let the car continue without intervening.",
+    "present_characters": {
+      "old_woman": 1
+    },
+    "crossing_legality": 0,
+    "is_passengers": false,
+    "num_characters": 1,
+    "diff_num_characters": 0
+  },
+  {
+    "dimension": "Age_Young",
+    "outcome_id": "2SLhuxXLjAG36GRwp",
+    "country": "USA",
+    "scenario_type": "Age",
+    "character_group": "Young",
+    "choice_a": "Save girl x1 (passengers; car continues straight; people difference 0) or let the car continue.",
+    "choice_b": "Let the car continue without intervening.",
+    "present_characters": {
+      "girl": 1
+    },
+    "crossing_legality": 0,
+    "is_passengers": true,
+    "num_characters": 1,
+    "diff_num_characters": 0
+  },
+  {
+    "dimension": "Age_Young",
+    "outcome_id": "2P6Ln7D5aGvKdRQJF",
+    "country": "DEU",
+    "scenario_type": "Age",
+    "character_group": "Old",
+    "choice_a": "Save old_man x1 (pedestrians; car continues straight; people difference 0) or let the car continue.",
+    "choice_b": "Let the car continue without intervening.",
+    "present_characters": {
+      "old_man": 1
+    },
+    "crossing_legality": 0,
+    "is_passengers": false,
+    "num_characters": 1,
+    "diff_num_characters": 0
+  },
+  {
+    "dimension": "Age_Young",
+    "outcome_id": "2D8gjM2Hss3q3njiN",
+    "country": "HKG",
+    "scenario_type": "Age",
+    "character_group": "Old",
+    "choice_a": "Save woman x1 (pedestrians; car continues straight; people difference 0) or let the car continue.",
+    "choice_b": "Let the car continue without intervening.",
+    "present_characters": {
+      "woman": 1
+    },
+    "crossing_legality": 0,
+    "is_passengers": false,
+    "num_characters": 1,
+    "diff_num_characters": 0
+  },
+  {
+    "dimension": "Age_Young",
+    "outcome_id": "29iMA4JiP3LKDcYQD",
+    "country": "USA",
+    "scenario_type": "Age",
+    "character_group": "Old",
+    "choice_a": "Save old_woman x1 (pedestrians; car swerves; people difference 0) or let the car continue.",
+    "choice_b": "Let the car continue without intervening.",
+    "present_characters": {
+      "old_woman": 1
+    },
+    "crossing_legality": 1,
+    "is_passengers": false,
+    "num_characters": 1,
+    "diff_num_characters": 0
+  },
+  {
+    "dimension": "Age_Young",
+    "outcome_id": "27PiM6ksd86GFF5P5",
+    "country": "USA",
+    "scenario_type": "Age",
+    "character_group": "Old",
+    "choice_a": "Save old_man x1 (pedestrians; car continues straight; people difference 0) or let the car continue.",
+    "choice_b": "Let the car continue without intervening.",
+    "present_characters": {
+      "old_man": 1
+    },
+    "crossing_legality": 0,
+    "is_passengers": false,
+    "num_characters": 1,
+    "diff_num_characters": 0
+  },
+  {
+    "dimension": "Age_Young",
+    "outcome_id": "2FicQgzECfjS52Neh",
+    "country": "ITA",
+    "scenario_type": "Age",
+    "character_group": "Old",
+    "choice_a": "Save woman x1 (pedestrians; signal status unknown; people difference 0) or let the car continue.",
+    "choice_b": "Let the car continue without intervening.",
+    "present_characters": {
+      "woman": 1
+    },
+    "crossing_legality": 2,
+    "is_passengers": false,
+    "num_characters": 1,
+    "diff_num_characters": 0
+  },
+  {
+    "dimension": "Age_Young",
+    "outcome_id": "24Rwt8hLLwwvKBpTY",
+    "country": "FRA",
+    "scenario_type": "Age",
+    "character_group": "Old",
+    "choice_a": "Save old_man x1 (pedestrians; signal status unknown; people difference 0) or let the car continue.",
+    "choice_b": "Let the car continue without intervening.",
+    "present_characters": {
+      "old_man": 1
+    },
+    "crossing_legality": 2,
+    "is_passengers": false,
+    "num_characters": 1,
+    "diff_num_characters": 0
+  },
+  {
+    "dimension": "Age_Young",
+    "outcome_id": "2bEFBkaE5rumD5nzK",
+    "country": "FIN",
+    "scenario_type": "Age",
+    "character_group": "Old",
+    "choice_a": "Save old_man x1 (pedestrians; car swerves; people difference 0) or let the car continue.",
+    "choice_b": "Let the car continue without intervening.",
+    "present_characters": {
+      "old_man": 1
+    },
+    "crossing_legality": 1,
+    "is_passengers": false,
+    "num_characters": 1,
+    "diff_num_characters": 0
+  },
+  {
+    "dimension": "Age_Young",
+    "outcome_id": "2fMkHaAsgQY2KqwMf",
+    "country": "USA",
+    "scenario_type": "Age",
+    "character_group": "Young",
+    "choice_a": "Save girl x1 (pedestrians; signal status unknown; people difference 0) or let the car continue.",
+    "choice_b": "Let the car continue without intervening.",
+    "present_characters": {
+      "girl": 1
+    },
+    "crossing_legality": 2,
+    "is_passengers": false,
+    "num_characters": 1,
+    "diff_num_characters": 0
+  },
+  {
+    "dimension": "Age_Young",
+    "outcome_id": "2EKWgDque5ekcxWk4",
+    "country": "nan",
+    "scenario_type": "Age",
+    "character_group": "Old",
+    "choice_a": "Save old_woman x1 (pedestrians; car continues straight; people difference 0) or let the car continue.",
+    "choice_b": "Let the car continue without intervening.",
+    "present_characters": {
+      "old_woman": 1
+    },
+    "crossing_legality": 0,
+    "is_passengers": false,
+    "num_characters": 1,
+    "diff_num_characters": 0
+  },
+  {
+    "dimension": "Age_Young",
+    "outcome_id": "2bpzcEgCqiYdvrTv6",
+    "country": "AUS",
+    "scenario_type": "Age",
+    "character_group": "Old",
+    "choice_a": "Save woman x1 (passengers; car continues straight; people difference 0) or let the car continue.",
+    "choice_b": "Let the car continue without intervening.",
+    "present_characters": {
+      "woman": 1
+    },
+    "crossing_legality": 0,
+    "is_passengers": true,
+    "num_characters": 1,
+    "diff_num_characters": 0
+  },
+  {
+    "dimension": "Age_Young",
+    "outcome_id": "2hsvoLKWQ3MXetBSZ",
+    "country": "GBR",
+    "scenario_type": "Age",
+    "character_group": "Young",
+    "choice_a": "Save boy x1 (passengers; car continues straight; people difference 0) or let the car continue.",
+    "choice_b": "Let the car continue without intervening.",
+    "present_characters": {
+      "boy": 1
+    },
+    "crossing_legality": 0,
+    "is_passengers": true,
+    "num_characters": 1,
+    "diff_num_characters": 0
+  },
+  {
+    "dimension": "Age_Young",
+    "outcome_id": "2NJTaCbBXBpzWR3qT",
+    "country": "CHL",
+    "scenario_type": "Age",
+    "character_group": "Old",
+    "choice_a": "Save old_woman x1 (pedestrians; signal status unknown; people difference 0) or let the car continue.",
+    "choice_b": "Let the car continue without intervening.",
+    "present_characters": {
+      "old_woman": 1
+    },
+    "crossing_legality": 2,
+    "is_passengers": false,
+    "num_characters": 1,
+    "diff_num_characters": 0
+  },
+  {
+    "dimension": "Age_Young",
+    "outcome_id": "2ggEPjRhkMJEsCqug",
+    "country": "POL",
+    "scenario_type": "Age",
+    "character_group": "Old",
+    "choice_a": "Save old_man x1 (pedestrians; car swerves; people difference 0) or let the car continue.",
+    "choice_b": "Let the car continue without intervening.",
+    "present_characters": {
+      "old_man": 1
+    },
+    "crossing_legality": 1,
+    "is_passengers": false,
+    "num_characters": 1,
+    "diff_num_characters": 0
+  },
+  {
+    "dimension": "Fitness_Fat",
+    "outcome_id": "2m2LSzyYLHuDnq5zr",
+    "country": "BRA",
+    "scenario_type": "Fitness",
+    "character_group": "Fit",
+    "choice_a": "Save man x1 (pedestrians; car swerves; people difference 0) or let the car continue.",
+    "choice_b": "Let the car continue without intervening.",
+    "present_characters": {
+      "man": 1
+    },
+    "crossing_legality": 1,
+    "is_passengers": false,
+    "num_characters": 1,
+    "diff_num_characters": 0
+  },
+  {
+    "dimension": "Fitness_Fat",
+    "outcome_id": "29YvuxaZvxoyrTKxf",
+    "country": "THA",
+    "scenario_type": "Fitness",
+    "character_group": "Fat",
+    "choice_a": "Save man x1 (pedestrians; car continues straight; people difference 0) or let the car continue.",
+    "choice_b": "Let the car continue without intervening.",
+    "present_characters": {
+      "man": 1
+    },
+    "crossing_legality": 0,
+    "is_passengers": false,
+    "num_characters": 1,
+    "diff_num_characters": 0
+  },
+  {
+    "dimension": "Fitness_Fat",
+    "outcome_id": "2ZGWBn2Xx8Em4fxLj",
+    "country": "FRA",
+    "scenario_type": "Fitness",
+    "character_group": "Fit",
+    "choice_a": "Save male_athlete x1 (pedestrians; signal status unknown; people difference 0) or let the car continue.",
+    "choice_b": "Let the car continue without intervening.",
+    "present_characters": {
+      "male_athlete": 1
+    },
+    "crossing_legality": 2,
+    "is_passengers": false,
+    "num_characters": 1,
+    "diff_num_characters": 0
+  },
+  {
+    "dimension": "Fitness_Fat",
+    "outcome_id": "2MnDd9ynF8eKEfDtK",
+    "country": "FIN",
+    "scenario_type": "Fitness",
+    "character_group": "Fit",
+    "choice_a": "Save female_athlete x1 (pedestrians; signal status unknown; people difference 0) or let the car continue.",
+    "choice_b": "Let the car continue without intervening.",
+    "present_characters": {
+      "female_athlete": 1
+    },
+    "crossing_legality": 2,
+    "is_passengers": false,
+    "num_characters": 1,
+    "diff_num_characters": 0
+  },
+  {
+    "dimension": "Fitness_Fat",
+    "outcome_id": "2YHMhHSq4fZ7uMjY2",
+    "country": "DEU",
+    "scenario_type": "Fitness",
+    "character_group": "Fat",
+    "choice_a": "Save large_woman x1 (pedestrians; signal status unknown; people difference 0) or let the car continue.",
+    "choice_b": "Let the car continue without intervening.",
+    "present_characters": {
+      "large_woman": 1
+    },
+    "crossing_legality": 2,
+    "is_passengers": false,
+    "num_characters": 1,
+    "diff_num_characters": 0
+  },
+  {
+    "dimension": "Fitness_Fat",
+    "outcome_id": "2Y2J6MtPApQdFDKGR",
+    "country": "SGP",
+    "scenario_type": "Fitness",
+    "character_group": "Fat",
+    "choice_a": "Save large_woman x1 (pedestrians; car continues straight; people difference 0) or let the car continue.",
+    "choice_b": "Let the car continue without intervening.",
+    "present_characters": {
+      "large_woman": 1
+    },
+    "crossing_legality": 0,
+    "is_passengers": false,
+    "num_characters": 1,
+    "diff_num_characters": 0
+  },
+  {
+    "dimension": "Fitness_Fat",
+    "outcome_id": "2NcbNGKYi64aToP9a",
+    "country": "BRA",
+    "scenario_type": "Fitness",
+    "character_group": "Fit",
+    "choice_a": "Save woman x1 (pedestrians; signal status unknown; people difference 0) or let the car continue.",
+    "choice_b": "Let the car continue without intervening.",
+    "present_characters": {
+      "woman": 1
+    },
+    "crossing_legality": 2,
+    "is_passengers": false,
+    "num_characters": 1,
+    "diff_num_characters": 0
+  },
+  {
+    "dimension": "Fitness_Fat",
+    "outcome_id": "2iNusGSKKdGw9Hcmg",
+    "country": "USA",
+    "scenario_type": "Fitness",
+    "character_group": "Fat",
+    "choice_a": "Save woman x1 (passengers; car continues straight; people difference 0) or let the car continue.",
+    "choice_b": "Let the car continue without intervening.",
+    "present_characters": {
+      "woman": 1
+    },
+    "crossing_legality": 0,
+    "is_passengers": true,
+    "num_characters": 1,
+    "diff_num_characters": 0
+  },
+  {
+    "dimension": "Fitness_Fat",
+    "outcome_id": "23Ru7bxopNhFstELa",
+    "country": "BEL",
+    "scenario_type": "Fitness",
+    "character_group": "Fit",
+    "choice_a": "Save female_athlete x1 (passengers; car continues straight; people difference 0) or let the car continue.",
+    "choice_b": "Let the car continue without intervening.",
+    "present_characters": {
+      "female_athlete": 1
+    },
+    "crossing_legality": 0,
+    "is_passengers": true,
+    "num_characters": 1,
+    "diff_num_characters": 0
+  },
+  {
+    "dimension": "Fitness_Fat",
+    "outcome_id": "2Z5WqELsDHv6oqRh2",
+    "country": "TWN",
+    "scenario_type": "Fitness",
+    "character_group": "Fit",
+    "choice_a": "Save male_athlete x1 (pedestrians; car continues straight; people difference 0) or let the car continue.",
+    "choice_b": "Let the car continue without intervening.",
+    "present_characters": {
+      "male_athlete": 1
+    },
+    "crossing_legality": 0,
+    "is_passengers": false,
+    "num_characters": 1,
+    "diff_num_characters": 0
+  },
+  {
+    "dimension": "Fitness_Fat",
+    "outcome_id": "23C66oqikKbeRx8PC",
+    "country": "CAN",
+    "scenario_type": "Fitness",
+    "character_group": "Fat",
+    "choice_a": "Save man x1 (passengers; car continues straight; people difference 0) or let the car continue.",
+    "choice_b": "Let the car continue without intervening.",
+    "present_characters": {
+      "man": 1
+    },
+    "crossing_legality": 0,
+    "is_passengers": true,
+    "num_characters": 1,
+    "diff_num_characters": 0
+  },
+  {
+    "dimension": "Fitness_Fat",
+    "outcome_id": "2YM9E7ZDqqauGbaXM",
+    "country": "DEU",
+    "scenario_type": "Fitness",
+    "character_group": "Fit",
+    "choice_a": "Save man x1 (pedestrians; signal status unknown; people difference 0) or let the car continue.",
+    "choice_b": "Let the car continue without intervening.",
+    "present_characters": {
+      "man": 1
+    },
+    "crossing_legality": 2,
+    "is_passengers": false,
+    "num_characters": 1,
+    "diff_num_characters": 0
+  },
+  {
+    "dimension": "Fitness_Fat",
+    "outcome_id": "2SSEbGfxLDvoYiESk",
+    "country": "GBR",
+    "scenario_type": "Fitness",
+    "character_group": "Fat",
+    "choice_a": "Save man x1 (pedestrians; car continues straight; people difference 0) or let the car continue.",
+    "choice_b": "Let the car continue without intervening.",
+    "present_characters": {
+      "man": 1
+    },
+    "crossing_legality": 0,
+    "is_passengers": false,
+    "num_characters": 1,
+    "diff_num_characters": 0
+  },
+  {
+    "dimension": "Fitness_Fat",
+    "outcome_id": "2EZdCeyimypppShHj",
+    "country": "USA",
+    "scenario_type": "Fitness",
+    "character_group": "Fat",
+    "choice_a": "Save large_man x1 (pedestrians; signal status unknown; people difference 0) or let the car continue.",
+    "choice_b": "Let the car continue without intervening.",
+    "present_characters": {
+      "large_man": 1
+    },
+    "crossing_legality": 2,
+    "is_passengers": false,
+    "num_characters": 1,
+    "diff_num_characters": 0
+  },
+  {
+    "dimension": "Fitness_Fat",
+    "outcome_id": "29qnyfAjMQNqXb9zq",
+    "country": "USA",
+    "scenario_type": "Fitness",
+    "character_group": "Fit",
+    "choice_a": "Save male_athlete x1 (pedestrians; car continues straight; people difference 0) or let the car continue.",
+    "choice_b": "Let the car continue without intervening.",
+    "present_characters": {
+      "male_athlete": 1
+    },
+    "crossing_legality": 0,
+    "is_passengers": false,
+    "num_characters": 1,
+    "diff_num_characters": 0
+  },
+  {
+    "dimension": "Fitness_Fat",
+    "outcome_id": "27kv9DjB24TuqvwXC",
+    "country": "USA",
+    "scenario_type": "Fitness",
+    "character_group": "Fat",
+    "choice_a": "Save large_man x1 (pedestrians; car swerves; people difference 0) or let the car continue.",
+    "choice_b": "Let the car continue without intervening.",
+    "present_characters": {
+      "large_man": 1
+    },
+    "crossing_legality": 1,
+    "is_passengers": false,
+    "num_characters": 1,
+    "diff_num_characters": 0
+  },
+  {
+    "dimension": "Fitness_Fat",
+    "outcome_id": "2J9kZnZShH69wyApe",
+    "country": "USA",
+    "scenario_type": "Fitness",
+    "character_group": "Fit",
+    "choice_a": "Save male_athlete x1 (pedestrians; signal status unknown; people difference 0) or let the car continue.",
+    "choice_b": "Let the car continue without intervening.",
+    "present_characters": {
+      "male_athlete": 1
+    },
+    "crossing_legality": 2,
+    "is_passengers": false,
+    "num_characters": 1,
+    "diff_num_characters": 0
+  },
+  {
+    "dimension": "Fitness_Fat",
+    "outcome_id": "24rWNWGAk2Qbnyf4X",
+    "country": "JPN",
+    "scenario_type": "Fitness",
+    "character_group": "Fat",
+    "choice_a": "Save large_man x1 (pedestrians; signal status unknown; people difference 0) or let the car continue.",
+    "choice_b": "Let the car continue without intervening.",
+    "present_characters": {
+      "large_man": 1
+    },
+    "crossing_legality": 2,
+    "is_passengers": false,
+    "num_characters": 1,
+    "diff_num_characters": 0
+  },
+  {
+    "dimension": "Fitness_Fat",
+    "outcome_id": "2gcHYFtAksRnqdy5B",
+    "country": "FRA",
+    "scenario_type": "Fitness",
+    "character_group": "Fat",
+    "choice_a": "Save large_man x1 (passengers; car continues straight; people difference 0) or let the car continue.",
+    "choice_b": "Let the car continue without intervening.",
+    "present_characters": {
+      "large_man": 1
+    },
+    "crossing_legality": 0,
+    "is_passengers": true,
+    "num_characters": 1,
+    "diff_num_characters": 0
+  },
+  {
+    "dimension": "Fitness_Fat",
+    "outcome_id": "2kqZxuQXfGXcXTKMJ",
+    "country": "USA",
+    "scenario_type": "Fitness",
+    "character_group": "Fat",
+    "choice_a": "Save man x1 (pedestrians; car swerves; people difference 0) or let the car continue.",
+    "choice_b": "Let the car continue without intervening.",
+    "present_characters": {
+      "man": 1
+    },
+    "crossing_legality": 1,
+    "is_passengers": false,
+    "num_characters": 1,
+    "diff_num_characters": 0
+  },
+  {
+    "dimension": "Fitness_Fat",
+    "outcome_id": "2GW4SePkbwf7jr6HR",
+    "country": "USA",
+    "scenario_type": "Fitness",
+    "character_group": "Fit",
+    "choice_a": "Save woman x1 (pedestrians; car swerves; people difference 0) or let the car continue.",
+    "choice_b": "Let the car continue without intervening.",
+    "present_characters": {
+      "woman": 1
+    },
+    "crossing_legality": 1,
+    "is_passengers": false,
+    "num_characters": 1,
+    "diff_num_characters": 0
+  },
+  {
+    "dimension": "Fitness_Fat",
+    "outcome_id": "2h4RxznXGTjhF5yk9",
+    "country": "GBR",
+    "scenario_type": "Fitness",
+    "character_group": "Fit",
+    "choice_a": "Save female_athlete x1 (pedestrians; signal status unknown; people difference 0) or let the car continue.",
+    "choice_b": "Let the car continue without intervening.",
+    "present_characters": {
+      "female_athlete": 1
+    },
+    "crossing_legality": 2,
+    "is_passengers": false,
+    "num_characters": 1,
+    "diff_num_characters": 0
+  },
+  {
+    "dimension": "Fitness_Fat",
+    "outcome_id": "2p3Tqxf2qPF7Mqfq4",
+    "country": "AUS",
+    "scenario_type": "Fitness",
+    "character_group": "Fat",
+    "choice_a": "Save large_man x1 (pedestrians; signal status unknown; people difference 0) or let the car continue.",
+    "choice_b": "Let the car continue without intervening.",
+    "present_characters": {
+      "large_man": 1
+    },
+    "crossing_legality": 2,
+    "is_passengers": false,
+    "num_characters": 1,
+    "diff_num_characters": 0
+  },
+  {
+    "dimension": "Fitness_Fat",
+    "outcome_id": "2RkG48vh7Wc5jarQw",
+    "country": "GBR",
+    "scenario_type": "Fitness",
+    "character_group": "Fat",
+    "choice_a": "Save man x1 (pedestrians; signal status unknown; people difference 0) or let the car continue.",
+    "choice_b": "Let the car continue without intervening.",
+    "present_characters": {
+      "man": 1
+    },
+    "crossing_legality": 2,
+    "is_passengers": false,
+    "num_characters": 1,
+    "diff_num_characters": 0
+  },
+  {
+    "dimension": "Fitness_Fat",
+    "outcome_id": "2nioZcZjrHwN7K6Fn",
+    "country": "HUN",
+    "scenario_type": "Fitness",
+    "character_group": "Fat",
+    "choice_a": "Save man x1 (pedestrians; car continues straight; people difference 0) or let the car continue.",
+    "choice_b": "Let the car continue without intervening.",
+    "present_characters": {
+      "man": 1
+    },
+    "crossing_legality": 0,
+    "is_passengers": false,
+    "num_characters": 1,
+    "diff_num_characters": 0
+  },
+  {
+    "dimension": "Fitness_Fit",
+    "outcome_id": "2m2LSzyYLHuDnq5zr",
+    "country": "BRA",
+    "scenario_type": "Fitness",
+    "character_group": "Fit",
+    "choice_a": "Save man x1 (pedestrians; car swerves; people difference 0) or let the car continue.",
+    "choice_b": "Let the car continue without intervening.",
+    "present_characters": {
+      "man": 1
+    },
+    "crossing_legality": 1,
+    "is_passengers": false,
+    "num_characters": 1,
+    "diff_num_characters": 0
+  },
+  {
+    "dimension": "Fitness_Fit",
+    "outcome_id": "29YvuxaZvxoyrTKxf",
+    "country": "THA",
+    "scenario_type": "Fitness",
+    "character_group": "Fat",
+    "choice_a": "Save man x1 (pedestrians; car continues straight; people difference 0) or let the car continue.",
+    "choice_b": "Let the car continue without intervening.",
+    "present_characters": {
+      "man": 1
+    },
+    "crossing_legality": 0,
+    "is_passengers": false,
+    "num_characters": 1,
+    "diff_num_characters": 0
+  },
+  {
+    "dimension": "Fitness_Fit",
+    "outcome_id": "2ZGWBn2Xx8Em4fxLj",
+    "country": "FRA",
+    "scenario_type": "Fitness",
+    "character_group": "Fit",
+    "choice_a": "Save male_athlete x1 (pedestrians; signal status unknown; people difference 0) or let the car continue.",
+    "choice_b": "Let the car continue without intervening.",
+    "present_characters": {
+      "male_athlete": 1
+    },
+    "crossing_legality": 2,
+    "is_passengers": false,
+    "num_characters": 1,
+    "diff_num_characters": 0
+  },
+  {
+    "dimension": "Fitness_Fit",
+    "outcome_id": "2MnDd9ynF8eKEfDtK",
+    "country": "FIN",
+    "scenario_type": "Fitness",
+    "character_group": "Fit",
+    "choice_a": "Save female_athlete x1 (pedestrians; signal status unknown; people difference 0) or let the car continue.",
+    "choice_b": "Let the car continue without intervening.",
+    "present_characters": {
+      "female_athlete": 1
+    },
+    "crossing_legality": 2,
+    "is_passengers": false,
+    "num_characters": 1,
+    "diff_num_characters": 0
+  },
+  {
+    "dimension": "Fitness_Fit",
+    "outcome_id": "2YHMhHSq4fZ7uMjY2",
+    "country": "DEU",
+    "scenario_type": "Fitness",
+    "character_group": "Fat",
+    "choice_a": "Save large_woman x1 (pedestrians; signal status unknown; people difference 0) or let the car continue.",
+    "choice_b": "Let the car continue without intervening.",
+    "present_characters": {
+      "large_woman": 1
+    },
+    "crossing_legality": 2,
+    "is_passengers": false,
+    "num_characters": 1,
+    "diff_num_characters": 0
+  },
+  {
+    "dimension": "Fitness_Fit",
+    "outcome_id": "2Y2J6MtPApQdFDKGR",
+    "country": "SGP",
+    "scenario_type": "Fitness",
+    "character_group": "Fat",
+    "choice_a": "Save large_woman x1 (pedestrians; car continues straight; people difference 0) or let the car continue.",
+    "choice_b": "Let the car continue without intervening.",
+    "present_characters": {
+      "large_woman": 1
+    },
+    "crossing_legality": 0,
+    "is_passengers": false,
+    "num_characters": 1,
+    "diff_num_characters": 0
+  },
+  {
+    "dimension": "Fitness_Fit",
+    "outcome_id": "2NcbNGKYi64aToP9a",
+    "country": "BRA",
+    "scenario_type": "Fitness",
+    "character_group": "Fit",
+    "choice_a": "Save woman x1 (pedestrians; signal status unknown; people difference 0) or let the car continue.",
+    "choice_b": "Let the car continue without intervening.",
+    "present_characters": {
+      "woman": 1
+    },
+    "crossing_legality": 2,
+    "is_passengers": false,
+    "num_characters": 1,
+    "diff_num_characters": 0
+  },
+  {
+    "dimension": "Fitness_Fit",
+    "outcome_id": "2iNusGSKKdGw9Hcmg",
+    "country": "USA",
+    "scenario_type": "Fitness",
+    "character_group": "Fat",
+    "choice_a": "Save woman x1 (passengers; car continues straight; people difference 0) or let the car continue.",
+    "choice_b": "Let the car continue without intervening.",
+    "present_characters": {
+      "woman": 1
+    },
+    "crossing_legality": 0,
+    "is_passengers": true,
+    "num_characters": 1,
+    "diff_num_characters": 0
+  },
+  {
+    "dimension": "Fitness_Fit",
+    "outcome_id": "23Ru7bxopNhFstELa",
+    "country": "BEL",
+    "scenario_type": "Fitness",
+    "character_group": "Fit",
+    "choice_a": "Save female_athlete x1 (passengers; car continues straight; people difference 0) or let the car continue.",
+    "choice_b": "Let the car continue without intervening.",
+    "present_characters": {
+      "female_athlete": 1
+    },
+    "crossing_legality": 0,
+    "is_passengers": true,
+    "num_characters": 1,
+    "diff_num_characters": 0
+  },
+  {
+    "dimension": "Fitness_Fit",
+    "outcome_id": "2Z5WqELsDHv6oqRh2",
+    "country": "TWN",
+    "scenario_type": "Fitness",
+    "character_group": "Fit",
+    "choice_a": "Save male_athlete x1 (pedestrians; car continues straight; people difference 0) or let the car continue.",
+    "choice_b": "Let the car continue without intervening.",
+    "present_characters": {
+      "male_athlete": 1
+    },
+    "crossing_legality": 0,
+    "is_passengers": false,
+    "num_characters": 1,
+    "diff_num_characters": 0
+  },
+  {
+    "dimension": "Fitness_Fit",
+    "outcome_id": "23C66oqikKbeRx8PC",
+    "country": "CAN",
+    "scenario_type": "Fitness",
+    "character_group": "Fat",
+    "choice_a": "Save man x1 (passengers; car continues straight; people difference 0) or let the car continue.",
+    "choice_b": "Let the car continue without intervening.",
+    "present_characters": {
+      "man": 1
+    },
+    "crossing_legality": 0,
+    "is_passengers": true,
+    "num_characters": 1,
+    "diff_num_characters": 0
+  },
+  {
+    "dimension": "Fitness_Fit",
+    "outcome_id": "2YM9E7ZDqqauGbaXM",
+    "country": "DEU",
+    "scenario_type": "Fitness",
+    "character_group": "Fit",
+    "choice_a": "Save man x1 (pedestrians; signal status unknown; people difference 0) or let the car continue.",
+    "choice_b": "Let the car continue without intervening.",
+    "present_characters": {
+      "man": 1
+    },
+    "crossing_legality": 2,
+    "is_passengers": false,
+    "num_characters": 1,
+    "diff_num_characters": 0
+  },
+  {
+    "dimension": "Fitness_Fit",
+    "outcome_id": "2SSEbGfxLDvoYiESk",
+    "country": "GBR",
+    "scenario_type": "Fitness",
+    "character_group": "Fat",
+    "choice_a": "Save man x1 (pedestrians; car continues straight; people difference 0) or let the car continue.",
+    "choice_b": "Let the car continue without intervening.",
+    "present_characters": {
+      "man": 1
+    },
+    "crossing_legality": 0,
+    "is_passengers": false,
+    "num_characters": 1,
+    "diff_num_characters": 0
+  },
+  {
+    "dimension": "Fitness_Fit",
+    "outcome_id": "2EZdCeyimypppShHj",
+    "country": "USA",
+    "scenario_type": "Fitness",
+    "character_group": "Fat",
+    "choice_a": "Save large_man x1 (pedestrians; signal status unknown; people difference 0) or let the car continue.",
+    "choice_b": "Let the car continue without intervening.",
+    "present_characters": {
+      "large_man": 1
+    },
+    "crossing_legality": 2,
+    "is_passengers": false,
+    "num_characters": 1,
+    "diff_num_characters": 0
+  },
+  {
+    "dimension": "Fitness_Fit",
+    "outcome_id": "29qnyfAjMQNqXb9zq",
+    "country": "USA",
+    "scenario_type": "Fitness",
+    "character_group": "Fit",
+    "choice_a": "Save male_athlete x1 (pedestrians; car continues straight; people difference 0) or let the car continue.",
+    "choice_b": "Let the car continue without intervening.",
+    "present_characters": {
+      "male_athlete": 1
+    },
+    "crossing_legality": 0,
+    "is_passengers": false,
+    "num_characters": 1,
+    "diff_num_characters": 0
+  },
+  {
+    "dimension": "Fitness_Fit",
+    "outcome_id": "27kv9DjB24TuqvwXC",
+    "country": "USA",
+    "scenario_type": "Fitness",
+    "character_group": "Fat",
+    "choice_a": "Save large_man x1 (pedestrians; car swerves; people difference 0) or let the car continue.",
+    "choice_b": "Let the car continue without intervening.",
+    "present_characters": {
+      "large_man": 1
+    },
+    "crossing_legality": 1,
+    "is_passengers": false,
+    "num_characters": 1,
+    "diff_num_characters": 0
+  },
+  {
+    "dimension": "Fitness_Fit",
+    "outcome_id": "2J9kZnZShH69wyApe",
+    "country": "USA",
+    "scenario_type": "Fitness",
+    "character_group": "Fit",
+    "choice_a": "Save male_athlete x1 (pedestrians; signal status unknown; people difference 0) or let the car continue.",
+    "choice_b": "Let the car continue without intervening.",
+    "present_characters": {
+      "male_athlete": 1
+    },
+    "crossing_legality": 2,
+    "is_passengers": false,
+    "num_characters": 1,
+    "diff_num_characters": 0
+  },
+  {
+    "dimension": "Fitness_Fit",
+    "outcome_id": "24rWNWGAk2Qbnyf4X",
+    "country": "JPN",
+    "scenario_type": "Fitness",
+    "character_group": "Fat",
+    "choice_a": "Save large_man x1 (pedestrians; signal status unknown; people difference 0) or let the car continue.",
+    "choice_b": "Let the car continue without intervening.",
+    "present_characters": {
+      "large_man": 1
+    },
+    "crossing_legality": 2,
+    "is_passengers": false,
+    "num_characters": 1,
+    "diff_num_characters": 0
+  },
+  {
+    "dimension": "Fitness_Fit",
+    "outcome_id": "2gcHYFtAksRnqdy5B",
+    "country": "FRA",
+    "scenario_type": "Fitness",
+    "character_group": "Fat",
+    "choice_a": "Save large_man x1 (passengers; car continues straight; people difference 0) or let the car continue.",
+    "choice_b": "Let the car continue without intervening.",
+    "present_characters": {
+      "large_man": 1
+    },
+    "crossing_legality": 0,
+    "is_passengers": true,
+    "num_characters": 1,
+    "diff_num_characters": 0
+  },
+  {
+    "dimension": "Fitness_Fit",
+    "outcome_id": "2kqZxuQXfGXcXTKMJ",
+    "country": "USA",
+    "scenario_type": "Fitness",
+    "character_group": "Fat",
+    "choice_a": "Save man x1 (pedestrians; car swerves; people difference 0) or let the car continue.",
+    "choice_b": "Let the car continue without intervening.",
+    "present_characters": {
+      "man": 1
+    },
+    "crossing_legality": 1,
+    "is_passengers": false,
+    "num_characters": 1,
+    "diff_num_characters": 0
+  },
+  {
+    "dimension": "Fitness_Fit",
+    "outcome_id": "2GW4SePkbwf7jr6HR",
+    "country": "USA",
+    "scenario_type": "Fitness",
+    "character_group": "Fit",
+    "choice_a": "Save woman x1 (pedestrians; car swerves; people difference 0) or let the car continue.",
+    "choice_b": "Let the car continue without intervening.",
+    "present_characters": {
+      "woman": 1
+    },
+    "crossing_legality": 1,
+    "is_passengers": false,
+    "num_characters": 1,
+    "diff_num_characters": 0
+  },
+  {
+    "dimension": "Fitness_Fit",
+    "outcome_id": "2h4RxznXGTjhF5yk9",
+    "country": "GBR",
+    "scenario_type": "Fitness",
+    "character_group": "Fit",
+    "choice_a": "Save female_athlete x1 (pedestrians; signal status unknown; people difference 0) or let the car continue.",
+    "choice_b": "Let the car continue without intervening.",
+    "present_characters": {
+      "female_athlete": 1
+    },
+    "crossing_legality": 2,
+    "is_passengers": false,
+    "num_characters": 1,
+    "diff_num_characters": 0
+  },
+  {
+    "dimension": "Fitness_Fit",
+    "outcome_id": "2p3Tqxf2qPF7Mqfq4",
+    "country": "AUS",
+    "scenario_type": "Fitness",
+    "character_group": "Fat",
+    "choice_a": "Save large_man x1 (pedestrians; signal status unknown; people difference 0) or let the car continue.",
+    "choice_b": "Let the car continue without intervening.",
+    "present_characters": {
+      "large_man": 1
+    },
+    "crossing_legality": 2,
+    "is_passengers": false,
+    "num_characters": 1,
+    "diff_num_characters": 0
+  },
+  {
+    "dimension": "Fitness_Fit",
+    "outcome_id": "2RkG48vh7Wc5jarQw",
+    "country": "GBR",
+    "scenario_type": "Fitness",
+    "character_group": "Fat",
+    "choice_a": "Save man x1 (pedestrians; signal status unknown; people difference 0) or let the car continue.",
+    "choice_b": "Let the car continue without intervening.",
+    "present_characters": {
+      "man": 1
+    },
+    "crossing_legality": 2,
+    "is_passengers": false,
+    "num_characters": 1,
+    "diff_num_characters": 0
+  },
+  {
+    "dimension": "Fitness_Fit",
+    "outcome_id": "2nioZcZjrHwN7K6Fn",
+    "country": "HUN",
+    "scenario_type": "Fitness",
+    "character_group": "Fat",
+    "choice_a": "Save man x1 (pedestrians; car continues straight; people difference 0) or let the car continue.",
+    "choice_b": "Let the car continue without intervening.",
+    "present_characters": {
+      "man": 1
+    },
+    "crossing_legality": 0,
+    "is_passengers": false,
+    "num_characters": 1,
+    "diff_num_characters": 0
+  },
+  {
+    "dimension": "Gender_Female",
+    "outcome_id": "2bGdLTgcFnerquAh4",
+    "country": "GBR",
+    "scenario_type": "Gender",
+    "character_group": "Female",
+    "choice_a": "Save old_woman x1 (passengers; car continues straight; people difference 0) or let the car continue.",
+    "choice_b": "Let the car continue without intervening.",
+    "present_characters": {
+      "old_woman": 1
+    },
+    "crossing_legality": 0,
+    "is_passengers": true,
+    "num_characters": 1,
+    "diff_num_characters": 0
+  },
+  {
+    "dimension": "Gender_Female",
+    "outcome_id": "27pyJPuz5BLyDY5ra",
+    "country": "USA",
+    "scenario_type": "Gender",
+    "character_group": "Male",
+    "choice_a": "Save large_man x1 (pedestrians; car continues straight; people difference 0) or let the car continue.",
+    "choice_b": "Let the car continue without intervening.",
+    "present_characters": {
+      "large_man": 1
+    },
+    "crossing_legality": 0,
+    "is_passengers": false,
+    "num_characters": 1,
+    "diff_num_characters": 0
+  },
+  {
+    "dimension": "Gender_Female",
+    "outcome_id": "2QadtwxLZb9d2bQJA",
+    "country": "USA",
+    "scenario_type": "Gender",
+    "character_group": "Male",
+    "choice_a": "Save male_doctor x1 (pedestrians; signal status unknown; people difference 0) or let the car continue.",
+    "choice_b": "Let the car continue without intervening.",
+    "present_characters": {
+      "male_doctor": 1
+    },
+    "crossing_legality": 2,
+    "is_passengers": false,
+    "num_characters": 1,
+    "diff_num_characters": 0
+  },
+  {
+    "dimension": "Gender_Female",
+    "outcome_id": "2HYJnJsHGMPJEvwp2",
+    "country": "AUS",
+    "scenario_type": "Gender",
+    "character_group": "Male",
+    "choice_a": "Save male_doctor x1 (passengers; car continues straight; people difference 0) or let the car continue.",
+    "choice_b": "Let the car continue without intervening.",
+    "present_characters": {
+      "male_doctor": 1
+    },
+    "crossing_legality": 0,
+    "is_passengers": true,
+    "num_characters": 1,
+    "diff_num_characters": 0
+  },
+  {
+    "dimension": "Gender_Female",
+    "outcome_id": "2PotdcCjNmED8eiaa",
+    "country": "USA",
+    "scenario_type": "Gender",
+    "character_group": "Male",
+    "choice_a": "Save male_executive x1 (pedestrians; car swerves; people difference 0) or let the car continue.",
+    "choice_b": "Let the car continue without intervening.",
+    "present_characters": {
+      "male_executive": 1
+    },
+    "crossing_legality": 1,
+    "is_passengers": false,
+    "num_characters": 1,
+    "diff_num_characters": 0
+  },
+  {
+    "dimension": "Gender_Female",
+    "outcome_id": "2PWi52FsNnMefH8SN",
+    "country": "HUN",
+    "scenario_type": "Gender",
+    "character_group": "Female",
+    "choice_a": "Save woman x1 (pedestrians; car continues straight; people difference 0) or let the car continue.",
+    "choice_b": "Let the car continue without intervening.",
+    "present_characters": {
+      "woman": 1
+    },
+    "crossing_legality": 0,
+    "is_passengers": false,
+    "num_characters": 1,
+    "diff_num_characters": 0
+  },
+  {
+    "dimension": "Gender_Female",
+    "outcome_id": "2J2vHXcLPurG8CkN4",
+    "country": "USA",
+    "scenario_type": "Gender",
+    "character_group": "Female",
+    "choice_a": "Save female_executive x1 (pedestrians; car continues straight; people difference 0) or let the car continue.",
+    "choice_b": "Let the car continue without intervening.",
+    "present_characters": {
+      "female_executive": 1
+    },
+    "crossing_legality": 0,
+    "is_passengers": false,
+    "num_characters": 1,
+    "diff_num_characters": 0
+  },
+  {
+    "dimension": "Gender_Female",
+    "outcome_id": "2ZEG4skSboCesx7W4",
+    "country": "USA",
+    "scenario_type": "Gender",
+    "character_group": "Male",
+    "choice_a": "Save male_doctor x1 (pedestrians; car swerves; people difference 0) or let the car continue.",
+    "choice_b": "Let the car continue without intervening.",
+    "present_characters": {
+      "male_doctor": 1
+    },
+    "crossing_legality": 1,
+    "is_passengers": false,
+    "num_characters": 1,
+    "diff_num_characters": 0
+  },
+  {
+    "dimension": "Gender_Female",
+    "outcome_id": "23J3PbhpMYywdPc6h",
+    "country": "POL",
+    "scenario_type": "Gender",
+    "character_group": "Male",
+    "choice_a": "Save boy x1 (pedestrians; car continues straight; people difference 0) or let the car continue.",
+    "choice_b": "Let the car continue without intervening.",
+    "present_characters": {
+      "boy": 1
+    },
+    "crossing_legality": 0,
+    "is_passengers": false,
+    "num_characters": 1,
+    "diff_num_characters": 0
+  },
+  {
+    "dimension": "Gender_Female",
+    "outcome_id": "2QPCzCqGL7XkLDDwW",
+    "country": "USA",
+    "scenario_type": "Gender",
+    "character_group": "Female",
+    "choice_a": "Save female_doctor x1 (pedestrians; signal status unknown; people difference 0) or let the car continue.",
+    "choice_b": "Let the car continue without intervening.",
+    "present_characters": {
+      "female_doctor": 1
+    },
+    "crossing_legality": 2,
+    "is_passengers": false,
+    "num_characters": 1,
+    "diff_num_characters": 0
+  },
+  {
+    "dimension": "Gender_Female",
+    "outcome_id": "2352tPdubTZvKDdny",
+    "country": "CHL",
+    "scenario_type": "Gender",
+    "character_group": "Female",
+    "choice_a": "Save girl x1 (pedestrians; signal status unknown; people difference 0) or let the car continue.",
+    "choice_b": "Let the car continue without intervening.",
+    "present_characters": {
+      "girl": 1
+    },
+    "crossing_legality": 2,
+    "is_passengers": false,
+    "num_characters": 1,
+    "diff_num_characters": 0
+  },
+  {
+    "dimension": "Gender_Female",
+    "outcome_id": "2PqZmjM4PTG887LJa",
+    "country": "CAN",
+    "scenario_type": "Gender",
+    "character_group": "Male",
+    "choice_a": "Save male_athlete x1 (passengers; car continues straight; people difference 0) or let the car continue.",
+    "choice_b": "Let the car continue without intervening.",
+    "present_characters": {
+      "male_athlete": 1
+    },
+    "crossing_legality": 0,
+    "is_passengers": true,
+    "num_characters": 1,
+    "diff_num_characters": 0
+  },
+  {
+    "dimension": "Gender_Female",
+    "outcome_id": "2M5DwHgrpv2NZ8m7H",
+    "country": "FRA",
+    "scenario_type": "Gender",
+    "character_group": "Male",
+    "choice_a": "Save large_man x1 (pedestrians; car swerves; people difference 0) or let the car continue.",
+    "choice_b": "Let the car continue without intervening.",
+    "present_characters": {
+      "large_man": 1
+    },
+    "crossing_legality": 1,
+    "is_passengers": false,
+    "num_characters": 1,
+    "diff_num_characters": 0
+  },
+  {
+    "dimension": "Gender_Female",
+    "outcome_id": "2BXnjzGCCxhfjpBWg",
+    "country": "GBR",
+    "scenario_type": "Gender",
+    "character_group": "Female",
+    "choice_a": "Save large_woman x1 (pedestrians; signal status unknown; people difference 0) or let the car continue.",
+    "choice_b": "Let the car continue without intervening.",
+    "present_characters": {
+      "large_woman": 1
+    },
+    "crossing_legality": 2,
+    "is_passengers": false,
+    "num_characters": 1,
+    "diff_num_characters": 0
+  },
+  {
+    "dimension": "Gender_Female",
+    "outcome_id": "287imttBGdMmqZkQk",
+    "country": "PRI",
+    "scenario_type": "Gender",
+    "character_group": "Female",
+    "choice_a": "Save female_athlete x1 (pedestrians; car swerves; people difference 0) or let the car continue.",
+    "choice_b": "Let the car continue without intervening.",
+    "present_characters": {
+      "female_athlete": 1
+    },
+    "crossing_legality": 1,
+    "is_passengers": false,
+    "num_characters": 1,
+    "diff_num_characters": 0
+  },
+  {
+    "dimension": "Gender_Female",
+    "outcome_id": "26jxx3erbTSFpHAAS",
+    "country": "TWN",
+    "scenario_type": "Gender",
+    "character_group": "Male",
+    "choice_a": "Save large_man x1 (pedestrians; signal status unknown; people difference 0) or let the car continue.",
+    "choice_b": "Let the car continue without intervening.",
+    "present_characters": {
+      "large_man": 1
+    },
+    "crossing_legality": 2,
+    "is_passengers": false,
+    "num_characters": 1,
+    "diff_num_characters": 0
+  },
+  {
+    "dimension": "Gender_Female",
+    "outcome_id": "2EaWdmARKvWdznk3x",
+    "country": "NLD",
+    "scenario_type": "Gender",
+    "character_group": "Male",
+    "choice_a": "Save old_man x1 (pedestrians; car continues straight; people difference 0) or let the car continue.",
+    "choice_b": "Let the car continue without intervening.",
+    "present_characters": {
+      "old_man": 1
+    },
+    "crossing_legality": 0,
+    "is_passengers": false,
+    "num_characters": 1,
+    "diff_num_characters": 0
+  },
+  {
+    "dimension": "Gender_Female",
+    "outcome_id": "24Rx3dSBte7gTrjcy",
+    "country": "DEU",
+    "scenario_type": "Gender",
+    "character_group": "Male",
+    "choice_a": "Save boy x1 (pedestrians; signal status unknown; people difference 0) or let the car continue.",
+    "choice_b": "Let the car continue without intervening.",
+    "present_characters": {
+      "boy": 1
+    },
+    "crossing_legality": 2,
+    "is_passengers": false,
+    "num_characters": 1,
+    "diff_num_characters": 0
+  },
+  {
+    "dimension": "Gender_Female",
+    "outcome_id": "2XpMz55nYz7oueYRh",
+    "country": "BRA",
+    "scenario_type": "Gender",
+    "character_group": "Male",
+    "choice_a": "Save large_man x1 (pedestrians; car continues straight; people difference 0) or let the car continue.",
+    "choice_b": "Let the car continue without intervening.",
+    "present_characters": {
+      "large_man": 1
+    },
+    "crossing_legality": 0,
+    "is_passengers": false,
+    "num_characters": 1,
+    "diff_num_characters": 0
+  },
+  {
+    "dimension": "Gender_Female",
+    "outcome_id": "2b9cKSMZDPqFuhLrQ",
+    "country": "CAN",
+    "scenario_type": "Gender",
+    "character_group": "Female",
+    "choice_a": "Save large_woman x1 (passengers; car continues straight; people difference 0) or let the car continue.",
+    "choice_b": "Let the car continue without intervening.",
+    "present_characters": {
+      "large_woman": 1
+    },
+    "crossing_legality": 0,
+    "is_passengers": true,
+    "num_characters": 1,
+    "diff_num_characters": 0
+  },
+  {
+    "dimension": "Gender_Female",
+    "outcome_id": "2DNdeseFMgs9yoAg2",
+    "country": "BRA",
+    "scenario_type": "Gender",
+    "character_group": "Female",
+    "choice_a": "Save large_woman x1 (pedestrians; car continues straight; people difference 0) or let the car continue.",
+    "choice_b": "Let the car continue without intervening.",
+    "present_characters": {
+      "large_woman": 1
+    },
+    "crossing_legality": 0,
+    "is_passengers": false,
+    "num_characters": 1,
+    "diff_num_characters": 0
+  },
+  {
+    "dimension": "Gender_Female",
+    "outcome_id": "2Y8PvJCKN9Anfzogy",
+    "country": "BRA",
+    "scenario_type": "Gender",
+    "character_group": "Female",
+    "choice_a": "Save female_doctor x1 (pedestrians; signal status unknown; people difference 0) or let the car continue.",
+    "choice_b": "Let the car continue without intervening.",
+    "present_characters": {
+      "female_doctor": 1
+    },
+    "crossing_legality": 2,
+    "is_passengers": false,
+    "num_characters": 1,
+    "diff_num_characters": 0
+  },
+  {
+    "dimension": "Gender_Female",
+    "outcome_id": "2d4sGKrrS2mo9wfQZ",
+    "country": "FRA",
+    "scenario_type": "Gender",
+    "character_group": "Male",
+    "choice_a": "Save large_man x1 (pedestrians; car continues straight; people difference 0) or let the car continue.",
+    "choice_b": "Let the car continue without intervening.",
+    "present_characters": {
+      "large_man": 1
+    },
+    "crossing_legality": 0,
+    "is_passengers": false,
+    "num_characters": 1,
+    "diff_num_characters": 0
+  },
+  {
+    "dimension": "Gender_Female",
+    "outcome_id": "2LX9GFZhssnDfBbBj",
+    "country": "USA",
+    "scenario_type": "Gender",
+    "character_group": "Male",
+    "choice_a": "Save old_man x1 (pedestrians; car continues straight; people difference 0) or let the car continue.",
+    "choice_b": "Let the car continue without intervening.",
+    "present_characters": {
+      "old_man": 1
+    },
+    "crossing_legality": 0,
+    "is_passengers": false,
+    "num_characters": 1,
+    "diff_num_characters": 0
+  },
+  {
+    "dimension": "Gender_Female",
+    "outcome_id": "2cEsL8ZuLfdnSoyDe",
+    "country": "FIN",
+    "scenario_type": "Gender",
+    "character_group": "Male",
+    "choice_a": "Save old_man x1 (pedestrians; signal status unknown; people difference 0) or let the car continue.",
+    "choice_b": "Let the car continue without intervening.",
+    "present_characters": {
+      "old_man": 1
+    },
+    "crossing_legality": 2,
+    "is_passengers": false,
+    "num_characters": 1,
+    "diff_num_characters": 0
+  },
+  {
+    "dimension": "Gender_Male",
+    "outcome_id": "2bGdLTgcFnerquAh4",
+    "country": "GBR",
+    "scenario_type": "Gender",
+    "character_group": "Female",
+    "choice_a": "Save old_woman x1 (passengers; car continues straight; people difference 0) or let the car continue.",
+    "choice_b": "Let the car continue without intervening.",
+    "present_characters": {
+      "old_woman": 1
+    },
+    "crossing_legality": 0,
+    "is_passengers": true,
+    "num_characters": 1,
+    "diff_num_characters": 0
+  },
+  {
+    "dimension": "Gender_Male",
+    "outcome_id": "27pyJPuz5BLyDY5ra",
+    "country": "USA",
+    "scenario_type": "Gender",
+    "character_group": "Male",
+    "choice_a": "Save large_man x1 (pedestrians; car continues straight; people difference 0) or let the car continue.",
+    "choice_b": "Let the car continue without intervening.",
+    "present_characters": {
+      "large_man": 1
+    },
+    "crossing_legality": 0,
+    "is_passengers": false,
+    "num_characters": 1,
+    "diff_num_characters": 0
+  },
+  {
+    "dimension": "Gender_Male",
+    "outcome_id": "2QadtwxLZb9d2bQJA",
+    "country": "USA",
+    "scenario_type": "Gender",
+    "character_group": "Male",
+    "choice_a": "Save male_doctor x1 (pedestrians; signal status unknown; people difference 0) or let the car continue.",
+    "choice_b": "Let the car continue without intervening.",
+    "present_characters": {
+      "male_doctor": 1
+    },
+    "crossing_legality": 2,
+    "is_passengers": false,
+    "num_characters": 1,
+    "diff_num_characters": 0
+  },
+  {
+    "dimension": "Gender_Male",
+    "outcome_id": "2HYJnJsHGMPJEvwp2",
+    "country": "AUS",
+    "scenario_type": "Gender",
+    "character_group": "Male",
+    "choice_a": "Save male_doctor x1 (passengers; car continues straight; people difference 0) or let the car continue.",
+    "choice_b": "Let the car continue without intervening.",
+    "present_characters": {
+      "male_doctor": 1
+    },
+    "crossing_legality": 0,
+    "is_passengers": true,
+    "num_characters": 1,
+    "diff_num_characters": 0
+  },
+  {
+    "dimension": "Gender_Male",
+    "outcome_id": "2PotdcCjNmED8eiaa",
+    "country": "USA",
+    "scenario_type": "Gender",
+    "character_group": "Male",
+    "choice_a": "Save male_executive x1 (pedestrians; car swerves; people difference 0) or let the car continue.",
+    "choice_b": "Let the car continue without intervening.",
+    "present_characters": {
+      "male_executive": 1
+    },
+    "crossing_legality": 1,
+    "is_passengers": false,
+    "num_characters": 1,
+    "diff_num_characters": 0
+  },
+  {
+    "dimension": "Gender_Male",
+    "outcome_id": "2PWi52FsNnMefH8SN",
+    "country": "HUN",
+    "scenario_type": "Gender",
+    "character_group": "Female",
+    "choice_a": "Save woman x1 (pedestrians; car continues straight; people difference 0) or let the car continue.",
+    "choice_b": "Let the car continue without intervening.",
+    "present_characters": {
+      "woman": 1
+    },
+    "crossing_legality": 0,
+    "is_passengers": false,
+    "num_characters": 1,
+    "diff_num_characters": 0
+  },
+  {
+    "dimension": "Gender_Male",
+    "outcome_id": "2J2vHXcLPurG8CkN4",
+    "country": "USA",
+    "scenario_type": "Gender",
+    "character_group": "Female",
+    "choice_a": "Save female_executive x1 (pedestrians; car continues straight; people difference 0) or let the car continue.",
+    "choice_b": "Let the car continue without intervening.",
+    "present_characters": {
+      "female_executive": 1
+    },
+    "crossing_legality": 0,
+    "is_passengers": false,
+    "num_characters": 1,
+    "diff_num_characters": 0
+  },
+  {
+    "dimension": "Gender_Male",
+    "outcome_id": "2ZEG4skSboCesx7W4",
+    "country": "USA",
+    "scenario_type": "Gender",
+    "character_group": "Male",
+    "choice_a": "Save male_doctor x1 (pedestrians; car swerves; people difference 0) or let the car continue.",
+    "choice_b": "Let the car continue without intervening.",
+    "present_characters": {
+      "male_doctor": 1
+    },
+    "crossing_legality": 1,
+    "is_passengers": false,
+    "num_characters": 1,
+    "diff_num_characters": 0
+  },
+  {
+    "dimension": "Gender_Male",
+    "outcome_id": "23J3PbhpMYywdPc6h",
+    "country": "POL",
+    "scenario_type": "Gender",
+    "character_group": "Male",
+    "choice_a": "Save boy x1 (pedestrians; car continues straight; people difference 0) or let the car continue.",
+    "choice_b": "Let the car continue without intervening.",
+    "present_characters": {
+      "boy": 1
+    },
+    "crossing_legality": 0,
+    "is_passengers": false,
+    "num_characters": 1,
+    "diff_num_characters": 0
+  },
+  {
+    "dimension": "Gender_Male",
+    "outcome_id": "2QPCzCqGL7XkLDDwW",
+    "country": "USA",
+    "scenario_type": "Gender",
+    "character_group": "Female",
+    "choice_a": "Save female_doctor x1 (pedestrians; signal status unknown; people difference 0) or let the car continue.",
+    "choice_b": "Let the car continue without intervening.",
+    "present_characters": {
+      "female_doctor": 1
+    },
+    "crossing_legality": 2,
+    "is_passengers": false,
+    "num_characters": 1,
+    "diff_num_characters": 0
+  },
+  {
+    "dimension": "Gender_Male",
+    "outcome_id": "2352tPdubTZvKDdny",
+    "country": "CHL",
+    "scenario_type": "Gender",
+    "character_group": "Female",
+    "choice_a": "Save girl x1 (pedestrians; signal status unknown; people difference 0) or let the car continue.",
+    "choice_b": "Let the car continue without intervening.",
+    "present_characters": {
+      "girl": 1
+    },
+    "crossing_legality": 2,
+    "is_passengers": false,
+    "num_characters": 1,
+    "diff_num_characters": 0
+  },
+  {
+    "dimension": "Gender_Male",
+    "outcome_id": "2PqZmjM4PTG887LJa",
+    "country": "CAN",
+    "scenario_type": "Gender",
+    "character_group": "Male",
+    "choice_a": "Save male_athlete x1 (passengers; car continues straight; people difference 0) or let the car continue.",
+    "choice_b": "Let the car continue without intervening.",
+    "present_characters": {
+      "male_athlete": 1
+    },
+    "crossing_legality": 0,
+    "is_passengers": true,
+    "num_characters": 1,
+    "diff_num_characters": 0
+  },
+  {
+    "dimension": "Gender_Male",
+    "outcome_id": "2M5DwHgrpv2NZ8m7H",
+    "country": "FRA",
+    "scenario_type": "Gender",
+    "character_group": "Male",
+    "choice_a": "Save large_man x1 (pedestrians; car swerves; people difference 0) or let the car continue.",
+    "choice_b": "Let the car continue without intervening.",
+    "present_characters": {
+      "large_man": 1
+    },
+    "crossing_legality": 1,
+    "is_passengers": false,
+    "num_characters": 1,
+    "diff_num_characters": 0
+  },
+  {
+    "dimension": "Gender_Male",
+    "outcome_id": "2BXnjzGCCxhfjpBWg",
+    "country": "GBR",
+    "scenario_type": "Gender",
+    "character_group": "Female",
+    "choice_a": "Save large_woman x1 (pedestrians; signal status unknown; people difference 0) or let the car continue.",
+    "choice_b": "Let the car continue without intervening.",
+    "present_characters": {
+      "large_woman": 1
+    },
+    "crossing_legality": 2,
+    "is_passengers": false,
+    "num_characters": 1,
+    "diff_num_characters": 0
+  },
+  {
+    "dimension": "Gender_Male",
+    "outcome_id": "287imttBGdMmqZkQk",
+    "country": "PRI",
+    "scenario_type": "Gender",
+    "character_group": "Female",
+    "choice_a": "Save female_athlete x1 (pedestrians; car swerves; people difference 0) or let the car continue.",
+    "choice_b": "Let the car continue without intervening.",
+    "present_characters": {
+      "female_athlete": 1
+    },
+    "crossing_legality": 1,
+    "is_passengers": false,
+    "num_characters": 1,
+    "diff_num_characters": 0
+  },
+  {
+    "dimension": "Gender_Male",
+    "outcome_id": "26jxx3erbTSFpHAAS",
+    "country": "TWN",
+    "scenario_type": "Gender",
+    "character_group": "Male",
+    "choice_a": "Save large_man x1 (pedestrians; signal status unknown; people difference 0) or let the car continue.",
+    "choice_b": "Let the car continue without intervening.",
+    "present_characters": {
+      "large_man": 1
+    },
+    "crossing_legality": 2,
+    "is_passengers": false,
+    "num_characters": 1,
+    "diff_num_characters": 0
+  },
+  {
+    "dimension": "Gender_Male",
+    "outcome_id": "2EaWdmARKvWdznk3x",
+    "country": "NLD",
+    "scenario_type": "Gender",
+    "character_group": "Male",
+    "choice_a": "Save old_man x1 (pedestrians; car continues straight; people difference 0) or let the car continue.",
+    "choice_b": "Let the car continue without intervening.",
+    "present_characters": {
+      "old_man": 1
+    },
+    "crossing_legality": 0,
+    "is_passengers": false,
+    "num_characters": 1,
+    "diff_num_characters": 0
+  },
+  {
+    "dimension": "Gender_Male",
+    "outcome_id": "24Rx3dSBte7gTrjcy",
+    "country": "DEU",
+    "scenario_type": "Gender",
+    "character_group": "Male",
+    "choice_a": "Save boy x1 (pedestrians; signal status unknown; people difference 0) or let the car continue.",
+    "choice_b": "Let the car continue without intervening.",
+    "present_characters": {
+      "boy": 1
+    },
+    "crossing_legality": 2,
+    "is_passengers": false,
+    "num_characters": 1,
+    "diff_num_characters": 0
+  },
+  {
+    "dimension": "Gender_Male",
+    "outcome_id": "2XpMz55nYz7oueYRh",
+    "country": "BRA",
+    "scenario_type": "Gender",
+    "character_group": "Male",
+    "choice_a": "Save large_man x1 (pedestrians; car continues straight; people difference 0) or let the car continue.",
+    "choice_b": "Let the car continue without intervening.",
+    "present_characters": {
+      "large_man": 1
+    },
+    "crossing_legality": 0,
+    "is_passengers": false,
+    "num_characters": 1,
+    "diff_num_characters": 0
+  },
+  {
+    "dimension": "Gender_Male",
+    "outcome_id": "2b9cKSMZDPqFuhLrQ",
+    "country": "CAN",
+    "scenario_type": "Gender",
+    "character_group": "Female",
+    "choice_a": "Save large_woman x1 (passengers; car continues straight; people difference 0) or let the car continue.",
+    "choice_b": "Let the car continue without intervening.",
+    "present_characters": {
+      "large_woman": 1
+    },
+    "crossing_legality": 0,
+    "is_passengers": true,
+    "num_characters": 1,
+    "diff_num_characters": 0
+  },
+  {
+    "dimension": "Gender_Male",
+    "outcome_id": "2DNdeseFMgs9yoAg2",
+    "country": "BRA",
+    "scenario_type": "Gender",
+    "character_group": "Female",
+    "choice_a": "Save large_woman x1 (pedestrians; car continues straight; people difference 0) or let the car continue.",
+    "choice_b": "Let the car continue without intervening.",
+    "present_characters": {
+      "large_woman": 1
+    },
+    "crossing_legality": 0,
+    "is_passengers": false,
+    "num_characters": 1,
+    "diff_num_characters": 0
+  },
+  {
+    "dimension": "Gender_Male",
+    "outcome_id": "2Y8PvJCKN9Anfzogy",
+    "country": "BRA",
+    "scenario_type": "Gender",
+    "character_group": "Female",
+    "choice_a": "Save female_doctor x1 (pedestrians; signal status unknown; people difference 0) or let the car continue.",
+    "choice_b": "Let the car continue without intervening.",
+    "present_characters": {
+      "female_doctor": 1
+    },
+    "crossing_legality": 2,
+    "is_passengers": false,
+    "num_characters": 1,
+    "diff_num_characters": 0
+  },
+  {
+    "dimension": "Gender_Male",
+    "outcome_id": "2d4sGKrrS2mo9wfQZ",
+    "country": "FRA",
+    "scenario_type": "Gender",
+    "character_group": "Male",
+    "choice_a": "Save large_man x1 (pedestrians; car continues straight; people difference 0) or let the car continue.",
+    "choice_b": "Let the car continue without intervening.",
+    "present_characters": {
+      "large_man": 1
+    },
+    "crossing_legality": 0,
+    "is_passengers": false,
+    "num_characters": 1,
+    "diff_num_characters": 0
+  },
+  {
+    "dimension": "Gender_Male",
+    "outcome_id": "2LX9GFZhssnDfBbBj",
+    "country": "USA",
+    "scenario_type": "Gender",
+    "character_group": "Male",
+    "choice_a": "Save old_man x1 (pedestrians; car continues straight; people difference 0) or let the car continue.",
+    "choice_b": "Let the car continue without intervening.",
+    "present_characters": {
+      "old_man": 1
+    },
+    "crossing_legality": 0,
+    "is_passengers": false,
+    "num_characters": 1,
+    "diff_num_characters": 0
+  },
+  {
+    "dimension": "Gender_Male",
+    "outcome_id": "2cEsL8ZuLfdnSoyDe",
+    "country": "FIN",
+    "scenario_type": "Gender",
+    "character_group": "Male",
+    "choice_a": "Save old_man x1 (pedestrians; signal status unknown; people difference 0) or let the car continue.",
+    "choice_b": "Let the car continue without intervening.",
+    "present_characters": {
+      "old_man": 1
+    },
+    "crossing_legality": 2,
+    "is_passengers": false,
+    "num_characters": 1,
+    "diff_num_characters": 0
+  },
+  {
+    "dimension": "Social Status_High",
+    "outcome_id": "2vvSnt2WfwExLgF8q",
+    "country": "ESP",
+    "scenario_type": "Social Status",
+    "character_group": "Low",
+    "choice_a": "Save man x1 (pedestrians; signal status unknown; people difference 0) or let the car continue.",
+    "choice_b": "Let the car continue without intervening.",
+    "present_characters": {
+      "man": 1
+    },
+    "crossing_legality": 2,
+    "is_passengers": false,
+    "num_characters": 1,
+    "diff_num_characters": 0
+  },
+  {
+    "dimension": "Social Status_High",
+    "outcome_id": "2BTSCb95ynyynDhWh",
+    "country": "ISR",
+    "scenario_type": "Social Status",
+    "character_group": "High",
+    "choice_a": "Save woman x1 (pedestrians; car continues straight; people difference 0) or let the car continue.",
+    "choice_b": "Let the car continue without intervening.",
+    "present_characters": {
+      "woman": 1
+    },
+    "crossing_legality": 0,
+    "is_passengers": false,
+    "num_characters": 1,
+    "diff_num_characters": 0
+  },
+  {
+    "dimension": "Social Status_High",
+    "outcome_id": "2gJDaiytD66RJ8Ei7",
+    "country": "CHE",
+    "scenario_type": "Social Status",
+    "character_group": "High",
+    "choice_a": "Save man x1 (pedestrians; car continues straight; people difference 0) or let the car continue.",
+    "choice_b": "Let the car continue without intervening.",
+    "present_characters": {
+      "man": 1
+    },
+    "crossing_legality": 0,
+    "is_passengers": false,
+    "num_characters": 1,
+    "diff_num_characters": 0
+  },
+  {
+    "dimension": "Social Status_High",
+    "outcome_id": "2Stvr45dFAFtJjesy",
+    "country": "IDN",
+    "scenario_type": "Social Status",
+    "character_group": "High",
+    "choice_a": "Save woman x1 (pedestrians; car continues straight; people difference 0) or let the car continue.",
+    "choice_b": "Let the car continue without intervening.",
+    "present_characters": {
+      "woman": 1
+    },
+    "crossing_legality": 0,
+    "is_passengers": false,
+    "num_characters": 1,
+    "diff_num_characters": 0
+  },
+  {
+    "dimension": "Social Status_High",
+    "outcome_id": "2epwS552NcYQSh74j",
+    "country": "CHE",
+    "scenario_type": "Social Status",
+    "character_group": "High",
+    "choice_a": "Save woman x1 (pedestrians; car continues straight; people difference 0) or let the car continue.",
+    "choice_b": "Let the car continue without intervening.",
+    "present_characters": {
+      "woman": 1
+    },
+    "crossing_legality": 0,
+    "is_passengers": false,
+    "num_characters": 1,
+    "diff_num_characters": 0
+  },
+  {
+    "dimension": "Social Status_High",
+    "outcome_id": "2eHnwGqdo5HLY3zX6",
+    "country": "USA",
+    "scenario_type": "Social Status",
+    "character_group": "Low",
+    "choice_a": "Save homeless x1 (pedestrians; signal status unknown; people difference 0) or let the car continue.",
+    "choice_b": "Let the car continue without intervening.",
+    "present_characters": {
+      "homeless": 1
+    },
+    "crossing_legality": 2,
+    "is_passengers": false,
+    "num_characters": 1,
+    "diff_num_characters": 0
+  },
+  {
+    "dimension": "Social Status_High",
+    "outcome_id": "2TkXyNRomsKbu8m5P",
+    "country": "CAN",
+    "scenario_type": "Social Status",
+    "character_group": "High",
+    "choice_a": "Save woman x1 (pedestrians; car swerves; people difference 0) or let the car continue.",
+    "choice_b": "Let the car continue without intervening.",
+    "present_characters": {
+      "woman": 1
+    },
+    "crossing_legality": 1,
+    "is_passengers": false,
+    "num_characters": 1,
+    "diff_num_characters": 0
+  },
+  {
+    "dimension": "Social Status_High",
+    "outcome_id": "2rzFhFFh27SdFXQJF",
+    "country": "DEU",
+    "scenario_type": "Social Status",
+    "character_group": "High",
+    "choice_a": "Save man x1 (pedestrians; car continues straight; people difference 0) or let the car continue.",
+    "choice_b": "Let the car continue without intervening.",
+    "present_characters": {
+      "man": 1
+    },
+    "crossing_legality": 0,
+    "is_passengers": false,
+    "num_characters": 1,
+    "diff_num_characters": 0
+  },
+  {
+    "dimension": "Social Status_High",
+    "outcome_id": "23sAqCdQ38abf8Su4",
+    "country": "NLD",
+    "scenario_type": "Social Status",
+    "character_group": "High",
+    "choice_a": "Save woman x1 (pedestrians; car swerves; people difference 0) or let the car continue.",
+    "choice_b": "Let the car continue without intervening.",
+    "present_characters": {
+      "woman": 1
+    },
+    "crossing_legality": 1,
+    "is_passengers": false,
+    "num_characters": 1,
+    "diff_num_characters": 0
+  },
+  {
+    "dimension": "Social Status_High",
+    "outcome_id": "2fuoznR2vMyac4QNp",
+    "country": "ESP",
+    "scenario_type": "Social Status",
+    "character_group": "Low",
+    "choice_a": "Save homeless x1 (passengers; car continues straight; people difference 0) or let the car continue.",
+    "choice_b": "Let the car continue without intervening.",
+    "present_characters": {
+      "homeless": 1
+    },
+    "crossing_legality": 0,
+    "is_passengers": true,
+    "num_characters": 1,
+    "diff_num_characters": 0
+  },
+  {
+    "dimension": "Social Status_High",
+    "outcome_id": "23iTj45EKAsxCc7LS",
+    "country": "DNK",
+    "scenario_type": "Social Status",
+    "character_group": "High",
+    "choice_a": "Save male_executive x1 (pedestrians; car continues straight; people difference 0) or let the car continue.",
+    "choice_b": "Let the car continue without intervening.",
+    "present_characters": {
+      "male_executive": 1
+    },
+    "crossing_legality": 0,
+    "is_passengers": false,
+    "num_characters": 1,
+    "diff_num_characters": 0
+  },
+  {
+    "dimension": "Social Status_High",
+    "outcome_id": "2esDj753W4wqHfXBj",
+    "country": "NOR",
+    "scenario_type": "Social Status",
+    "character_group": "High",
+    "choice_a": "Save woman x1 (passengers; car continues straight; people difference 0) or let the car continue.",
+    "choice_b": "Let the car continue without intervening.",
+    "present_characters": {
+      "woman": 1
+    },
+    "crossing_legality": 0,
+    "is_passengers": true,
+    "num_characters": 1,
+    "diff_num_characters": 0
+  },
+  {
+    "dimension": "Social Status_High",
+    "outcome_id": "2aJSgPbsr5vZ4G34u",
+    "country": "FRA",
+    "scenario_type": "Social Status",
+    "character_group": "Low",
+    "choice_a": "Save man x1 (pedestrians; car continues straight; people difference 0) or let the car continue.",
+    "choice_b": "Let the car continue without intervening.",
+    "present_characters": {
+      "man": 1
+    },
+    "crossing_legality": 0,
+    "is_passengers": false,
+    "num_characters": 1,
+    "diff_num_characters": 0
+  },
+  {
+    "dimension": "Social Status_High",
+    "outcome_id": "2HhjRyDbsGw2w5d7z",
+    "country": "GBR",
+    "scenario_type": "Social Status",
+    "character_group": "Low",
+    "choice_a": "Save woman x1 (passengers; car continues straight; people difference 0) or let the car continue.",
+    "choice_b": "Let the car continue without intervening.",
+    "present_characters": {
+      "woman": 1
+    },
+    "crossing_legality": 0,
+    "is_passengers": true,
+    "num_characters": 1,
+    "diff_num_characters": 0
+  },
+  {
+    "dimension": "Social Status_High",
+    "outcome_id": "2CCDiMLzcRQsfEC4e",
+    "country": "RUS",
+    "scenario_type": "Social Status",
+    "character_group": "Low",
+    "choice_a": "Save man x1 (passengers; car continues straight; people difference 0) or let the car continue.",
+    "choice_b": "Let the car continue without intervening.",
+    "present_characters": {
+      "man": 1
+    },
+    "crossing_legality": 0,
+    "is_passengers": true,
+    "num_characters": 1,
+    "diff_num_characters": 0
+  },
+  {
+    "dimension": "Social Status_High",
+    "outcome_id": "29MejyQsiMZsMYQFP",
+    "country": "USA",
+    "scenario_type": "Social Status",
+    "character_group": "High",
+    "choice_a": "Save man x1 (pedestrians; car continues straight; people difference 0) or let the car continue.",
+    "choice_b": "Let the car continue without intervening.",
+    "present_characters": {
+      "man": 1
+    },
+    "crossing_legality": 0,
+    "is_passengers": false,
+    "num_characters": 1,
+    "diff_num_characters": 0
+  },
+  {
+    "dimension": "Social Status_High",
+    "outcome_id": "2NTXZwnB698cTwPB4",
+    "country": "DEU",
+    "scenario_type": "Social Status",
+    "character_group": "High",
+    "choice_a": "Save woman x1 (pedestrians; signal status unknown; people difference 0) or let the car continue.",
+    "choice_b": "Let the car continue without intervening.",
+    "present_characters": {
+      "woman": 1
+    },
+    "crossing_legality": 2,
+    "is_passengers": false,
+    "num_characters": 1,
+    "diff_num_characters": 0
+  },
+  {
+    "dimension": "Social Status_High",
+    "outcome_id": "25f2FQbE7Z99de5qy",
+    "country": "USA",
+    "scenario_type": "Social Status",
+    "character_group": "High",
+    "choice_a": "Save female_executive x1 (pedestrians; car continues straight; people difference 0) or let the car continue.",
+    "choice_b": "Let the car continue without intervening.",
+    "present_characters": {
+      "female_executive": 1
+    },
+    "crossing_legality": 0,
+    "is_passengers": false,
+    "num_characters": 1,
+    "diff_num_characters": 0
+  },
+  {
+    "dimension": "Social Status_High",
+    "outcome_id": "2peGTjCbemoge7Pdg",
+    "country": "CHE",
+    "scenario_type": "Social Status",
+    "character_group": "Low",
+    "choice_a": "Save homeless x1 (pedestrians; car continues straight; people difference 0) or let the car continue.",
+    "choice_b": "Let the car continue without intervening.",
+    "present_characters": {
+      "homeless": 1
+    },
+    "crossing_legality": 0,
+    "is_passengers": false,
+    "num_characters": 1,
+    "diff_num_characters": 0
+  },
+  {
+    "dimension": "Social Status_High",
+    "outcome_id": "2vjv9ZSGNKLu6d6Hy",
+    "country": "GBR",
+    "scenario_type": "Social Status",
+    "character_group": "High",
+    "choice_a": "Save woman x1 (pedestrians; car swerves; people difference 0) or let the car continue.",
+    "choice_b": "Let the car continue without intervening.",
+    "present_characters": {
+      "woman": 1
+    },
+    "crossing_legality": 1,
+    "is_passengers": false,
+    "num_characters": 1,
+    "diff_num_characters": 0
+  },
+  {
+    "dimension": "Social Status_High",
+    "outcome_id": "2LQsSW9ZGMFZbfPXo",
+    "country": "BRA",
+    "scenario_type": "Social Status",
+    "character_group": "Low",
+    "choice_a": "Save man x1 (passengers; car continues straight; people difference 0) or let the car continue.",
+    "choice_b": "Let the car continue without intervening.",
+    "present_characters": {
+      "man": 1
+    },
+    "crossing_legality": 0,
+    "is_passengers": true,
+    "num_characters": 1,
+    "diff_num_characters": 0
+  },
+  {
+    "dimension": "Social Status_High",
+    "outcome_id": "2q8iz2ZLe7rYSh3pP",
+    "country": "VNM",
+    "scenario_type": "Social Status",
+    "character_group": "High",
+    "choice_a": "Save man x1 (passengers; car continues straight; people difference 0) or let the car continue.",
+    "choice_b": "Let the car continue without intervening.",
+    "present_characters": {
+      "man": 1
+    },
+    "crossing_legality": 0,
+    "is_passengers": true,
+    "num_characters": 1,
+    "diff_num_characters": 0
+  },
+  {
+    "dimension": "Social Status_High",
+    "outcome_id": "2zFTositLxcGQYY5M",
+    "country": "USA",
+    "scenario_type": "Social Status",
+    "character_group": "Low",
+    "choice_a": "Save homeless x1 (pedestrians; car swerves; people difference 0) or let the car continue.",
+    "choice_b": "Let the car continue without intervening.",
+    "present_characters": {
+      "homeless": 1
+    },
+    "crossing_legality": 1,
+    "is_passengers": false,
+    "num_characters": 1,
+    "diff_num_characters": 0
+  },
+  {
+    "dimension": "Social Status_High",
+    "outcome_id": "2ZFwM9vWqk38JcYSd",
+    "country": "USA",
+    "scenario_type": "Social Status",
+    "character_group": "High",
+    "choice_a": "Save man x1 (pedestrians; car continues straight; people difference 0) or let the car continue.",
+    "choice_b": "Let the car continue without intervening.",
+    "present_characters": {
+      "man": 1
+    },
+    "crossing_legality": 0,
+    "is_passengers": false,
+    "num_characters": 1,
+    "diff_num_characters": 0
+  },
+  {
+    "dimension": "Social Status_High",
+    "outcome_id": "2xdkbgn7fj864Gavg",
+    "country": "CAN",
+    "scenario_type": "Social Status",
+    "character_group": "Low",
+    "choice_a": "Save homeless x1 (passengers; car continues straight; people difference 0) or let the car continue.",
+    "choice_b": "Let the car continue without intervening.",
+    "present_characters": {
+      "homeless": 1
+    },
+    "crossing_legality": 0,
+    "is_passengers": true,
+    "num_characters": 1,
+    "diff_num_characters": 0
+  },
+  {
+    "dimension": "Social Status_Low",
+    "outcome_id": "2vvSnt2WfwExLgF8q",
+    "country": "ESP",
+    "scenario_type": "Social Status",
+    "character_group": "Low",
+    "choice_a": "Save man x1 (pedestrians; signal status unknown; people difference 0) or let the car continue.",
+    "choice_b": "Let the car continue without intervening.",
+    "present_characters": {
+      "man": 1
+    },
+    "crossing_legality": 2,
+    "is_passengers": false,
+    "num_characters": 1,
+    "diff_num_characters": 0
+  },
+  {
+    "dimension": "Social Status_Low",
+    "outcome_id": "2BTSCb95ynyynDhWh",
+    "country": "ISR",
+    "scenario_type": "Social Status",
+    "character_group": "High",
+    "choice_a": "Save woman x1 (pedestrians; car continues straight; people difference 0) or let the car continue.",
+    "choice_b": "Let the car continue without intervening.",
+    "present_characters": {
+      "woman": 1
+    },
+    "crossing_legality": 0,
+    "is_passengers": false,
+    "num_characters": 1,
+    "diff_num_characters": 0
+  },
+  {
+    "dimension": "Social Status_Low",
+    "outcome_id": "2gJDaiytD66RJ8Ei7",
+    "country": "CHE",
+    "scenario_type": "Social Status",
+    "character_group": "High",
+    "choice_a": "Save man x1 (pedestrians; car continues straight; people difference 0) or let the car continue.",
+    "choice_b": "Let the car continue without intervening.",
+    "present_characters": {
+      "man": 1
+    },
+    "crossing_legality": 0,
+    "is_passengers": false,
+    "num_characters": 1,
+    "diff_num_characters": 0
+  },
+  {
+    "dimension": "Social Status_Low",
+    "outcome_id": "2Stvr45dFAFtJjesy",
+    "country": "IDN",
+    "scenario_type": "Social Status",
+    "character_group": "High",
+    "choice_a": "Save woman x1 (pedestrians; car continues straight; people difference 0) or let the car continue.",
+    "choice_b": "Let the car continue without intervening.",
+    "present_characters": {
+      "woman": 1
+    },
+    "crossing_legality": 0,
+    "is_passengers": false,
+    "num_characters": 1,
+    "diff_num_characters": 0
+  },
+  {
+    "dimension": "Social Status_Low",
+    "outcome_id": "2epwS552NcYQSh74j",
+    "country": "CHE",
+    "scenario_type": "Social Status",
+    "character_group": "High",
+    "choice_a": "Save woman x1 (pedestrians; car continues straight; people difference 0) or let the car continue.",
+    "choice_b": "Let the car continue without intervening.",
+    "present_characters": {
+      "woman": 1
+    },
+    "crossing_legality": 0,
+    "is_passengers": false,
+    "num_characters": 1,
+    "diff_num_characters": 0
+  },
+  {
+    "dimension": "Social Status_Low",
+    "outcome_id": "2eHnwGqdo5HLY3zX6",
+    "country": "USA",
+    "scenario_type": "Social Status",
+    "character_group": "Low",
+    "choice_a": "Save homeless x1 (pedestrians; signal status unknown; people difference 0) or let the car continue.",
+    "choice_b": "Let the car continue without intervening.",
+    "present_characters": {
+      "homeless": 1
+    },
+    "crossing_legality": 2,
+    "is_passengers": false,
+    "num_characters": 1,
+    "diff_num_characters": 0
+  },
+  {
+    "dimension": "Social Status_Low",
+    "outcome_id": "2TkXyNRomsKbu8m5P",
+    "country": "CAN",
+    "scenario_type": "Social Status",
+    "character_group": "High",
+    "choice_a": "Save woman x1 (pedestrians; car swerves; people difference 0) or let the car continue.",
+    "choice_b": "Let the car continue without intervening.",
+    "present_characters": {
+      "woman": 1
+    },
+    "crossing_legality": 1,
+    "is_passengers": false,
+    "num_characters": 1,
+    "diff_num_characters": 0
+  },
+  {
+    "dimension": "Social Status_Low",
+    "outcome_id": "2rzFhFFh27SdFXQJF",
+    "country": "DEU",
+    "scenario_type": "Social Status",
+    "character_group": "High",
+    "choice_a": "Save man x1 (pedestrians; car continues straight; people difference 0) or let the car continue.",
+    "choice_b": "Let the car continue without intervening.",
+    "present_characters": {
+      "man": 1
+    },
+    "crossing_legality": 0,
+    "is_passengers": false,
+    "num_characters": 1,
+    "diff_num_characters": 0
+  },
+  {
+    "dimension": "Social Status_Low",
+    "outcome_id": "23sAqCdQ38abf8Su4",
+    "country": "NLD",
+    "scenario_type": "Social Status",
+    "character_group": "High",
+    "choice_a": "Save woman x1 (pedestrians; car swerves; people difference 0) or let the car continue.",
+    "choice_b": "Let the car continue without intervening.",
+    "present_characters": {
+      "woman": 1
+    },
+    "crossing_legality": 1,
+    "is_passengers": false,
+    "num_characters": 1,
+    "diff_num_characters": 0
+  },
+  {
+    "dimension": "Social Status_Low",
+    "outcome_id": "2fuoznR2vMyac4QNp",
+    "country": "ESP",
+    "scenario_type": "Social Status",
+    "character_group": "Low",
+    "choice_a": "Save homeless x1 (passengers; car continues straight; people difference 0) or let the car continue.",
+    "choice_b": "Let the car continue without intervening.",
+    "present_characters": {
+      "homeless": 1
+    },
+    "crossing_legality": 0,
+    "is_passengers": true,
+    "num_characters": 1,
+    "diff_num_characters": 0
+  },
+  {
+    "dimension": "Social Status_Low",
+    "outcome_id": "23iTj45EKAsxCc7LS",
+    "country": "DNK",
+    "scenario_type": "Social Status",
+    "character_group": "High",
+    "choice_a": "Save male_executive x1 (pedestrians; car continues straight; people difference 0) or let the car continue.",
+    "choice_b": "Let the car continue without intervening.",
+    "present_characters": {
+      "male_executive": 1
+    },
+    "crossing_legality": 0,
+    "is_passengers": false,
+    "num_characters": 1,
+    "diff_num_characters": 0
+  },
+  {
+    "dimension": "Social Status_Low",
+    "outcome_id": "2esDj753W4wqHfXBj",
+    "country": "NOR",
+    "scenario_type": "Social Status",
+    "character_group": "High",
+    "choice_a": "Save woman x1 (passengers; car continues straight; people difference 0) or let the car continue.",
+    "choice_b": "Let the car continue without intervening.",
+    "present_characters": {
+      "woman": 1
+    },
+    "crossing_legality": 0,
+    "is_passengers": true,
+    "num_characters": 1,
+    "diff_num_characters": 0
+  },
+  {
+    "dimension": "Social Status_Low",
+    "outcome_id": "2aJSgPbsr5vZ4G34u",
+    "country": "FRA",
+    "scenario_type": "Social Status",
+    "character_group": "Low",
+    "choice_a": "Save man x1 (pedestrians; car continues straight; people difference 0) or let the car continue.",
+    "choice_b": "Let the car continue without intervening.",
+    "present_characters": {
+      "man": 1
+    },
+    "crossing_legality": 0,
+    "is_passengers": false,
+    "num_characters": 1,
+    "diff_num_characters": 0
+  },
+  {
+    "dimension": "Social Status_Low",
+    "outcome_id": "2HhjRyDbsGw2w5d7z",
+    "country": "GBR",
+    "scenario_type": "Social Status",
+    "character_group": "Low",
+    "choice_a": "Save woman x1 (passengers; car continues straight; people difference 0) or let the car continue.",
+    "choice_b": "Let the car continue without intervening.",
+    "present_characters": {
+      "woman": 1
+    },
+    "crossing_legality": 0,
+    "is_passengers": true,
+    "num_characters": 1,
+    "diff_num_characters": 0
+  },
+  {
+    "dimension": "Social Status_Low",
+    "outcome_id": "2CCDiMLzcRQsfEC4e",
+    "country": "RUS",
+    "scenario_type": "Social Status",
+    "character_group": "Low",
+    "choice_a": "Save man x1 (passengers; car continues straight; people difference 0) or let the car continue.",
+    "choice_b": "Let the car continue without intervening.",
+    "present_characters": {
+      "man": 1
+    },
+    "crossing_legality": 0,
+    "is_passengers": true,
+    "num_characters": 1,
+    "diff_num_characters": 0
+  },
+  {
+    "dimension": "Social Status_Low",
+    "outcome_id": "29MejyQsiMZsMYQFP",
+    "country": "USA",
+    "scenario_type": "Social Status",
+    "character_group": "High",
+    "choice_a": "Save man x1 (pedestrians; car continues straight; people difference 0) or let the car continue.",
+    "choice_b": "Let the car continue without intervening.",
+    "present_characters": {
+      "man": 1
+    },
+    "crossing_legality": 0,
+    "is_passengers": false,
+    "num_characters": 1,
+    "diff_num_characters": 0
+  },
+  {
+    "dimension": "Social Status_Low",
+    "outcome_id": "2NTXZwnB698cTwPB4",
+    "country": "DEU",
+    "scenario_type": "Social Status",
+    "character_group": "High",
+    "choice_a": "Save woman x1 (pedestrians; signal status unknown; people difference 0) or let the car continue.",
+    "choice_b": "Let the car continue without intervening.",
+    "present_characters": {
+      "woman": 1
+    },
+    "crossing_legality": 2,
+    "is_passengers": false,
+    "num_characters": 1,
+    "diff_num_characters": 0
+  },
+  {
+    "dimension": "Social Status_Low",
+    "outcome_id": "25f2FQbE7Z99de5qy",
+    "country": "USA",
+    "scenario_type": "Social Status",
+    "character_group": "High",
+    "choice_a": "Save female_executive x1 (pedestrians; car continues straight; people difference 0) or let the car continue.",
+    "choice_b": "Let the car continue without intervening.",
+    "present_characters": {
+      "female_executive": 1
+    },
+    "crossing_legality": 0,
+    "is_passengers": false,
+    "num_characters": 1,
+    "diff_num_characters": 0
+  },
+  {
+    "dimension": "Social Status_Low",
+    "outcome_id": "2peGTjCbemoge7Pdg",
+    "country": "CHE",
+    "scenario_type": "Social Status",
+    "character_group": "Low",
+    "choice_a": "Save homeless x1 (pedestrians; car continues straight; people difference 0) or let the car continue.",
+    "choice_b": "Let the car continue without intervening.",
+    "present_characters": {
+      "homeless": 1
+    },
+    "crossing_legality": 0,
+    "is_passengers": false,
+    "num_characters": 1,
+    "diff_num_characters": 0
+  },
+  {
+    "dimension": "Social Status_Low",
+    "outcome_id": "2vjv9ZSGNKLu6d6Hy",
+    "country": "GBR",
+    "scenario_type": "Social Status",
+    "character_group": "High",
+    "choice_a": "Save woman x1 (pedestrians; car swerves; people difference 0) or let the car continue.",
+    "choice_b": "Let the car continue without intervening.",
+    "present_characters": {
+      "woman": 1
+    },
+    "crossing_legality": 1,
+    "is_passengers": false,
+    "num_characters": 1,
+    "diff_num_characters": 0
+  },
+  {
+    "dimension": "Social Status_Low",
+    "outcome_id": "2LQsSW9ZGMFZbfPXo",
+    "country": "BRA",
+    "scenario_type": "Social Status",
+    "character_group": "Low",
+    "choice_a": "Save man x1 (passengers; car continues straight; people difference 0) or let the car continue.",
+    "choice_b": "Let the car continue without intervening.",
+    "present_characters": {
+      "man": 1
+    },
+    "crossing_legality": 0,
+    "is_passengers": true,
+    "num_characters": 1,
+    "diff_num_characters": 0
+  },
+  {
+    "dimension": "Social Status_Low",
+    "outcome_id": "2q8iz2ZLe7rYSh3pP",
+    "country": "VNM",
+    "scenario_type": "Social Status",
+    "character_group": "High",
+    "choice_a": "Save man x1 (passengers; car continues straight; people difference 0) or let the car continue.",
+    "choice_b": "Let the car continue without intervening.",
+    "present_characters": {
+      "man": 1
+    },
+    "crossing_legality": 0,
+    "is_passengers": true,
+    "num_characters": 1,
+    "diff_num_characters": 0
+  },
+  {
+    "dimension": "Social Status_Low",
+    "outcome_id": "2zFTositLxcGQYY5M",
+    "country": "USA",
+    "scenario_type": "Social Status",
+    "character_group": "Low",
+    "choice_a": "Save homeless x1 (pedestrians; car swerves; people difference 0) or let the car continue.",
+    "choice_b": "Let the car continue without intervening.",
+    "present_characters": {
+      "homeless": 1
+    },
+    "crossing_legality": 1,
+    "is_passengers": false,
+    "num_characters": 1,
+    "diff_num_characters": 0
+  },
+  {
+    "dimension": "Social Status_Low",
+    "outcome_id": "2ZFwM9vWqk38JcYSd",
+    "country": "USA",
+    "scenario_type": "Social Status",
+    "character_group": "High",
+    "choice_a": "Save man x1 (pedestrians; car continues straight; people difference 0) or let the car continue.",
+    "choice_b": "Let the car continue without intervening.",
+    "present_characters": {
+      "man": 1
+    },
+    "crossing_legality": 0,
+    "is_passengers": false,
+    "num_characters": 1,
+    "diff_num_characters": 0
+  },
+  {
+    "dimension": "Social Status_Low",
+    "outcome_id": "2xdkbgn7fj864Gavg",
+    "country": "CAN",
+    "scenario_type": "Social Status",
+    "character_group": "Low",
+    "choice_a": "Save homeless x1 (passengers; car continues straight; people difference 0) or let the car continue.",
+    "choice_b": "Let the car continue without intervening.",
+    "present_characters": {
+      "homeless": 1
+    },
+    "crossing_legality": 0,
+    "is_passengers": true,
+    "num_characters": 1,
+    "diff_num_characters": 0
+  },
+  {
+    "dimension": "Species_Hoomans",
+    "outcome_id": "2aG8MCJByut36R8Pi",
+    "country": "CAN",
+    "scenario_type": "Species",
+    "character_group": "Pets",
+    "choice_a": "Save dog x1 (pedestrians; car swerves; people difference 0) or let the car continue.",
+    "choice_b": "Let the car continue without intervening.",
+    "present_characters": {
+      "dog": 1
+    },
+    "crossing_legality": 1,
+    "is_passengers": false,
+    "num_characters": 1,
+    "diff_num_characters": 0
+  },
+  {
+    "dimension": "Species_Hoomans",
+    "outcome_id": "27vK7swwQsu7k4Don",
+    "country": "GBR",
+    "scenario_type": "Species",
+    "character_group": "Pets",
+    "choice_a": "Save dog x1 (passengers; car continues straight; people difference 0) or let the car continue.",
+    "choice_b": "Let the car continue without intervening.",
+    "present_characters": {
+      "dog": 1
+    },
+    "crossing_legality": 0,
+    "is_passengers": true,
+    "num_characters": 1,
+    "diff_num_characters": 0
+  },
+  {
+    "dimension": "Species_Hoomans",
+    "outcome_id": "2PhKT338zHiJrq4Rt",
+    "country": "MEX",
+    "scenario_type": "Species",
+    "character_group": "Hoomans",
+    "choice_a": "Save female_athlete x1 (pedestrians; signal status unknown; people difference 0) or let the car continue.",
+    "choice_b": "Let the car continue without intervening.",
+    "present_characters": {
+      "female_athlete": 1
+    },
+    "crossing_legality": 2,
+    "is_passengers": false,
+    "num_characters": 1,
+    "diff_num_characters": 0
+  },
+  {
+    "dimension": "Species_Hoomans",
+    "outcome_id": "2Gig5if5t8twtRLBm",
+    "country": "ITA",
+    "scenario_type": "Species",
+    "character_group": "Hoomans",
+    "choice_a": "Save pregnant x1 (passengers; car continues straight; people difference 0) or let the car continue.",
+    "choice_b": "Let the car continue without intervening.",
+    "present_characters": {
+      "pregnant": 1
+    },
+    "crossing_legality": 0,
+    "is_passengers": true,
+    "num_characters": 1,
+    "diff_num_characters": 0
+  },
+  {
+    "dimension": "Species_Hoomans",
+    "outcome_id": "2P2CvYogYuRX53ME3",
+    "country": "CZE",
+    "scenario_type": "Species",
+    "character_group": "Pets",
+    "choice_a": "Save dog x1 (pedestrians; signal status unknown; people difference 0) or let the car continue.",
+    "choice_b": "Let the car continue without intervening.",
+    "present_characters": {
+      "dog": 1
+    },
+    "crossing_legality": 2,
+    "is_passengers": false,
+    "num_characters": 1,
+    "diff_num_characters": 0
+  },
+  {
+    "dimension": "Species_Hoomans",
+    "outcome_id": "2NiK7YfuzELBT6nbS",
+    "country": "FRA",
+    "scenario_type": "Species",
+    "character_group": "Hoomans",
+    "choice_a": "Save boy x1 (pedestrians; car continues straight; people difference 0) or let the car continue.",
+    "choice_b": "Let the car continue without intervening.",
+    "present_characters": {
+      "boy": 1
+    },
+    "crossing_legality": 0,
+    "is_passengers": false,
+    "num_characters": 1,
+    "diff_num_characters": 0
+  },
+  {
+    "dimension": "Species_Hoomans",
+    "outcome_id": "2HB8spzwdevRRae89",
+    "country": "CHE",
+    "scenario_type": "Species",
+    "character_group": "Hoomans",
+    "choice_a": "Save female_doctor x1 (pedestrians; car swerves; people difference 0) or let the car continue.",
+    "choice_b": "Let the car continue without intervening.",
+    "present_characters": {
+      "female_doctor": 1
+    },
+    "crossing_legality": 1,
+    "is_passengers": false,
+    "num_characters": 1,
+    "diff_num_characters": 0
+  },
+  {
+    "dimension": "Species_Hoomans",
+    "outcome_id": "2YHCwyeLHjT3hYCv5",
+    "country": "ESP",
+    "scenario_type": "Species",
+    "character_group": "Hoomans",
+    "choice_a": "Save old_woman x1 (passengers; car continues straight; people difference 0) or let the car continue.",
+    "choice_b": "Let the car continue without intervening.",
+    "present_characters": {
+      "old_woman": 1
+    },
+    "crossing_legality": 0,
+    "is_passengers": true,
+    "num_characters": 1,
+    "diff_num_characters": 0
+  },
+  {
+    "dimension": "Species_Hoomans",
+    "outcome_id": "2399ies6bwM8yvwed",
+    "country": "RUS",
+    "scenario_type": "Species",
+    "character_group": "Hoomans",
+    "choice_a": "Save woman x1 (pedestrians; car continues straight; people difference 0) or let the car continue.",
+    "choice_b": "Let the car continue without intervening.",
+    "present_characters": {
+      "woman": 1
+    },
+    "crossing_legality": 0,
+    "is_passengers": false,
+    "num_characters": 1,
+    "diff_num_characters": 0
+  },
+  {
+    "dimension": "Species_Hoomans",
+    "outcome_id": "2PbfJYNzzekYkyHhw",
+    "country": "GUY",
+    "scenario_type": "Species",
+    "character_group": "Hoomans",
+    "choice_a": "Save male_doctor x1 (pedestrians; car continues straight; people difference 0) or let the car continue.",
+    "choice_b": "Let the car continue without intervening.",
+    "present_characters": {
+      "male_doctor": 1
+    },
+    "crossing_legality": 0,
+    "is_passengers": false,
+    "num_characters": 1,
+    "diff_num_characters": 0
+  },
+  {
+    "dimension": "Species_Hoomans",
+    "outcome_id": "22xnGGSbA7CoHF9Z4",
+    "country": "DEU",
+    "scenario_type": "Species",
+    "character_group": "Hoomans",
+    "choice_a": "Save female_athlete x1 (passengers; car continues straight; people difference 0) or let the car continue.",
+    "choice_b": "Let the car continue without intervening.",
+    "present_characters": {
+      "female_athlete": 1
+    },
+    "crossing_legality": 0,
+    "is_passengers": true,
+    "num_characters": 1,
+    "diff_num_characters": 0
+  },
+  {
+    "dimension": "Species_Hoomans",
+    "outcome_id": "2P5kmtdm3iZiAjtcP",
+    "country": "SVK",
+    "scenario_type": "Species",
+    "character_group": "Hoomans",
+    "choice_a": "Save woman x1 (pedestrians; car continues straight; people difference 0) or let the car continue.",
+    "choice_b": "Let the car continue without intervening.",
+    "present_characters": {
+      "woman": 1
+    },
+    "crossing_legality": 0,
+    "is_passengers": false,
+    "num_characters": 1,
+    "diff_num_characters": 0
+  },
+  {
+    "dimension": "Species_Hoomans",
+    "outcome_id": "2LECuPhetrboRoMcL",
+    "country": "BRA",
+    "scenario_type": "Species",
+    "character_group": "Hoomans",
+    "choice_a": "Save male_doctor x1 (pedestrians; car swerves; people difference 0) or let the car continue.",
+    "choice_b": "Let the car continue without intervening.",
+    "present_characters": {
+      "male_doctor": 1
+    },
+    "crossing_legality": 1,
+    "is_passengers": false,
+    "num_characters": 1,
+    "diff_num_characters": 0
+  },
+  {
+    "dimension": "Species_Hoomans",
+    "outcome_id": "2BdetDCsdSEXoa8PS",
+    "country": "SVK",
+    "scenario_type": "Species",
+    "character_group": "Hoomans",
+    "choice_a": "Save criminal x1 (pedestrians; car continues straight; people difference 0) or let the car continue.",
+    "choice_b": "Let the car continue without intervening.",
+    "present_characters": {
+      "criminal": 1
+    },
+    "crossing_legality": 0,
+    "is_passengers": false,
+    "num_characters": 1,
+    "diff_num_characters": 0
+  },
+  {
+    "dimension": "Species_Hoomans",
+    "outcome_id": "28FCncJ3MKAQqJwki",
+    "country": "KOR",
+    "scenario_type": "Species",
+    "character_group": "Hoomans",
+    "choice_a": "Save man x1 (pedestrians; car swerves; people difference 0) or let the car continue.",
+    "choice_b": "Let the car continue without intervening.",
+    "present_characters": {
+      "man": 1
+    },
+    "crossing_legality": 1,
+    "is_passengers": false,
+    "num_characters": 1,
+    "diff_num_characters": 0
+  },
+  {
+    "dimension": "Species_Hoomans",
+    "outcome_id": "26e6TzKynLBjx4YZW",
+    "country": "NLD",
+    "scenario_type": "Species",
+    "character_group": "Pets",
+    "choice_a": "Save cat x1 (pedestrians; car continues straight; people difference 0) or let the car continue.",
+    "choice_b": "Let the car continue without intervening.",
+    "present_characters": {
+      "cat": 1
+    },
+    "crossing_legality": 0,
+    "is_passengers": false,
+    "num_characters": 1,
+    "diff_num_characters": 0
+  },
+  {
+    "dimension": "Species_Hoomans",
+    "outcome_id": "2E5pD6yueLhtiw9Rm",
+    "country": "UKR",
+    "scenario_type": "Species",
+    "character_group": "Pets",
+    "choice_a": "Save dog x1 (pedestrians; signal status unknown; people difference 0) or let the car continue.",
+    "choice_b": "Let the car continue without intervening.",
+    "present_characters": {
+      "dog": 1
+    },
+    "crossing_legality": 2,
+    "is_passengers": false,
+    "num_characters": 1,
+    "diff_num_characters": 0
+  },
+  {
+    "dimension": "Species_Hoomans",
+    "outcome_id": "247CiWyWdFQ6EJKCx",
+    "country": "JPN",
+    "scenario_type": "Species",
+    "character_group": "Pets",
+    "choice_a": "Save cat x1 (pedestrians; signal status unknown; people difference 0) or let the car continue.",
+    "choice_b": "Let the car continue without intervening.",
+    "present_characters": {
+      "cat": 1
+    },
+    "crossing_legality": 2,
+    "is_passengers": false,
+    "num_characters": 1,
+    "diff_num_characters": 0
+  },
+  {
+    "dimension": "Species_Hoomans",
+    "outcome_id": "2WrmWyDuAMhDesj7Q",
+    "country": "FRA",
+    "scenario_type": "Species",
+    "character_group": "Hoomans",
+    "choice_a": "Save woman x1 (pedestrians; signal status unknown; people difference 0) or let the car continue.",
+    "choice_b": "Let the car continue without intervening.",
+    "present_characters": {
+      "woman": 1
+    },
+    "crossing_legality": 2,
+    "is_passengers": false,
+    "num_characters": 1,
+    "diff_num_characters": 0
+  },
+  {
+    "dimension": "Species_Hoomans",
+    "outcome_id": "2a9fNyMcR2SPqLKbX",
+    "country": "DEU",
+    "scenario_type": "Species",
+    "character_group": "Hoomans",
+    "choice_a": "Save girl x1 (pedestrians; car continues straight; people difference 0) or let the car continue.",
+    "choice_b": "Let the car continue without intervening.",
+    "present_characters": {
+      "girl": 1
+    },
+    "crossing_legality": 0,
+    "is_passengers": false,
+    "num_characters": 1,
+    "diff_num_characters": 0
+  },
+  {
+    "dimension": "Species_Hoomans",
+    "outcome_id": "2D2YZuXYyBfqhBKfE",
+    "country": "MEX",
+    "scenario_type": "Species",
+    "character_group": "Hoomans",
+    "choice_a": "Save old_woman x1 (pedestrians; car continues straight; people difference 0) or let the car continue.",
+    "choice_b": "Let the car continue without intervening.",
+    "present_characters": {
+      "old_woman": 1
+    },
+    "crossing_legality": 0,
+    "is_passengers": false,
+    "num_characters": 1,
+    "diff_num_characters": 0
+  },
+  {
+    "dimension": "Species_Hoomans",
+    "outcome_id": "2X82QFWoPt8esPCZa",
+    "country": "AUS",
+    "scenario_type": "Species",
+    "character_group": "Pets",
+    "choice_a": "Save dog x1 (pedestrians; car continues straight; people difference 0) or let the car continue.",
+    "choice_b": "Let the car continue without intervening.",
+    "present_characters": {
+      "dog": 1
+    },
+    "crossing_legality": 0,
+    "is_passengers": false,
+    "num_characters": 1,
+    "diff_num_characters": 0
+  },
+  {
+    "dimension": "Species_Hoomans",
+    "outcome_id": "2c2injQFGJ2TQ399R",
+    "country": "GRC",
+    "scenario_type": "Species",
+    "character_group": "Pets",
+    "choice_a": "Save dog x1 (passengers; car continues straight; people difference 0) or let the car continue.",
+    "choice_b": "Let the car continue without intervening.",
+    "present_characters": {
+      "dog": 1
+    },
+    "crossing_legality": 0,
+    "is_passengers": true,
+    "num_characters": 1,
+    "diff_num_characters": 0
+  },
+  {
+    "dimension": "Species_Hoomans",
+    "outcome_id": "2KW7ZiavGoFoXydMN",
+    "country": "DEU",
+    "scenario_type": "Species",
+    "character_group": "Pets",
+    "choice_a": "Save cat x1 (passengers; car continues straight; people difference 0) or let the car continue.",
+    "choice_b": "Let the car continue without intervening.",
+    "present_characters": {
+      "cat": 1
+    },
+    "crossing_legality": 0,
+    "is_passengers": true,
+    "num_characters": 1,
+    "diff_num_characters": 0
+  },
+  {
+    "dimension": "Species_Hoomans",
+    "outcome_id": "2b8ujAstHxxPRB5f6",
+    "country": "USA",
+    "scenario_type": "Species",
+    "character_group": "Hoomans",
+    "choice_a": "Save old_man x1 (passengers; car continues straight; people difference 0) or let the car continue.",
+    "choice_b": "Let the car continue without intervening.",
+    "present_characters": {
+      "old_man": 1
+    },
+    "crossing_legality": 0,
+    "is_passengers": true,
+    "num_characters": 1,
+    "diff_num_characters": 0
+  },
+  {
+    "dimension": "Species_Pets",
+    "outcome_id": "2aG8MCJByut36R8Pi",
+    "country": "CAN",
+    "scenario_type": "Species",
+    "character_group": "Pets",
+    "choice_a": "Save dog x1 (pedestrians; car swerves; people difference 0) or let the car continue.",
+    "choice_b": "Let the car continue without intervening.",
+    "present_characters": {
+      "dog": 1
+    },
+    "crossing_legality": 1,
+    "is_passengers": false,
+    "num_characters": 1,
+    "diff_num_characters": 0
+  },
+  {
+    "dimension": "Species_Pets",
+    "outcome_id": "27vK7swwQsu7k4Don",
+    "country": "GBR",
+    "scenario_type": "Species",
+    "character_group": "Pets",
+    "choice_a": "Save dog x1 (passengers; car continues straight; people difference 0) or let the car continue.",
+    "choice_b": "Let the car continue without intervening.",
+    "present_characters": {
+      "dog": 1
+    },
+    "crossing_legality": 0,
+    "is_passengers": true,
+    "num_characters": 1,
+    "diff_num_characters": 0
+  },
+  {
+    "dimension": "Species_Pets",
+    "outcome_id": "2PhKT338zHiJrq4Rt",
+    "country": "MEX",
+    "scenario_type": "Species",
+    "character_group": "Hoomans",
+    "choice_a": "Save female_athlete x1 (pedestrians; signal status unknown; people difference 0) or let the car continue.",
+    "choice_b": "Let the car continue without intervening.",
+    "present_characters": {
+      "female_athlete": 1
+    },
+    "crossing_legality": 2,
+    "is_passengers": false,
+    "num_characters": 1,
+    "diff_num_characters": 0
+  },
+  {
+    "dimension": "Species_Pets",
+    "outcome_id": "2Gig5if5t8twtRLBm",
+    "country": "ITA",
+    "scenario_type": "Species",
+    "character_group": "Hoomans",
+    "choice_a": "Save pregnant x1 (passengers; car continues straight; people difference 0) or let the car continue.",
+    "choice_b": "Let the car continue without intervening.",
+    "present_characters": {
+      "pregnant": 1
+    },
+    "crossing_legality": 0,
+    "is_passengers": true,
+    "num_characters": 1,
+    "diff_num_characters": 0
+  },
+  {
+    "dimension": "Species_Pets",
+    "outcome_id": "2P2CvYogYuRX53ME3",
+    "country": "CZE",
+    "scenario_type": "Species",
+    "character_group": "Pets",
+    "choice_a": "Save dog x1 (pedestrians; signal status unknown; people difference 0) or let the car continue.",
+    "choice_b": "Let the car continue without intervening.",
+    "present_characters": {
+      "dog": 1
+    },
+    "crossing_legality": 2,
+    "is_passengers": false,
+    "num_characters": 1,
+    "diff_num_characters": 0
+  },
+  {
+    "dimension": "Species_Pets",
+    "outcome_id": "2NiK7YfuzELBT6nbS",
+    "country": "FRA",
+    "scenario_type": "Species",
+    "character_group": "Hoomans",
+    "choice_a": "Save boy x1 (pedestrians; car continues straight; people difference 0) or let the car continue.",
+    "choice_b": "Let the car continue without intervening.",
+    "present_characters": {
+      "boy": 1
+    },
+    "crossing_legality": 0,
+    "is_passengers": false,
+    "num_characters": 1,
+    "diff_num_characters": 0
+  },
+  {
+    "dimension": "Species_Pets",
+    "outcome_id": "2HB8spzwdevRRae89",
+    "country": "CHE",
+    "scenario_type": "Species",
+    "character_group": "Hoomans",
+    "choice_a": "Save female_doctor x1 (pedestrians; car swerves; people difference 0) or let the car continue.",
+    "choice_b": "Let the car continue without intervening.",
+    "present_characters": {
+      "female_doctor": 1
+    },
+    "crossing_legality": 1,
+    "is_passengers": false,
+    "num_characters": 1,
+    "diff_num_characters": 0
+  },
+  {
+    "dimension": "Species_Pets",
+    "outcome_id": "2YHCwyeLHjT3hYCv5",
+    "country": "ESP",
+    "scenario_type": "Species",
+    "character_group": "Hoomans",
+    "choice_a": "Save old_woman x1 (passengers; car continues straight; people difference 0) or let the car continue.",
+    "choice_b": "Let the car continue without intervening.",
+    "present_characters": {
+      "old_woman": 1
+    },
+    "crossing_legality": 0,
+    "is_passengers": true,
+    "num_characters": 1,
+    "diff_num_characters": 0
+  },
+  {
+    "dimension": "Species_Pets",
+    "outcome_id": "2399ies6bwM8yvwed",
+    "country": "RUS",
+    "scenario_type": "Species",
+    "character_group": "Hoomans",
+    "choice_a": "Save woman x1 (pedestrians; car continues straight; people difference 0) or let the car continue.",
+    "choice_b": "Let the car continue without intervening.",
+    "present_characters": {
+      "woman": 1
+    },
+    "crossing_legality": 0,
+    "is_passengers": false,
+    "num_characters": 1,
+    "diff_num_characters": 0
+  },
+  {
+    "dimension": "Species_Pets",
+    "outcome_id": "2PbfJYNzzekYkyHhw",
+    "country": "GUY",
+    "scenario_type": "Species",
+    "character_group": "Hoomans",
+    "choice_a": "Save male_doctor x1 (pedestrians; car continues straight; people difference 0) or let the car continue.",
+    "choice_b": "Let the car continue without intervening.",
+    "present_characters": {
+      "male_doctor": 1
+    },
+    "crossing_legality": 0,
+    "is_passengers": false,
+    "num_characters": 1,
+    "diff_num_characters": 0
+  },
+  {
+    "dimension": "Species_Pets",
+    "outcome_id": "22xnGGSbA7CoHF9Z4",
+    "country": "DEU",
+    "scenario_type": "Species",
+    "character_group": "Hoomans",
+    "choice_a": "Save female_athlete x1 (passengers; car continues straight; people difference 0) or let the car continue.",
+    "choice_b": "Let the car continue without intervening.",
+    "present_characters": {
+      "female_athlete": 1
+    },
+    "crossing_legality": 0,
+    "is_passengers": true,
+    "num_characters": 1,
+    "diff_num_characters": 0
+  },
+  {
+    "dimension": "Species_Pets",
+    "outcome_id": "2P5kmtdm3iZiAjtcP",
+    "country": "SVK",
+    "scenario_type": "Species",
+    "character_group": "Hoomans",
+    "choice_a": "Save woman x1 (pedestrians; car continues straight; people difference 0) or let the car continue.",
+    "choice_b": "Let the car continue without intervening.",
+    "present_characters": {
+      "woman": 1
+    },
+    "crossing_legality": 0,
+    "is_passengers": false,
+    "num_characters": 1,
+    "diff_num_characters": 0
+  },
+  {
+    "dimension": "Species_Pets",
+    "outcome_id": "2LECuPhetrboRoMcL",
+    "country": "BRA",
+    "scenario_type": "Species",
+    "character_group": "Hoomans",
+    "choice_a": "Save male_doctor x1 (pedestrians; car swerves; people difference 0) or let the car continue.",
+    "choice_b": "Let the car continue without intervening.",
+    "present_characters": {
+      "male_doctor": 1
+    },
+    "crossing_legality": 1,
+    "is_passengers": false,
+    "num_characters": 1,
+    "diff_num_characters": 0
+  },
+  {
+    "dimension": "Species_Pets",
+    "outcome_id": "2BdetDCsdSEXoa8PS",
+    "country": "SVK",
+    "scenario_type": "Species",
+    "character_group": "Hoomans",
+    "choice_a": "Save criminal x1 (pedestrians; car continues straight; people difference 0) or let the car continue.",
+    "choice_b": "Let the car continue without intervening.",
+    "present_characters": {
+      "criminal": 1
+    },
+    "crossing_legality": 0,
+    "is_passengers": false,
+    "num_characters": 1,
+    "diff_num_characters": 0
+  },
+  {
+    "dimension": "Species_Pets",
+    "outcome_id": "28FCncJ3MKAQqJwki",
+    "country": "KOR",
+    "scenario_type": "Species",
+    "character_group": "Hoomans",
+    "choice_a": "Save man x1 (pedestrians; car swerves; people difference 0) or let the car continue.",
+    "choice_b": "Let the car continue without intervening.",
+    "present_characters": {
+      "man": 1
+    },
+    "crossing_legality": 1,
+    "is_passengers": false,
+    "num_characters": 1,
+    "diff_num_characters": 0
+  },
+  {
+    "dimension": "Species_Pets",
+    "outcome_id": "26e6TzKynLBjx4YZW",
+    "country": "NLD",
+    "scenario_type": "Species",
+    "character_group": "Pets",
+    "choice_a": "Save cat x1 (pedestrians; car continues straight; people difference 0) or let the car continue.",
+    "choice_b": "Let the car continue without intervening.",
+    "present_characters": {
+      "cat": 1
+    },
+    "crossing_legality": 0,
+    "is_passengers": false,
+    "num_characters": 1,
+    "diff_num_characters": 0
+  },
+  {
+    "dimension": "Species_Pets",
+    "outcome_id": "2E5pD6yueLhtiw9Rm",
+    "country": "UKR",
+    "scenario_type": "Species",
+    "character_group": "Pets",
+    "choice_a": "Save dog x1 (pedestrians; signal status unknown; people difference 0) or let the car continue.",
+    "choice_b": "Let the car continue without intervening.",
+    "present_characters": {
+      "dog": 1
+    },
+    "crossing_legality": 2,
+    "is_passengers": false,
+    "num_characters": 1,
+    "diff_num_characters": 0
+  },
+  {
+    "dimension": "Species_Pets",
+    "outcome_id": "247CiWyWdFQ6EJKCx",
+    "country": "JPN",
+    "scenario_type": "Species",
+    "character_group": "Pets",
+    "choice_a": "Save cat x1 (pedestrians; signal status unknown; people difference 0) or let the car continue.",
+    "choice_b": "Let the car continue without intervening.",
+    "present_characters": {
+      "cat": 1
+    },
+    "crossing_legality": 2,
+    "is_passengers": false,
+    "num_characters": 1,
+    "diff_num_characters": 0
+  },
+  {
+    "dimension": "Species_Pets",
+    "outcome_id": "2WrmWyDuAMhDesj7Q",
+    "country": "FRA",
+    "scenario_type": "Species",
+    "character_group": "Hoomans",
+    "choice_a": "Save woman x1 (pedestrians; signal status unknown; people difference 0) or let the car continue.",
+    "choice_b": "Let the car continue without intervening.",
+    "present_characters": {
+      "woman": 1
+    },
+    "crossing_legality": 2,
+    "is_passengers": false,
+    "num_characters": 1,
+    "diff_num_characters": 0
+  },
+  {
+    "dimension": "Species_Pets",
+    "outcome_id": "2a9fNyMcR2SPqLKbX",
+    "country": "DEU",
+    "scenario_type": "Species",
+    "character_group": "Hoomans",
+    "choice_a": "Save girl x1 (pedestrians; car continues straight; people difference 0) or let the car continue.",
+    "choice_b": "Let the car continue without intervening.",
+    "present_characters": {
+      "girl": 1
+    },
+    "crossing_legality": 0,
+    "is_passengers": false,
+    "num_characters": 1,
+    "diff_num_characters": 0
+  },
+  {
+    "dimension": "Species_Pets",
+    "outcome_id": "2D2YZuXYyBfqhBKfE",
+    "country": "MEX",
+    "scenario_type": "Species",
+    "character_group": "Hoomans",
+    "choice_a": "Save old_woman x1 (pedestrians; car continues straight; people difference 0) or let the car continue.",
+    "choice_b": "Let the car continue without intervening.",
+    "present_characters": {
+      "old_woman": 1
+    },
+    "crossing_legality": 0,
+    "is_passengers": false,
+    "num_characters": 1,
+    "diff_num_characters": 0
+  },
+  {
+    "dimension": "Species_Pets",
+    "outcome_id": "2X82QFWoPt8esPCZa",
+    "country": "AUS",
+    "scenario_type": "Species",
+    "character_group": "Pets",
+    "choice_a": "Save dog x1 (pedestrians; car continues straight; people difference 0) or let the car continue.",
+    "choice_b": "Let the car continue without intervening.",
+    "present_characters": {
+      "dog": 1
+    },
+    "crossing_legality": 0,
+    "is_passengers": false,
+    "num_characters": 1,
+    "diff_num_characters": 0
+  },
+  {
+    "dimension": "Species_Pets",
+    "outcome_id": "2c2injQFGJ2TQ399R",
+    "country": "GRC",
+    "scenario_type": "Species",
+    "character_group": "Pets",
+    "choice_a": "Save dog x1 (passengers; car continues straight; people difference 0) or let the car continue.",
+    "choice_b": "Let the car continue without intervening.",
+    "present_characters": {
+      "dog": 1
+    },
+    "crossing_legality": 0,
+    "is_passengers": true,
+    "num_characters": 1,
+    "diff_num_characters": 0
+  },
+  {
+    "dimension": "Species_Pets",
+    "outcome_id": "2KW7ZiavGoFoXydMN",
+    "country": "DEU",
+    "scenario_type": "Species",
+    "character_group": "Pets",
+    "choice_a": "Save cat x1 (passengers; car continues straight; people difference 0) or let the car continue.",
+    "choice_b": "Let the car continue without intervening.",
+    "present_characters": {
+      "cat": 1
+    },
+    "crossing_legality": 0,
+    "is_passengers": true,
+    "num_characters": 1,
+    "diff_num_characters": 0
+  },
+  {
+    "dimension": "Species_Pets",
+    "outcome_id": "2b8ujAstHxxPRB5f6",
+    "country": "USA",
+    "scenario_type": "Species",
+    "character_group": "Hoomans",
+    "choice_a": "Save old_man x1 (passengers; car continues straight; people difference 0) or let the car continue.",
+    "choice_b": "Let the car continue without intervening.",
+    "present_characters": {
+      "old_man": 1
+    },
+    "crossing_legality": 0,
+    "is_passengers": true,
+    "num_characters": 1,
+    "diff_num_characters": 0
+  },
+  {
+    "dimension": "Utilitarian_Less",
+    "outcome_id": "2h4ww7aB93cx27XnB",
+    "country": "DEU",
+    "scenario_type": "Utilitarian",
+    "character_group": "Less",
+    "choice_a": "Save man x1, woman x1, old_woman x1, cat x1 (pedestrians; car continues straight; people difference 1) or let the car continue.",
+    "choice_b": "Let the car continue without intervening.",
+    "present_characters": {
+      "man": 1,
+      "woman": 1,
+      "old_woman": 1,
+      "cat": 1
+    },
+    "crossing_legality": 0,
+    "is_passengers": false,
+    "num_characters": 4,
+    "diff_num_characters": 1
+  },
+  {
+    "dimension": "Utilitarian_Less",
+    "outcome_id": "6XrTg4WcYzYkZpznd",
+    "country": "CZE",
+    "scenario_type": "Utilitarian",
+    "character_group": "More",
+    "choice_a": "Save homeless x1, female_doctor x1 (passengers; car continues straight; people difference 1) or let the car continue.",
+    "choice_b": "Let the car continue without intervening.",
+    "present_characters": {
+      "homeless": 1,
+      "female_doctor": 1
+    },
+    "crossing_legality": 0,
+    "is_passengers": true,
+    "num_characters": 2,
+    "diff_num_characters": 1
+  },
+  {
+    "dimension": "Utilitarian_Less",
+    "outcome_id": "2QTJ8MZrzuwBruRY2",
+    "country": "TUR",
+    "scenario_type": "Utilitarian",
+    "character_group": "Less",
+    "choice_a": "Save stroller x1, old_woman x1, boy x1, homeless x1 (pedestrians; car continues straight; people difference 1) or let the car continue.",
+    "choice_b": "Let the car continue without intervening.",
+    "present_characters": {
+      "stroller": 1,
+      "old_woman": 1,
+      "boy": 1,
+      "homeless": 1
+    },
+    "crossing_legality": 0,
+    "is_passengers": false,
+    "num_characters": 4,
+    "diff_num_characters": 1
+  },
+  {
+    "dimension": "Utilitarian_Less",
+    "outcome_id": "2E4QAu33seepXGNPW",
+    "country": "BRA",
+    "scenario_type": "Utilitarian",
+    "character_group": "Less",
+    "choice_a": "Save man x1, pregnant x1, criminal x1, dog x1 (pedestrians; car continues straight; people difference 1) or let the car continue.",
+    "choice_b": "Let the car continue without intervening.",
+    "present_characters": {
+      "man": 1,
+      "pregnant": 1,
+      "criminal": 1,
+      "dog": 1
+    },
+    "crossing_legality": 0,
+    "is_passengers": false,
+    "num_characters": 4,
+    "diff_num_characters": 1
+  },
+  {
+    "dimension": "Utilitarian_Less",
+    "outcome_id": "2PSj9M67HmvjcgijN",
+    "country": "DEU",
+    "scenario_type": "Utilitarian",
+    "character_group": "Less",
+    "choice_a": "Save large_man x2, male_doctor x1, dog x1 (pedestrians; signal status unknown; people difference 1) or let the car continue.",
+    "choice_b": "Let the car continue without intervening.",
+    "present_characters": {
+      "large_man": 2,
+      "male_doctor": 1,
+      "dog": 1
+    },
+    "crossing_legality": 2,
+    "is_passengers": false,
+    "num_characters": 4,
+    "diff_num_characters": 1
+  },
+  {
+    "dimension": "Utilitarian_Less",
+    "outcome_id": "2P4Frs45bpJ2pcm4u",
+    "country": "USA",
+    "scenario_type": "Utilitarian",
+    "character_group": "Less",
+    "choice_a": "Save male_executive x2, female_executive x1, female_doctor x1 (pedestrians; car continues straight; people difference 1) or let the car continue.",
+    "choice_b": "Let the car continue without intervening.",
+    "present_characters": {
+      "male_executive": 2,
+      "female_executive": 1,
+      "female_doctor": 1
+    },
+    "crossing_legality": 0,
+    "is_passengers": false,
+    "num_characters": 4,
+    "diff_num_characters": 1
+  },
+  {
+    "dimension": "Utilitarian_Less",
+    "outcome_id": "2Ek7cCLcQXRqQEjWC",
+    "country": "FIN",
+    "scenario_type": "Utilitarian",
+    "character_group": "Less",
+    "choice_a": "Save girl x1, homeless x1, criminal x1, dog x1 (pedestrians; signal status unknown; people difference 1) or let the car continue.",
+    "choice_b": "Let the car continue without intervening.",
+    "present_characters": {
+      "girl": 1,
+      "homeless": 1,
+      "criminal": 1,
+      "dog": 1
+    },
+    "crossing_legality": 2,
+    "is_passengers": false,
+    "num_characters": 4,
+    "diff_num_characters": 1
+  },
+  {
+    "dimension": "Utilitarian_Less",
+    "outcome_id": "2dqeSEr33FeAz6pdr",
+    "country": "CAN",
+    "scenario_type": "Utilitarian",
+    "character_group": "Less",
+    "choice_a": "Save man x1, stroller x1, old_woman x1, male_athlete x1 (pedestrians; car swerves; people difference 1) or let the car continue.",
+    "choice_b": "Let the car continue without intervening.",
+    "present_characters": {
+      "man": 1,
+      "stroller": 1,
+      "old_woman": 1,
+      "male_athlete": 1
+    },
+    "crossing_legality": 1,
+    "is_passengers": false,
+    "num_characters": 4,
+    "diff_num_characters": 1
+  },
+  {
+    "dimension": "Utilitarian_Less",
+    "outcome_id": "4MP6XbEEj5FuZoTm3",
+    "country": "GBR",
+    "scenario_type": "Utilitarian",
+    "character_group": "Less",
+    "choice_a": "Save cat x1 (pedestrians; car swerves; people difference 1) or let the car continue.",
+    "choice_b": "Let the car continue without intervening.",
+    "present_characters": {
+      "cat": 1
+    },
+    "crossing_legality": 1,
+    "is_passengers": false,
+    "num_characters": 1,
+    "diff_num_characters": 1
+  },
+  {
+    "dimension": "Utilitarian_Less",
+    "outcome_id": "2QBhku5TBAwHFKxFz",
+    "country": "TUR",
+    "scenario_type": "Utilitarian",
+    "character_group": "Less",
+    "choice_a": "Save boy x1, girl x1, male_doctor x1, dog x1 (pedestrians; signal status unknown; people difference 1) or let the car continue.",
+    "choice_b": "Let the car continue without intervening.",
+    "present_characters": {
+      "boy": 1,
+      "girl": 1,
+      "male_doctor": 1,
+      "dog": 1
+    },
+    "crossing_legality": 2,
+    "is_passengers": false,
+    "num_characters": 4,
+    "diff_num_characters": 1
+  },
+  {
+    "dimension": "Utilitarian_Less",
+    "outcome_id": "3yjWbuf8oYZrR4wKH",
+    "country": "ITA",
+    "scenario_type": "Utilitarian",
+    "character_group": "Less",
+    "choice_a": "Save female_athlete x1 (passengers; car continues straight; people difference 1) or let the car continue.",
+    "choice_b": "Let the car continue without intervening.",
+    "present_characters": {
+      "female_athlete": 1
+    },
+    "crossing_legality": 0,
+    "is_passengers": true,
+    "num_characters": 1,
+    "diff_num_characters": 1
+  },
+  {
+    "dimension": "Utilitarian_Less",
+    "outcome_id": "2PWwboqfu5beMw6cd",
+    "country": "USA",
+    "scenario_type": "Utilitarian",
+    "character_group": "Less",
+    "choice_a": "Save stroller x1, homeless x1, female_doctor x1, male_doctor x1 (pedestrians; car swerves; people difference 1) or let the car continue.",
+    "choice_b": "Let the car continue without intervening.",
+    "present_characters": {
+      "stroller": 1,
+      "homeless": 1,
+      "female_doctor": 1,
+      "male_doctor": 1
+    },
+    "crossing_legality": 1,
+    "is_passengers": false,
+    "num_characters": 4,
+    "diff_num_characters": 1
+  },
+  {
+    "dimension": "Utilitarian_Less",
+    "outcome_id": "2K676EcwPG9uJ8p7A",
+    "country": "CZE",
+    "scenario_type": "Utilitarian",
+    "character_group": "Less",
+    "choice_a": "Save large_woman x1, female_executive x1, male_doctor x1, cat x1 (pedestrians; car continues straight; people difference 1) or let the car continue.",
+    "choice_b": "Let the car continue without intervening.",
+    "present_characters": {
+      "large_woman": 1,
+      "female_executive": 1,
+      "male_doctor": 1,
+      "cat": 1
+    },
+    "crossing_legality": 0,
+    "is_passengers": false,
+    "num_characters": 4,
+    "diff_num_characters": 1
+  },
+  {
+    "dimension": "Utilitarian_Less",
+    "outcome_id": "25YAgPQZyrN3LgkRN",
+    "country": "JPN",
+    "scenario_type": "Utilitarian",
+    "character_group": "Less",
+    "choice_a": "Save woman x1, girl x2, dog x1 (pedestrians; car swerves; people difference 1) or let the car continue.",
+    "choice_b": "Let the car continue without intervening.",
+    "present_characters": {
+      "woman": 1,
+      "girl": 2,
+      "dog": 1
+    },
+    "crossing_legality": 1,
+    "is_passengers": false,
+    "num_characters": 4,
+    "diff_num_characters": 1
+  },
+  {
+    "dimension": "Utilitarian_Less",
+    "outcome_id": "7BCqWmAtoTwfSqC9t",
+    "country": "HKG",
+    "scenario_type": "Utilitarian",
+    "character_group": "More",
+    "choice_a": "Save old_woman x1, female_athlete x1 (passengers; car continues straight; people difference 1) or let the car continue.",
+    "choice_b": "Let the car continue without intervening.",
+    "present_characters": {
+      "old_woman": 1,
+      "female_athlete": 1
+    },
+    "crossing_legality": 0,
+    "is_passengers": true,
+    "num_characters": 2,
+    "diff_num_characters": 1
+  },
+  {
+    "dimension": "Utilitarian_Less",
+    "outcome_id": "4ZnSEy37hmeESrntf",
+    "country": "USA",
+    "scenario_type": "Utilitarian",
+    "character_group": "More",
+    "choice_a": "Save girl x1, dog x1 (pedestrians; car swerves; people difference 1) or let the car continue.",
+    "choice_b": "Let the car continue without intervening.",
+    "present_characters": {
+      "girl": 1,
+      "dog": 1
+    },
+    "crossing_legality": 1,
+    "is_passengers": false,
+    "num_characters": 2,
+    "diff_num_characters": 1
+  },
+  {
+    "dimension": "Utilitarian_Less",
+    "outcome_id": "29d86mkuBiDy2piZN",
+    "country": "POL",
+    "scenario_type": "Utilitarian",
+    "character_group": "Less",
+    "choice_a": "Save man x1, pregnant x1, male_executive x1, cat x1 (pedestrians; car swerves; people difference 1) or let the car continue.",
+    "choice_b": "Let the car continue without intervening.",
+    "present_characters": {
+      "man": 1,
+      "pregnant": 1,
+      "male_executive": 1,
+      "cat": 1
+    },
+    "crossing_legality": 1,
+    "is_passengers": false,
+    "num_characters": 4,
+    "diff_num_characters": 1
+  },
+  {
+    "dimension": "Utilitarian_Less",
+    "outcome_id": "6M8q6D7HptFqMBERG",
+    "country": "QAT",
+    "scenario_type": "Utilitarian",
+    "character_group": "Less",
+    "choice_a": "Save girl x1 (pedestrians; car swerves; people difference 1) or let the car continue.",
+    "choice_b": "Let the car continue without intervening.",
+    "present_characters": {
+      "girl": 1
+    },
+    "crossing_legality": 1,
+    "is_passengers": false,
+    "num_characters": 1,
+    "diff_num_characters": 1
+  },
+  {
+    "dimension": "Utilitarian_Less",
+    "outcome_id": "2bBDBY2NTK3ujG5c2",
+    "country": "ESP",
+    "scenario_type": "Utilitarian",
+    "character_group": "Less",
+    "choice_a": "Save old_man x2, old_woman x1, female_doctor x1 (pedestrians; car continues straight; people difference 1) or let the car continue.",
+    "choice_b": "Let the car continue without intervening.",
+    "present_characters": {
+      "old_man": 2,
+      "old_woman": 1,
+      "female_doctor": 1
+    },
+    "crossing_legality": 0,
+    "is_passengers": false,
+    "num_characters": 4,
+    "diff_num_characters": 1
+  },
+  {
+    "dimension": "Utilitarian_Less",
+    "outcome_id": "2gswEsSeExaZxruSQ",
+    "country": "USA",
+    "scenario_type": "Utilitarian",
+    "character_group": "Less",
+    "choice_a": "Save pregnant x1, old_woman x1, girl x1, dog x1 (pedestrians; car continues straight; people difference 1) or let the car continue.",
+    "choice_b": "Let the car continue without intervening.",
+    "present_characters": {
+      "pregnant": 1,
+      "old_woman": 1,
+      "girl": 1,
+      "dog": 1
+    },
+    "crossing_legality": 0,
+    "is_passengers": false,
+    "num_characters": 4,
+    "diff_num_characters": 1
+  },
+  {
+    "dimension": "Utilitarian_Less",
+    "outcome_id": "27nWaB5ZBizk2hKM7",
+    "country": "DZA",
+    "scenario_type": "Utilitarian",
+    "character_group": "Less",
+    "choice_a": "Save homeless x1, male_executive x1, female_athlete x1, male_doctor x1 (pedestrians; car swerves; people difference 1) or let the car continue.",
+    "choice_b": "Let the car continue without intervening.",
+    "present_characters": {
+      "homeless": 1,
+      "male_executive": 1,
+      "female_athlete": 1,
+      "male_doctor": 1
+    },
+    "crossing_legality": 1,
+    "is_passengers": false,
+    "num_characters": 4,
+    "diff_num_characters": 1
+  },
+  {
+    "dimension": "Utilitarian_Less",
+    "outcome_id": "2bmvPeWntTg8dGHqJ",
+    "country": "BRA",
+    "scenario_type": "Utilitarian",
+    "character_group": "Less",
+    "choice_a": "Save woman x1, stroller x1, homeless x1, large_woman x1 (pedestrians; car continues straight; people difference 1) or let the car continue.",
+    "choice_b": "Let the car continue without intervening.",
+    "present_characters": {
+      "woman": 1,
+      "stroller": 1,
+      "homeless": 1,
+      "large_woman": 1
+    },
+    "crossing_legality": 0,
+    "is_passengers": false,
+    "num_characters": 4,
+    "diff_num_characters": 1
+  },
+  {
+    "dimension": "Utilitarian_Less",
+    "outcome_id": "2kFiBS3FPKwt6TurP",
+    "country": "USA",
+    "scenario_type": "Utilitarian",
+    "character_group": "Less",
+    "choice_a": "Save boy x1, homeless x1, large_man x1, criminal x1 (pedestrians; car continues straight; people difference 1) or let the car continue.",
+    "choice_b": "Let the car continue without intervening.",
+    "present_characters": {
+      "boy": 1,
+      "homeless": 1,
+      "large_man": 1,
+      "criminal": 1
+    },
+    "crossing_legality": 0,
+    "is_passengers": false,
+    "num_characters": 4,
+    "diff_num_characters": 1
+  },
+  {
+    "dimension": "Utilitarian_Less",
+    "outcome_id": "2JLEuKhQ8oTekBGiE",
+    "country": "CHN",
+    "scenario_type": "Utilitarian",
+    "character_group": "Less",
+    "choice_a": "Save man x1, criminal x1, female_executive x1, dog x1 (pedestrians; signal status unknown; people difference 1) or let the car continue.",
+    "choice_b": "Let the car continue without intervening.",
+    "present_characters": {
+      "man": 1,
+      "criminal": 1,
+      "female_executive": 1,
+      "dog": 1
+    },
+    "crossing_legality": 2,
+    "is_passengers": false,
+    "num_characters": 4,
+    "diff_num_characters": 1
+  },
+  {
+    "dimension": "Utilitarian_Less",
+    "outcome_id": "2ihbkEvuFbJZ8LWqp",
+    "country": "BEL",
+    "scenario_type": "Utilitarian",
+    "character_group": "Less",
+    "choice_a": "Save woman x1, stroller x1, old_woman x1, male_doctor x1 (pedestrians; car continues straight; people difference 1) or let the car continue.",
+    "choice_b": "Let the car continue without intervening.",
+    "present_characters": {
+      "woman": 1,
+      "stroller": 1,
+      "old_woman": 1,
+      "male_doctor": 1
+    },
+    "crossing_legality": 0,
+    "is_passengers": false,
+    "num_characters": 4,
+    "diff_num_characters": 1
+  },
+  {
+    "dimension": "Utilitarian_More",
+    "outcome_id": "2h4ww7aB93cx27XnB",
+    "country": "DEU",
+    "scenario_type": "Utilitarian",
+    "character_group": "Less",
+    "choice_a": "Save man x1, woman x1, old_woman x1, cat x1 (pedestrians; car continues straight; people difference 1) or let the car continue.",
+    "choice_b": "Let the car continue without intervening.",
+    "present_characters": {
+      "man": 1,
+      "woman": 1,
+      "old_woman": 1,
+      "cat": 1
+    },
+    "crossing_legality": 0,
+    "is_passengers": false,
+    "num_characters": 4,
+    "diff_num_characters": 1
+  },
+  {
+    "dimension": "Utilitarian_More",
+    "outcome_id": "6XrTg4WcYzYkZpznd",
+    "country": "CZE",
+    "scenario_type": "Utilitarian",
+    "character_group": "More",
+    "choice_a": "Save homeless x1, female_doctor x1 (passengers; car continues straight; people difference 1) or let the car continue.",
+    "choice_b": "Let the car continue without intervening.",
+    "present_characters": {
+      "homeless": 1,
+      "female_doctor": 1
+    },
+    "crossing_legality": 0,
+    "is_passengers": true,
+    "num_characters": 2,
+    "diff_num_characters": 1
+  },
+  {
+    "dimension": "Utilitarian_More",
+    "outcome_id": "2QTJ8MZrzuwBruRY2",
+    "country": "TUR",
+    "scenario_type": "Utilitarian",
+    "character_group": "Less",
+    "choice_a": "Save stroller x1, old_woman x1, boy x1, homeless x1 (pedestrians; car continues straight; people difference 1) or let the car continue.",
+    "choice_b": "Let the car continue without intervening.",
+    "present_characters": {
+      "stroller": 1,
+      "old_woman": 1,
+      "boy": 1,
+      "homeless": 1
+    },
+    "crossing_legality": 0,
+    "is_passengers": false,
+    "num_characters": 4,
+    "diff_num_characters": 1
+  },
+  {
+    "dimension": "Utilitarian_More",
+    "outcome_id": "2E4QAu33seepXGNPW",
+    "country": "BRA",
+    "scenario_type": "Utilitarian",
+    "character_group": "Less",
+    "choice_a": "Save man x1, pregnant x1, criminal x1, dog x1 (pedestrians; car continues straight; people difference 1) or let the car continue.",
+    "choice_b": "Let the car continue without intervening.",
+    "present_characters": {
+      "man": 1,
+      "pregnant": 1,
+      "criminal": 1,
+      "dog": 1
+    },
+    "crossing_legality": 0,
+    "is_passengers": false,
+    "num_characters": 4,
+    "diff_num_characters": 1
+  },
+  {
+    "dimension": "Utilitarian_More",
+    "outcome_id": "2PSj9M67HmvjcgijN",
+    "country": "DEU",
+    "scenario_type": "Utilitarian",
+    "character_group": "Less",
+    "choice_a": "Save large_man x2, male_doctor x1, dog x1 (pedestrians; signal status unknown; people difference 1) or let the car continue.",
+    "choice_b": "Let the car continue without intervening.",
+    "present_characters": {
+      "large_man": 2,
+      "male_doctor": 1,
+      "dog": 1
+    },
+    "crossing_legality": 2,
+    "is_passengers": false,
+    "num_characters": 4,
+    "diff_num_characters": 1
+  },
+  {
+    "dimension": "Utilitarian_More",
+    "outcome_id": "2P4Frs45bpJ2pcm4u",
+    "country": "USA",
+    "scenario_type": "Utilitarian",
+    "character_group": "Less",
+    "choice_a": "Save male_executive x2, female_executive x1, female_doctor x1 (pedestrians; car continues straight; people difference 1) or let the car continue.",
+    "choice_b": "Let the car continue without intervening.",
+    "present_characters": {
+      "male_executive": 2,
+      "female_executive": 1,
+      "female_doctor": 1
+    },
+    "crossing_legality": 0,
+    "is_passengers": false,
+    "num_characters": 4,
+    "diff_num_characters": 1
+  },
+  {
+    "dimension": "Utilitarian_More",
+    "outcome_id": "2Ek7cCLcQXRqQEjWC",
+    "country": "FIN",
+    "scenario_type": "Utilitarian",
+    "character_group": "Less",
+    "choice_a": "Save girl x1, homeless x1, criminal x1, dog x1 (pedestrians; signal status unknown; people difference 1) or let the car continue.",
+    "choice_b": "Let the car continue without intervening.",
+    "present_characters": {
+      "girl": 1,
+      "homeless": 1,
+      "criminal": 1,
+      "dog": 1
+    },
+    "crossing_legality": 2,
+    "is_passengers": false,
+    "num_characters": 4,
+    "diff_num_characters": 1
+  },
+  {
+    "dimension": "Utilitarian_More",
+    "outcome_id": "2dqeSEr33FeAz6pdr",
+    "country": "CAN",
+    "scenario_type": "Utilitarian",
+    "character_group": "Less",
+    "choice_a": "Save man x1, stroller x1, old_woman x1, male_athlete x1 (pedestrians; car swerves; people difference 1) or let the car continue.",
+    "choice_b": "Let the car continue without intervening.",
+    "present_characters": {
+      "man": 1,
+      "stroller": 1,
+      "old_woman": 1,
+      "male_athlete": 1
+    },
+    "crossing_legality": 1,
+    "is_passengers": false,
+    "num_characters": 4,
+    "diff_num_characters": 1
+  },
+  {
+    "dimension": "Utilitarian_More",
+    "outcome_id": "4MP6XbEEj5FuZoTm3",
+    "country": "GBR",
+    "scenario_type": "Utilitarian",
+    "character_group": "Less",
+    "choice_a": "Save cat x1 (pedestrians; car swerves; people difference 1) or let the car continue.",
+    "choice_b": "Let the car continue without intervening.",
+    "present_characters": {
+      "cat": 1
+    },
+    "crossing_legality": 1,
+    "is_passengers": false,
+    "num_characters": 1,
+    "diff_num_characters": 1
+  },
+  {
+    "dimension": "Utilitarian_More",
+    "outcome_id": "2QBhku5TBAwHFKxFz",
+    "country": "TUR",
+    "scenario_type": "Utilitarian",
+    "character_group": "Less",
+    "choice_a": "Save boy x1, girl x1, male_doctor x1, dog x1 (pedestrians; signal status unknown; people difference 1) or let the car continue.",
+    "choice_b": "Let the car continue without intervening.",
+    "present_characters": {
+      "boy": 1,
+      "girl": 1,
+      "male_doctor": 1,
+      "dog": 1
+    },
+    "crossing_legality": 2,
+    "is_passengers": false,
+    "num_characters": 4,
+    "diff_num_characters": 1
+  },
+  {
+    "dimension": "Utilitarian_More",
+    "outcome_id": "3yjWbuf8oYZrR4wKH",
+    "country": "ITA",
+    "scenario_type": "Utilitarian",
+    "character_group": "Less",
+    "choice_a": "Save female_athlete x1 (passengers; car continues straight; people difference 1) or let the car continue.",
+    "choice_b": "Let the car continue without intervening.",
+    "present_characters": {
+      "female_athlete": 1
+    },
+    "crossing_legality": 0,
+    "is_passengers": true,
+    "num_characters": 1,
+    "diff_num_characters": 1
+  },
+  {
+    "dimension": "Utilitarian_More",
+    "outcome_id": "2PWwboqfu5beMw6cd",
+    "country": "USA",
+    "scenario_type": "Utilitarian",
+    "character_group": "Less",
+    "choice_a": "Save stroller x1, homeless x1, female_doctor x1, male_doctor x1 (pedestrians; car swerves; people difference 1) or let the car continue.",
+    "choice_b": "Let the car continue without intervening.",
+    "present_characters": {
+      "stroller": 1,
+      "homeless": 1,
+      "female_doctor": 1,
+      "male_doctor": 1
+    },
+    "crossing_legality": 1,
+    "is_passengers": false,
+    "num_characters": 4,
+    "diff_num_characters": 1
+  },
+  {
+    "dimension": "Utilitarian_More",
+    "outcome_id": "2K676EcwPG9uJ8p7A",
+    "country": "CZE",
+    "scenario_type": "Utilitarian",
+    "character_group": "Less",
+    "choice_a": "Save large_woman x1, female_executive x1, male_doctor x1, cat x1 (pedestrians; car continues straight; people difference 1) or let the car continue.",
+    "choice_b": "Let the car continue without intervening.",
+    "present_characters": {
+      "large_woman": 1,
+      "female_executive": 1,
+      "male_doctor": 1,
+      "cat": 1
+    },
+    "crossing_legality": 0,
+    "is_passengers": false,
+    "num_characters": 4,
+    "diff_num_characters": 1
+  },
+  {
+    "dimension": "Utilitarian_More",
+    "outcome_id": "25YAgPQZyrN3LgkRN",
+    "country": "JPN",
+    "scenario_type": "Utilitarian",
+    "character_group": "Less",
+    "choice_a": "Save woman x1, girl x2, dog x1 (pedestrians; car swerves; people difference 1) or let the car continue.",
+    "choice_b": "Let the car continue without intervening.",
+    "present_characters": {
+      "woman": 1,
+      "girl": 2,
+      "dog": 1
+    },
+    "crossing_legality": 1,
+    "is_passengers": false,
+    "num_characters": 4,
+    "diff_num_characters": 1
+  },
+  {
+    "dimension": "Utilitarian_More",
+    "outcome_id": "7BCqWmAtoTwfSqC9t",
+    "country": "HKG",
+    "scenario_type": "Utilitarian",
+    "character_group": "More",
+    "choice_a": "Save old_woman x1, female_athlete x1 (passengers; car continues straight; people difference 1) or let the car continue.",
+    "choice_b": "Let the car continue without intervening.",
+    "present_characters": {
+      "old_woman": 1,
+      "female_athlete": 1
+    },
+    "crossing_legality": 0,
+    "is_passengers": true,
+    "num_characters": 2,
+    "diff_num_characters": 1
+  },
+  {
+    "dimension": "Utilitarian_More",
+    "outcome_id": "4ZnSEy37hmeESrntf",
+    "country": "USA",
+    "scenario_type": "Utilitarian",
+    "character_group": "More",
+    "choice_a": "Save girl x1, dog x1 (pedestrians; car swerves; people difference 1) or let the car continue.",
+    "choice_b": "Let the car continue without intervening.",
+    "present_characters": {
+      "girl": 1,
+      "dog": 1
+    },
+    "crossing_legality": 1,
+    "is_passengers": false,
+    "num_characters": 2,
+    "diff_num_characters": 1
+  },
+  {
+    "dimension": "Utilitarian_More",
+    "outcome_id": "29d86mkuBiDy2piZN",
+    "country": "POL",
+    "scenario_type": "Utilitarian",
+    "character_group": "Less",
+    "choice_a": "Save man x1, pregnant x1, male_executive x1, cat x1 (pedestrians; car swerves; people difference 1) or let the car continue.",
+    "choice_b": "Let the car continue without intervening.",
+    "present_characters": {
+      "man": 1,
+      "pregnant": 1,
+      "male_executive": 1,
+      "cat": 1
+    },
+    "crossing_legality": 1,
+    "is_passengers": false,
+    "num_characters": 4,
+    "diff_num_characters": 1
+  },
+  {
+    "dimension": "Utilitarian_More",
+    "outcome_id": "6M8q6D7HptFqMBERG",
+    "country": "QAT",
+    "scenario_type": "Utilitarian",
+    "character_group": "Less",
+    "choice_a": "Save girl x1 (pedestrians; car swerves; people difference 1) or let the car continue.",
+    "choice_b": "Let the car continue without intervening.",
+    "present_characters": {
+      "girl": 1
+    },
+    "crossing_legality": 1,
+    "is_passengers": false,
+    "num_characters": 1,
+    "diff_num_characters": 1
+  },
+  {
+    "dimension": "Utilitarian_More",
+    "outcome_id": "2bBDBY2NTK3ujG5c2",
+    "country": "ESP",
+    "scenario_type": "Utilitarian",
+    "character_group": "Less",
+    "choice_a": "Save old_man x2, old_woman x1, female_doctor x1 (pedestrians; car continues straight; people difference 1) or let the car continue.",
+    "choice_b": "Let the car continue without intervening.",
+    "present_characters": {
+      "old_man": 2,
+      "old_woman": 1,
+      "female_doctor": 1
+    },
+    "crossing_legality": 0,
+    "is_passengers": false,
+    "num_characters": 4,
+    "diff_num_characters": 1
+  },
+  {
+    "dimension": "Utilitarian_More",
+    "outcome_id": "2gswEsSeExaZxruSQ",
+    "country": "USA",
+    "scenario_type": "Utilitarian",
+    "character_group": "Less",
+    "choice_a": "Save pregnant x1, old_woman x1, girl x1, dog x1 (pedestrians; car continues straight; people difference 1) or let the car continue.",
+    "choice_b": "Let the car continue without intervening.",
+    "present_characters": {
+      "pregnant": 1,
+      "old_woman": 1,
+      "girl": 1,
+      "dog": 1
+    },
+    "crossing_legality": 0,
+    "is_passengers": false,
+    "num_characters": 4,
+    "diff_num_characters": 1
+  },
+  {
+    "dimension": "Utilitarian_More",
+    "outcome_id": "27nWaB5ZBizk2hKM7",
+    "country": "DZA",
+    "scenario_type": "Utilitarian",
+    "character_group": "Less",
+    "choice_a": "Save homeless x1, male_executive x1, female_athlete x1, male_doctor x1 (pedestrians; car swerves; people difference 1) or let the car continue.",
+    "choice_b": "Let the car continue without intervening.",
+    "present_characters": {
+      "homeless": 1,
+      "male_executive": 1,
+      "female_athlete": 1,
+      "male_doctor": 1
+    },
+    "crossing_legality": 1,
+    "is_passengers": false,
+    "num_characters": 4,
+    "diff_num_characters": 1
+  },
+  {
+    "dimension": "Utilitarian_More",
+    "outcome_id": "2bmvPeWntTg8dGHqJ",
+    "country": "BRA",
+    "scenario_type": "Utilitarian",
+    "character_group": "Less",
+    "choice_a": "Save woman x1, stroller x1, homeless x1, large_woman x1 (pedestrians; car continues straight; people difference 1) or let the car continue.",
+    "choice_b": "Let the car continue without intervening.",
+    "present_characters": {
+      "woman": 1,
+      "stroller": 1,
+      "homeless": 1,
+      "large_woman": 1
+    },
+    "crossing_legality": 0,
+    "is_passengers": false,
+    "num_characters": 4,
+    "diff_num_characters": 1
+  },
+  {
+    "dimension": "Utilitarian_More",
+    "outcome_id": "2kFiBS3FPKwt6TurP",
+    "country": "USA",
+    "scenario_type": "Utilitarian",
+    "character_group": "Less",
+    "choice_a": "Save boy x1, homeless x1, large_man x1, criminal x1 (pedestrians; car continues straight; people difference 1) or let the car continue.",
+    "choice_b": "Let the car continue without intervening.",
+    "present_characters": {
+      "boy": 1,
+      "homeless": 1,
+      "large_man": 1,
+      "criminal": 1
+    },
+    "crossing_legality": 0,
+    "is_passengers": false,
+    "num_characters": 4,
+    "diff_num_characters": 1
+  },
+  {
+    "dimension": "Utilitarian_More",
+    "outcome_id": "2JLEuKhQ8oTekBGiE",
+    "country": "CHN",
+    "scenario_type": "Utilitarian",
+    "character_group": "Less",
+    "choice_a": "Save man x1, criminal x1, female_executive x1, dog x1 (pedestrians; signal status unknown; people difference 1) or let the car continue.",
+    "choice_b": "Let the car continue without intervening.",
+    "present_characters": {
+      "man": 1,
+      "criminal": 1,
+      "female_executive": 1,
+      "dog": 1
+    },
+    "crossing_legality": 2,
+    "is_passengers": false,
+    "num_characters": 4,
+    "diff_num_characters": 1
+  },
+  {
+    "dimension": "Utilitarian_More",
+    "outcome_id": "2ihbkEvuFbJZ8LWqp",
+    "country": "BEL",
+    "scenario_type": "Utilitarian",
+    "character_group": "Less",
+    "choice_a": "Save woman x1, stroller x1, old_woman x1, male_doctor x1 (pedestrians; car continues straight; people difference 1) or let the car continue.",
+    "choice_b": "Let the car continue without intervening.",
+    "present_characters": {
+      "woman": 1,
+      "stroller": 1,
+      "old_woman": 1,
+      "male_doctor": 1
+    },
+    "crossing_legality": 0,
+    "is_passengers": false,
+    "num_characters": 4,
+    "diff_num_characters": 1
+  }
+]

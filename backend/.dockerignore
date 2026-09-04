@@ -1,0 +1,4 @@
+secrets/
+.venv/
+.env
+data_pipeline/output/
