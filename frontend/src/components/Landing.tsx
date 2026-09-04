@@ -1,39 +1,47 @@
+import Flag from "./Flag";
+import { useLang } from "../lib/i18n";
+
 interface LandingProps {
   onStart: () => void;
   loading: boolean;
 }
 
+const FLAG_CODES = ["JP", "BR", "NG", "SE", "IN", "MX", "EG", "KR"];
+
 export default function Landing({ onStart, loading }: LandingProps) {
+  const { t } = useLang();
   return (
     <div className="landing">
-      <div className="landing-flags">🇯🇵 🇧🇷 🇳🇬 🇸🇪 🇮🇳 🇲🇽 🇪🇬 🇰🇷</div>
+      <div className="landing-flags">
+        {FLAG_CODES.map((code) => (
+          <Flag key={code} code={code} size={26} />
+        ))}
+      </div>
+      <p className="landing-kicker">{t("landingKicker")}</p>
       <h1 className="landing-title">
-        Which country
+        {t("landingTitleA")}
         <br />
-        thinks like <span className="highlight">you</span>?
+        {t("landingTitleB")} <span className="highlight">{t("landingTitleYou")}</span>?
       </h1>
-      <p className="landing-sub">
-        Face 6 impossible driving dilemmas — the same ones scientists used to
-        map the morals of 228 countries. We will find your moral twin. 🌍
-      </p>
+      <p className="landing-sub">{t("landingSub")}</p>
       <button type="button" className="cta" onClick={onStart} disabled={loading}>
-        {loading ? "Loading dilemmas..." : "🚗 Start the test"}
+        {loading ? t("loadingDilemmas") : t("startCta")}
       </button>
       <div className="steps">
         <div className="step">
           <span className="step-emoji">🤔</span>
-          <strong>6 dilemmas</strong>
-          <span>Who lives? You decide.</span>
+          <strong>{t("step1Title")}</strong>
+          <span>{t("step1Sub")}</span>
         </div>
         <div className="step">
           <span className="step-emoji">🧬</span>
-          <strong>Moral twin</strong>
-          <span>Matched against 228 countries.</span>
+          <strong>{t("step2Title")}</strong>
+          <span>{t("step2Sub")}</span>
         </div>
         <div className="step">
           <span className="step-emoji">🗺️</span>
-          <strong>Explore</strong>
-          <span>See yourself on the world map of morals.</span>
+          <strong>{t("step3Title")}</strong>
+          <span>{t("step3Sub")}</span>
         </div>
       </div>
     </div>

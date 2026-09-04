@@ -1,5 +1,6 @@
 import type { Choice, Scenario } from "../lib/api";
 import { scenarioEmoji } from "../lib/format";
+import { useLang } from "../lib/i18n";
 
 interface QuizCardProps {
   scenario: Scenario;
@@ -24,11 +25,12 @@ export default function QuizCard({
   isFirst,
   isLast,
 }: QuizCardProps) {
+  const { t } = useLang();
   return (
     <section className="quiz">
       <div className="quiz-top">
         <span className="muted">
-          Dilemma {index + 1} of {total}
+          {t("dilemmaOf")} {index + 1} {t("dilemmaOfTotal")} {total}
         </span>
         <div className="dots">
           {Array.from({ length: total }, (_, i) => (
@@ -40,7 +42,7 @@ export default function QuizCard({
         </div>
       </div>
       <div className="dilemma-emoji">{scenarioEmoji(scenario.scenario_type)}</div>
-      <h2 className="dilemma-title">The car must hit someone. You choose:</h2>
+      <h2 className="dilemma-title">{t("dilemmaTitle")}</h2>
       <div className="choices big">
         <button
           type="button"
@@ -66,7 +68,7 @@ export default function QuizCard({
           onClick={onBack}
           disabled={isFirst}
         >
-          ← Back
+          {t("back")}
         </button>
         <button
           type="button"
@@ -74,7 +76,7 @@ export default function QuizCard({
           onClick={onNext}
           disabled={!selected}
         >
-          {isLast ? "See my result ✨" : "Next →"}
+          {isLast ? t("seeResult") : t("next")}
         </button>
       </div>
     </section>

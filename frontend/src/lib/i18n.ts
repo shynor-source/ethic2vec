@@ -1,0 +1,124 @@
+import { createContext, useContext } from "react";
+
+export type Lang = "en" | "vi";
+
+const STRINGS = {
+  landingKicker: {
+    en: "🌍 A Moral Machine experiment",
+    vi: "🌍 Thí nghiệm Moral Machine",
+  },
+  landingTitleA: { en: "Which country", vi: "Quốc gia nào" },
+  landingTitleB: { en: "thinks like", vi: "nghĩ giống" },
+  landingTitleYou: { en: "you", vi: "bạn" },
+  landingSub: {
+    en: "Face 6 impossible driving dilemmas — the same ones scientists used to map the morals of 228 countries. We will find your moral twin.",
+    vi: "Đối mặt 6 tình huống lái xe bất khả thi — chính những tình huống các nhà khoa học đã dùng để lập bản đồ đạo đức của 228 quốc gia. Chúng tôi sẽ tìm ra bản sao đạo đức của bạn.",
+  },
+  startCta: { en: "🚗 Start the test", vi: "🚗 Bắt đầu kiểm tra" },
+  loadingDilemmas: { en: "Loading dilemmas...", vi: "Đang tải tình huống..." },
+  step1Title: { en: "6 dilemmas", vi: "6 tình huống" },
+  step1Sub: { en: "Who lives? You decide.", vi: "Ai sống? Bạn quyết định." },
+  step2Title: { en: "Moral twin", vi: "Bản sao đạo đức" },
+  step2Sub: {
+    en: "Matched against 228 countries.",
+    vi: "So khớp với 228 quốc gia.",
+  },
+  step3Title: { en: "Explore", vi: "Khám phá" },
+  step3Sub: {
+    en: "See yourself on the world map of morals.",
+    vi: "Thấy mình trên bản đồ đạo đức thế giới.",
+  },
+  dilemmaOf: { en: "Dilemma", vi: "Tình huống" },
+  dilemmaOfTotal: { en: "of", vi: "trên" },
+  dilemmaTitle: {
+    en: "The car must hit someone. You choose:",
+    vi: "Xe buộc phải đâm vào ai đó. Bạn chọn:",
+  },
+  back: { en: "← Back", vi: "← Quay lại" },
+  next: { en: "Next →", vi: "Tiếp →" },
+  seeResult: { en: "See my result ✨", vi: "Xem kết quả ✨" },
+  analyzingTitle: {
+    en: "Reading your moral compass…",
+    vi: "Đang đọc la bàn đạo đức của bạn…",
+  },
+  analyzingSub: {
+    en: "Comparing you with 228 countries.",
+    vi: "Đang so sánh bạn với 228 quốc gia.",
+  },
+  verdictKicker: {
+    en: "Your moral twin is…",
+    vi: "Bản sao đạo đức của bạn là…",
+  },
+  matchSuffix: { en: "match", vi: "tương đồng" },
+  share: { en: "📋 Share my result", vi: "📋 Chia sẻ kết quả" },
+  copied: { en: "Copied! ✅", vi: "Đã copy! ✅" },
+  profileTitle: {
+    en: "🧬 Your moral profile, in plain words",
+    vi: "🧬 Hồ sơ đạo đức của bạn, nói dễ hiểu",
+  },
+  matchesTitle: { en: "🏆 Closest matches", vi: "🏆 Hợp nhất với bạn" },
+  matchesSub: {
+    en: "How closely each country's people answered, compared to you.",
+    vi: "Người dân mỗi nước trả lời giống bạn đến mức nào.",
+  },
+  groupsTitle: {
+    en: "👥 Groups that think like you",
+    vi: "👥 Các nhóm nghĩ giống bạn",
+  },
+  spotsTitle: { en: "👁️ Your moral blind spots", vi: "👁️ Điểm mù đạo đức của bạn" },
+  spotsSub: {
+    en: "Where you stand out from the rest of the world.",
+    vi: "Nơi bạn khác biệt với phần còn lại của thế giới.",
+  },
+  noSpots: {
+    en: "No blind spots detected — you are very average.",
+    vi: "Không phát hiện điểm mù — bạn rất trung bình.",
+  },
+  nerdTitle: {
+    en: "🤓 Nerd corner: the science behind it",
+    vi: "🤓 Góc nerd: khoa học đằng sau",
+  },
+  radarTitle: { en: "across 6 themes", vi: "trên 6 chủ đề" },
+  radarNote: {
+    en: "Higher means you step in more often.",
+    vi: "Càng cao nghĩa là bạn càng hay can thiệp.",
+  },
+  mapTitle: { en: "World map of morals", vi: "Bản đồ đạo đức thế giới" },
+  mapNote: {
+    en: "Each dot is a country. The red dot is you — the closer the dots, the more similar the morals.",
+    vi: "Mỗi chấm là một quốc gia. Chấm đỏ là bạn — càng gần nhau, đạo đức càng giống nhau.",
+  },
+  countriesLegend: { en: "Countries", vi: "Các quốc gia" },
+  youLegend: { en: "You", vi: "Bạn" },
+  retry: { en: "🔄 Try again", vi: "🔄 Làm lại" },
+  loadError: {
+    en: "Could not load scenarios. Check your connection and retry.",
+    vi: "Không tải được tình huống. Kiểm tra mạng rồi thử lại.",
+  },
+  analyzeError: {
+    en: "Analysis failed. Please retry.",
+    vi: "Chấm bài thất bại. Thử lại nhé.",
+  },
+} as const;
+
+export type StringKey = keyof typeof STRINGS;
+
+interface LangContextValue {
+  lang: Lang;
+  setLang: (lang: Lang) => void;
+  t: (key: StringKey) => string;
+}
+
+export const LangContext = createContext<LangContextValue>({
+  lang: "en",
+  setLang: () => {},
+  t: (key) => STRINGS[key].en,
+});
+
+export function useLang(): LangContextValue {
+  return useContext(LangContext);
+}
+
+export function translate(lang: Lang, key: StringKey): string {
+  return STRINGS[key][lang];
+}

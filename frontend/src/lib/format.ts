@@ -1,12 +1,15 @@
 import { COUNTRY_META } from "./countryMeta";
 import type { RadarPoint } from "./api";
+import type { Lang } from "./i18n";
 
 export function countryName(code: string): string {
   return COUNTRY_META[code]?.name ?? code;
 }
 
-export function countryFlag(code: string): string {
-  return COUNTRY_META[code]?.flag ?? "🏳️";
+export function flagUrl(code: string): string {
+  const iso2 = COUNTRY_META[code]?.iso2;
+  if (!iso2) return "";
+  return `https://flagcdn.com/w80/${iso2.toLowerCase()}.png`;
 }
 
 const SCENARIO_EMOJI: Record<string, string> = {
@@ -23,98 +26,181 @@ export function scenarioEmoji(scenarioType?: string): string {
   return SCENARIO_EMOJI[scenarioType] ?? "🤔";
 }
 
-const DIMENSION_LABELS: Record<string, { emoji: string; label: string }> = {
-  Age_Old: { emoji: "👴", label: "the elderly" },
-  Age_Young: { emoji: "🧒", label: "the young" },
-  Fitness_Fat: { emoji: "🦥", label: "plus-sized people" },
-  Fitness_Fit: { emoji: "🏃", label: "athletic people" },
-  Gender_Female: { emoji: "👩", label: "women" },
-  Gender_Male: { emoji: "👨", label: "men" },
-  "Social Status_High": { emoji: "🤵", label: "high-status people" },
-  "Social Status_Low": { emoji: "🧑‍🌾", label: "low-status people" },
-  Species_Hoomans: { emoji: "🧍", label: "humans" },
-  Species_Pets: { emoji: "🐶", label: "pets" },
-  Utilitarian_Less: { emoji: "🧍", label: "smaller groups" },
-  Utilitarian_More: { emoji: "👥", label: "larger groups" },
-};
-
-export function dimensionInfo(dimension: string): {
+interface DimensionInfo {
   emoji: string;
-  label: string;
-} {
-  return DIMENSION_LABELS[dimension] ?? { emoji: "❓", label: dimension };
+  en: string;
+  vi: string;
 }
 
-const DEMO_DIMENSION_LABELS: Record<string, string> = {
-  age_group: "Age",
-  education: "Education",
-  gender: "Gender",
-  income: "Income",
-  political: "Politics",
-  religious: "Faith",
+const DIMENSION_LABELS: Record<string, DimensionInfo> = {
+  Age_Old: { emoji: "👴", en: "the elderly", vi: "người cao tuổi" },
+  Age_Young: { emoji: "🧒", en: "the young", vi: "người trẻ" },
+  Fitness_Fat: { emoji: "🦥", en: "plus-sized people", vi: "người ngoại cỡ" },
+  Fitness_Fit: { emoji: "🏃", en: "athletic people", vi: "người khỏe mạnh" },
+  Gender_Female: { emoji: "👩", en: "women", vi: "phụ nữ" },
+  Gender_Male: { emoji: "👨", en: "men", vi: "đàn ông" },
+  "Social Status_High": {
+    emoji: "🤵",
+    en: "high-status people",
+    vi: "người địa vị cao",
+  },
+  "Social Status_Low": {
+    emoji: "🧑‍🌾",
+    en: "low-status people",
+    vi: "người địa vị thấp",
+  },
+  Species_Hoomans: { emoji: "🧍", en: "humans", vi: "con người" },
+  Species_Pets: { emoji: "🐶", en: "pets", vi: "thú cưng" },
+  Utilitarian_Less: { emoji: "🧍", en: "smaller groups", vi: "nhóm ít người" },
+  Utilitarian_More: { emoji: "👥", en: "larger groups", vi: "nhóm đông người" },
 };
 
-const DEMO_GROUP_LABELS: Record<string, string> = {
-  underHigh: "below high school",
-  female: "women",
-  male: "men",
-  not_religious: "non-religious",
-  somewhat: "somewhat religious",
-  very: "very religious",
-  above100000: "over $100k",
-  over10000: "over $10k",
+export function dimensionInfo(dimension: string): DimensionInfo {
+  return (
+    DIMENSION_LABELS[dimension] ?? { emoji: "❓", en: dimension, vi: dimension }
+  );
+}
+
+const DEMO_DIMENSION_LABELS: Record<Lang, Record<string, string>> = {
+  en: {
+    age_group: "Age",
+    education: "Education",
+    gender: "Gender",
+    income: "Income",
+    political: "Politics",
+    religious: "Faith",
+  },
+  vi: {
+    age_group: "Tuổi",
+    education: "Học vấn",
+    gender: "Giới tính",
+    income: "Thu nhập",
+    political: "Chính trị",
+    religious: "Tín ngưỡng",
+  },
 };
 
-function prettifyGroup(group: string): string {
-  if (DEMO_GROUP_LABELS[group]) return DEMO_GROUP_LABELS[group];
-  if (/^\d+$/.test(group)) return `around $${group}`;
+const DEMO_GROUP_LABELS: Record<Lang, Record<string, string>> = {
+  en: {
+    underHigh: "below high school",
+    female: "women",
+    male: "men",
+    not_religious: "non-religious",
+    somewhat: "somewhat religious",
+    very: "very religious",
+    above100000: "over $100k",
+    over10000: "over $10k",
+  },
+  vi: {
+    underHigh: "dưới THPT",
+    female: "nữ",
+    male: "nam",
+    not_religious: "vô thần",
+    somewhat: "tín ngưỡng vừa",
+    very: "rất sùng đạo",
+    above100000: "trên $100k",
+    over10000: "trên $10k",
+    high: "THPT",
+    college: "cao đẳng",
+    vocational: "trung cấp nghề",
+    bachelor: "cử nhân",
+    graduate: "sau đại học",
+    others: "khác",
+    conservative: "bảo thủ",
+    moderate: "ôn hòa",
+    progressive: "cấp tiến",
+  },
+};
+
+function prettifyGroup(lang: Lang, group: string): string {
+  const override = DEMO_GROUP_LABELS[lang][group];
+  if (override) return override;
+  if (/^\d+$/.test(group)) return lang === "vi" ? `khoảng $${group}` : `around $${group}`;
   if (/^\d+-\d+$/.test(group)) return group;
-  return group.replace(/_/g, " ");
+  const pretty = group.replace(/_/g, " ");
+  if (lang === "en") return pretty;
+  const EN_TO_VI: Record<string, string> = {
+    high: "THPT",
+    college: "cao đẳng",
+    vocational: "trung cấp nghề",
+    bachelor: "cử nhân",
+    graduate: "sau đại học",
+    others: "khác",
+  };
+  return EN_TO_VI[group] ?? pretty;
 }
 
-export function humanizeDemoGroup(key: string): string {
+export function humanizeDemoGroup(lang: Lang, key: string): string {
   const [dimension, ...rest] = key.split("_");
   const group = rest.join("_");
-  const dimLabel = DEMO_DIMENSION_LABELS[dimension] ?? dimension;
-  return `${dimLabel}: ${prettifyGroup(group)}`;
+  const dimLabel = DEMO_DIMENSION_LABELS[lang][dimension] ?? dimension;
+  return `${dimLabel}: ${prettifyGroup(lang, group)}`;
 }
 
-const AXIS_TOPICS: Record<string, string> = {
-  Age: "age",
-  Fitness: "physical fitness",
-  Gender: "gender",
-  "Social Status": "social status",
-  Species: "humans versus pets",
-  Utilitarian: "saving the many versus the few",
+const AXIS_TOPICS: Record<Lang, Record<string, string>> = {
+  en: {
+    Age: "age",
+    Fitness: "physical fitness",
+    Gender: "gender",
+    "Social Status": "social status",
+    Species: "humans versus pets",
+    Utilitarian: "saving the many versus the few",
+  },
+  vi: {
+    Age: "tuổi tác",
+    Fitness: "thể chất",
+    Gender: "giới tính",
+    "Social Status": "địa vị xã hội",
+    Species: "con người hay thú cưng",
+    Utilitarian: "cứu nhiều người hay ít người",
+  },
 };
 
-export function traitSentences(radar: RadarPoint[]): string[] {
+export function traitSentences(lang: Lang, radar: RadarPoint[]): string[] {
+  const topics = AXIS_TOPICS[lang];
   const sentences: string[] = [];
   for (const point of radar) {
-    const topic = AXIS_TOPICS[point.subject] ?? point.subject.toLowerCase();
+    const topic = topics[point.subject] ?? point.subject.toLowerCase();
     if (point.user >= 0.75) {
       sentences.push(
-        `You almost always step in when ${topic} is on the line.`,
+        lang === "vi"
+          ? `Bạn gần như luôn can thiệp khi ${topic} bị đe dọa.`
+          : `You almost always step in when ${topic} is on the line.`,
       );
     } else if (point.user <= 0.25) {
       sentences.push(
-        `You usually hold back when ${topic} is on the line.`,
+        lang === "vi"
+          ? `Bạn thường đứng ngoài khi ${topic} bị đe dọa.`
+          : `You usually hold back when ${topic} is on the line.`,
       );
     }
   }
   if (sentences.length === 0) {
-    sentences.push("You weigh each dilemma on its own — no single rule runs you.");
+    sentences.push(
+      lang === "vi"
+        ? "Bạn cân nhắc từng tình huống — không quy tắc nào chi phối bạn."
+        : "You weigh each dilemma on its own — no single rule runs you.",
+    );
   }
   return sentences.slice(0, 4);
 }
 
-export function friendlyBlindSpot(dimension: string, note: string): string {
-  const { emoji, label } = dimensionInfo(dimension);
-  const direction = note.includes("less often") ? "less" : "more";
-  return `${emoji} ${label}: you step in ${direction} often than most of the world.`;
+export function friendlyBlindSpot(
+  lang: Lang,
+  dimension: string,
+  note: string,
+): string {
+  const info = dimensionInfo(dimension);
+  const label = lang === "vi" ? info.vi : info.en;
+  const less = note.includes("less often");
+  if (lang === "vi") {
+    return `${info.emoji} ${label}: bạn can thiệp ${less ? "ít" : "nhiều"} hơn phần lớn thế giới.`;
+  }
+  return `${info.emoji} ${label}: you step in ${less ? "less" : "more"} often than most of the world.`;
 }
 
 export function shareText(
+  lang: Lang,
   matchName: string,
   score: number,
   topCountries: { label?: string; country?: string; score: number }[],
@@ -123,9 +209,16 @@ export function shareText(
     .slice(0, 3)
     .map((c) => countryName(c.country ?? c.label ?? ""))
     .join(", ");
+  if (lang === "vi") {
+    return (
+      `Bản sao đạo đức của mình là ${countryName(matchName)} (${score}% tương đồng) ` +
+      `theo Ethic2Vec! Xếp sau: ${names}. ` +
+      `Quốc gia nào nghĩ giống bạn?`
+    );
+  }
   return (
-    `My moral twin is ${countryName(matchName)} ${countryFlag(matchName)} ` +
-    `(${score}% match) according to Ethic2Vec! Runner-ups: ${names}. ` +
+    `My moral twin is ${countryName(matchName)} (${score}% match) ` +
+    `according to Ethic2Vec! Runner-ups: ${names}. ` +
     `Which country thinks like you?`
   );
 }
