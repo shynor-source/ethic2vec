@@ -12,6 +12,9 @@ class Settings(BaseSettings):
     assets_base_url: str = (
         "https://raw.githubusercontent.com/shynor-source/ethic2vec/main/cloud-assets"
     )
+    cors_origins: str = (
+        "https://ethic2vec.vercel.app,http://localhost:5173,http://localhost:3000"
+    )
 
 
 settings = Settings()

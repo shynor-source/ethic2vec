@@ -67,3 +67,30 @@ def test_analyze_rejects_bad_choice(monkeypatch):
 def test_analyze_rejects_empty_answers(monkeypatch):
     client = _client(monkeypatch)
     assert client.post("/api/analyze", json={"answers": []}).status_code == 422
+
+
+def test_cors_allows_vercel_origin(monkeypatch):
+    client = _client(monkeypatch)
+    response = client.get(
+        "/api/scenarios/random",
+        params={"n": 1},
+        headers={"Origin": "https://ethic2vec.vercel.app"},
+    )
+    assert response.status_code == 200
+    assert (
+        response.headers["access-control-allow-origin"]
+        == "https://ethic2vec.vercel.app"
+    )
+
+
+def test_cors_preflight(monkeypatch):
+    client = _client(monkeypatch)
+    response = client.options(
+        "/api/analyze",
+        headers={
+            "Origin": "https://ethic2vec.vercel.app",
+            "Access-Control-Request-Method": "POST",
+        },
+    )
+    assert response.status_code == 200
+    assert "POST" in response.headers["access-control-allow-methods"]
