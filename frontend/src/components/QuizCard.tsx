@@ -1,26 +1,47 @@
 import type { Choice, Scenario } from "../lib/api";
+import { scenarioEmoji } from "../lib/format";
 
 interface QuizCardProps {
   scenario: Scenario;
   index: number;
+  total: number;
   selected?: Choice;
   onSelect: (choice: Choice) => void;
+  onBack: () => void;
+  onNext: () => void;
+  isFirst: boolean;
+  isLast: boolean;
 }
 
 export default function QuizCard({
   scenario,
   index,
+  total,
   selected,
   onSelect,
+  onBack,
+  onNext,
+  isFirst,
+  isLast,
 }: QuizCardProps) {
   return (
-    <section className="card">
-      <header className="card-head">
-        <span className="badge">
-          Q{index + 1} · {scenario.dimension}
+    <section className="quiz">
+      <div className="quiz-top">
+        <span className="muted">
+          Dilemma {index + 1} of {total}
         </span>
-      </header>
-      <div className="choices">
+        <div className="dots">
+          {Array.from({ length: total }, (_, i) => (
+            <span
+              key={i}
+              className={i < index ? "dot done" : i === index ? "dot now" : "dot"}
+            />
+          ))}
+        </div>
+      </div>
+      <div className="dilemma-emoji">{scenarioEmoji(scenario.scenario_type)}</div>
+      <h2 className="dilemma-title">The car must hit someone. You choose:</h2>
+      <div className="choices big">
         <button
           type="button"
           className={selected === "A" ? "choice selected" : "choice"}
@@ -36,6 +57,24 @@ export default function QuizCard({
         >
           <span className="choice-tag">B</span>
           <span>{scenario.choice_b}</span>
+        </button>
+      </div>
+      <div className="quiz-nav">
+        <button
+          type="button"
+          className="ghost"
+          onClick={onBack}
+          disabled={isFirst}
+        >
+          ← Back
+        </button>
+        <button
+          type="button"
+          className="primary"
+          onClick={onNext}
+          disabled={!selected}
+        >
+          {isLast ? "See my result ✨" : "Next →"}
         </button>
       </div>
     </section>

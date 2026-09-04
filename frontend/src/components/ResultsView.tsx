@@ -1,3 +1,4 @@
+import { useState } from "react";
 import {
   PolarAngleAxis,
   PolarGrid,
@@ -13,112 +14,91 @@ import {
   Legend,
 } from "recharts";
 import type { AnalyzeResult } from "../lib/api";
+import {
+  countryFlag,
+  countryName,
+  friendlyBlindSpot,
+  humanizeDemoGroup,
+  shareText,
+  traitSentences,
+} from "../lib/format";
 
 interface ResultsViewProps {
   result: AnalyzeResult;
   onRestart: () => void;
 }
 
-function ScatterPanel({
-  title,
-  data,
-  xLabel,
-  yLabel,
-}: {
-  title: string;
-  data: AnalyzeResult["pc12"];
-  xLabel: string;
-  yLabel: string;
-}) {
-  const user = data.filter((point) => point.kind === "user");
-  const rest = data.filter((point) => point.kind !== "user");
-  return (
-    <section className="card">
-      <h2>{title}</h2>
-      <div className="chart">
-        <ResponsiveContainer width="100%" height={320}>
-          <ScatterChart margin={{ top: 16, right: 16, bottom: 16, left: 0 }}>
-            <XAxis type="number" dataKey="x" name={xLabel} />
-            <YAxis type="number" dataKey="y" name={yLabel} />
-            <ZAxis type="number" range={[60, 60]} />
-            <Tooltip cursor={{ strokeDasharray: "3 3" }} />
-            <Legend />
-            <Scatter name="Countries / groups" data={rest} fill="#8884d8" />
-            <Scatter name="You" data={user} fill="#ff4d4f" />
-          </ScatterChart>
-        </ResponsiveContainer>
-      </div>
-    </section>
-  );
-}
-
 export default function ResultsView({ result, onRestart }: ResultsViewProps) {
+  const [copied, setCopied] = useState(false);
+  const top = result.topCountries[0];
+  const topScore = top?.score ?? 0;
+  const traits = traitSentences(result.radar);
+
+  const handleShare = async () => {
+    const text = shareText(result.matchName, topScore, result.topCountries);
+    try {
+      await navigator.clipboard.writeText(text);
+      setCopied(true);
+      setTimeout(() => setCopied(false), 2000);
+    } catch {
+      setCopied(false);
+    }
+  };
+
   return (
     <div className="results">
-      <section className="card">
-        <h2>You vs {result.matchName}</h2>
-        {result.radar.length > 0 ? (
-          <div className="chart">
-            <ResponsiveContainer width="100%" height={340}>
-              <RadarChart data={result.radar}>
-                <PolarGrid />
-                <PolarAngleAxis dataKey="subject" />
-                <Radar
-                  name="You"
-                  dataKey="user"
-                  stroke="#ff4d4f"
-                  fill="#ff4d4f"
-                  fillOpacity={0.3}
-                />
-                <Radar
-                  name={result.matchName}
-                  dataKey="match"
-                  stroke="#8884d8"
-                  strokeWidth={2}
-                  fill="#8884d8"
-                  fillOpacity={0.3}
-                />
-                <Legend />
-                <Tooltip />
-              </RadarChart>
-            </ResponsiveContainer>
-          </div>
-        ) : (
-          <p className="muted">Radar data is not available.</p>
-        )}
+      <section className="verdict">
+        <div className="verdict-flag">{countryFlag(result.matchName)}</div>
+        <p className="verdict-kicker">Your moral twin is…</p>
+        <h2 className="verdict-name">{countryName(result.matchName)}</h2>
+        <div className="match-bar">
+          <div className="match-fill" style={{ width: `${topScore}%` }} />
+        </div>
+        <p className="verdict-score">{topScore}% match</p>
+        <button type="button" className="ghost" onClick={handleShare}>
+          {copied ? "Copied! ✅" : "📋 Share my result"}
+        </button>
       </section>
 
-      <ScatterPanel
-        title="PC1 vs PC2"
-        data={result.pc12}
-        xLabel="PC1"
-        yLabel="PC2"
-      />
-      <ScatterPanel
-        title="PC1 vs PC3"
-        data={result.pc13}
-        xLabel="PC1"
-        yLabel="PC3"
-      />
-
       <section className="card">
-        <h2>Top 5 matching countries</h2>
-        <ul className="rank-list">
-          {result.topCountries.slice(0, 5).map((entry) => (
-            <li key={entry.label}>
-              <span>{entry.label}</span>
-              <strong>{entry.score}%</strong>
-            </li>
+        <h2>🧬 Your moral profile, in plain words</h2>
+        <ul className="traits">
+          {traits.map((sentence) => (
+            <li key={sentence}>{sentence}</li>
           ))}
         </ul>
       </section>
 
       <section className="card">
-        <h2>Top demographic groups</h2>
+        <h2>🏆 Closest matches</h2>
+        <p className="muted">
+          How closely each country's people answered, compared to you.
+        </p>
+        <ul className="rank-list">
+          {result.topCountries.slice(0, 5).map((entry, i) => {
+            const code = entry.country ?? entry.label ?? "";
+            return (
+              <li key={code}>
+                <span className="rank-row">
+                  <span className="rank-medal">
+                    {["🥇", "🥈", "🥉", "4.", "5."][i]}
+                  </span>
+                  <span className="rank-flag">{countryFlag(code)}</span>
+                  <span>{countryName(code)}</span>
+                </span>
+                <strong>{entry.score}%</strong>
+              </li>
+            );
+          })}
+        </ul>
+      </section>
+
+      <section className="card">
+        <h2>👥 Groups that think like you</h2>
         <ul className="rank-list">
           {result.topDemographics.map((entry) => (
             <li key={entry.label}>
-              <span>{entry.label}</span>
+              <span>{humanizeDemoGroup(entry.label ?? "")}</span>
               <strong>{entry.score}%</strong>
             </li>
           ))}
@@ -126,20 +106,82 @@ export default function ResultsView({ result, onRestart }: ResultsViewProps) {
       </section>
 
       <section className="card">
-        <h2>Moral blind spots</h2>
+        <h2>👁️ Your moral blind spots</h2>
+        <p className="muted">Where you stand out from the rest of the world.</p>
         {result.blindSpots.length > 0 ? (
           <ul className="spots">
-            {result.blindSpots.map((spot) => (
-              <li key={spot}>{spot}</li>
-            ))}
+            {result.blindSpots.map((spot) => {
+              const dimension = spot.split(":")[0];
+              return <li key={spot}>{friendlyBlindSpot(dimension, spot)}</li>;
+            })}
           </ul>
         ) : (
-          <p className="muted">No blind spots detected.</p>
+          <p className="muted">No blind spots detected — you are very average.</p>
         )}
       </section>
 
+      <details className="card nerd">
+        <summary>🤓 Nerd corner: the science behind it</summary>
+        {result.radar.length > 0 && (
+          <>
+            <h3>You vs {countryName(result.matchName)} across 6 themes</h3>
+            <p className="muted">Higher means you step in more often.</p>
+            <div className="chart">
+              <ResponsiveContainer width="100%" height={320}>
+                <RadarChart data={result.radar}>
+                  <PolarGrid />
+                  <PolarAngleAxis dataKey="subject" />
+                  <Radar
+                    name="You"
+                    dataKey="user"
+                    stroke="#ff4d4f"
+                    fill="#ff4d4f"
+                    fillOpacity={0.3}
+                  />
+                  <Radar
+                    name={countryName(result.matchName)}
+                    dataKey="match"
+                    stroke="#8884d8"
+                    fill="#8884d8"
+                    fillOpacity={0.3}
+                  />
+                  <Legend />
+                  <Tooltip />
+                </RadarChart>
+              </ResponsiveContainer>
+            </div>
+          </>
+        )}
+        <h3>World map of morals</h3>
+        <p className="muted">
+          Each dot is a country. The red dot is you — the closer the dots,
+          the more similar the morals.
+        </p>
+        <div className="chart">
+          <ResponsiveContainer width="100%" height={300}>
+            <ScatterChart margin={{ top: 16, right: 16, bottom: 16, left: 0 }}>
+              <XAxis type="number" dataKey="x" name="Axis 1" />
+              <YAxis type="number" dataKey="y" name="Axis 2" />
+              <ZAxis type="number" range={[60, 60]} />
+              <Tooltip cursor={{ strokeDasharray: "3 3" }} />
+              <Legend />
+              <Scatter
+                name="Countries"
+                data={result.pc12.filter((p) => p.kind !== "user")}
+                fill="#8884d8"
+              />
+              <Scatter
+                name="You"
+                data={result.pc12.filter((p) => p.kind === "user")}
+                fill="#ff4d4f"
+              />
+            </ScatterChart>
+          </ResponsiveContainer>
+        </div>
+      </details>
+
       <button type="button" className="primary" onClick={onRestart}>
-        Start over
+        🔄 Try again
       </button>
     </div>
   );

@@ -1,4 +1,5 @@
 import { useCallback, useEffect, useState } from "react";
+import Landing from "./components/Landing";
 import QuizCard from "./components/QuizCard";
 import ResultsView from "./components/ResultsView";
 import {
@@ -13,12 +14,13 @@ import "./App.css";
 
 const QUESTION_COUNT = 6;
 
-type Stage = "quiz" | "loading-result" | "result";
+type Stage = "landing" | "quiz" | "loading-result" | "result";
 
 export default function App() {
   const [scenarios, setScenarios] = useState<Scenario[]>([]);
   const [answers, setAnswers] = useState<Record<string, Choice>>({});
-  const [stage, setStage] = useState<Stage>("quiz");
+  const [step, setStep] = useState(0);
+  const [stage, setStage] = useState<Stage>("landing");
   const [result, setResult] = useState<AnalyzeResult | null>(null);
   const [loading, setLoading] = useState(false);
   const [error, setError] = useState<string | null>(null);
@@ -30,10 +32,10 @@ export default function App() {
       const data = await fetchRandomScenarios(QUESTION_COUNT);
       setScenarios(data);
       setAnswers({});
+      setStep(0);
       setResult(null);
-      setStage("quiz");
     } catch {
-      setError("Could not load scenarios. Check VITE_API_URL and retry.");
+      setError("Could not load scenarios. Check your connection and retry.");
     } finally {
       setLoading(false);
     }
@@ -43,11 +45,20 @@ export default function App() {
     void loadScenarios();
   }, [loadScenarios]);
 
-  const answeredCount = Object.keys(answers).length;
-  const canSubmit = scenarios.length > 0 && answeredCount === scenarios.length;
+  const handleStart = () => {
+    if (scenarios.length > 0) {
+      setStage("quiz");
+    } else {
+      void loadScenarios().then(() => setStage("quiz"));
+    }
+  };
+
+  const handleRestart = () => {
+    void loadScenarios();
+    setStage("landing");
+  };
 
   const handleSubmit = async () => {
-    if (!canSubmit) return;
     setStage("loading-result");
     setError(null);
     const payload: Answer[] = scenarios.map((scenario) => ({
@@ -65,73 +76,46 @@ export default function App() {
     }
   };
 
+  const current = scenarios[step];
+
   return (
     <main className="page">
-      <header className="hero">
-        <h1>Ethic2Vec</h1>
-        <p className="muted">
-          Answer {QUESTION_COUNT} dilemmas, then compare your moral vector with
-          countries and groups.
-        </p>
-      </header>
-
-      {error && <p className="error">{error}</p>}
-
-      {stage === "result" && result ? (
-        <ResultsView result={result} onRestart={loadScenarios} />
-      ) : (
-        <>
-          <div className="toolbar">
-            <span className="muted">
-              {answeredCount}/{scenarios.length} answered
-            </span>
-            <button
-              type="button"
-              className="ghost"
-              onClick={loadScenarios}
-              disabled={loading}
-            >
-              {loading ? "Loading..." : "New quiz"}
-            </button>
-          </div>
-
-          <div className="progress">
-            <div
-              className="progress-bar"
-              style={{
-                width:
-                  scenarios.length > 0
-                    ? `${(answeredCount / scenarios.length) * 100}%`
-                    : "0%",
-              }}
-            />
-          </div>
-
-          {scenarios.map((scenario, index) => (
-            <QuizCard
-              key={scenario.outcome_id}
-              scenario={scenario}
-              index={index}
-              selected={answers[scenario.outcome_id]}
-              onSelect={(choice) =>
-                setAnswers((prev) => ({
-                  ...prev,
-                  [scenario.outcome_id]: choice,
-                }))
-              }
-            />
-          ))}
-
-          <button
-            type="button"
-            className="primary"
-            disabled={!canSubmit || stage === "loading-result"}
-            onClick={handleSubmit}
-          >
-            {stage === "loading-result" ? "Analyzing..." : "See my result"}
-          </button>
-        </>
+      {stage === "landing" && (
+        <Landing onStart={handleStart} loading={loading} />
       )}
+
+      {stage === "quiz" && current && (
+        <QuizCard
+          scenario={current}
+          index={step}
+          total={scenarios.length}
+          selected={answers[current.outcome_id]}
+          onSelect={(choice) =>
+            setAnswers((prev) => ({ ...prev, [current.outcome_id]: choice }))
+          }
+          onBack={() => setStep((s) => Math.max(0, s - 1))}
+          onNext={() => {
+            if (step === scenarios.length - 1) void handleSubmit();
+            else setStep((s) => s + 1);
+          }}
+          isFirst={step === 0}
+          isLast={step === scenarios.length - 1}
+        />
+      )}
+
+      {stage === "loading-result" && (
+        <div className="analyzing">
+          <div className="spinner">🧠</div>
+          <h2>Reading your moral compass…</h2>
+          <p className="muted">Comparing you with 228 countries.</p>
+        </div>
+      )}
+
+      {stage === "result" && result && (
+        <ResultsView result={result} onRestart={handleRestart} />
+      )}
+
+      {error && stage !== "landing" && <p className="error">{error}</p>}
     </main>
   );
 }
