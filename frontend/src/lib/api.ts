@@ -16,6 +16,8 @@ export interface Scenario {
   choice_b_vi?: string;
   side_a_emoji?: string;
   side_b_emoji?: string;
+  context_en?: string;
+  context_vi?: string;
   scenario_type?: string;
   character_group?: string;
   country?: string;

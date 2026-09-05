@@ -227,6 +227,19 @@
   font-size: 24px;
 }
 
+.dilemma-context {
+  margin: 0 auto;
+  max-width: 560px;
+  text-align: center;
+  font-size: 15px;
+  line-height: 1.6;
+  color: var(--text);
+  background: rgba(255, 255, 255, 0.04);
+  border: 1px dashed rgba(255, 255, 255, 0.18);
+  border-radius: 12px;
+  padding: 12px 18px;
+}
+
 .card {
   border: 1px solid var(--border);
   border-radius: 18px;

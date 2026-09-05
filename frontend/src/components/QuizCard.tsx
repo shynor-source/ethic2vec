@@ -32,6 +32,10 @@ export default function QuizCard({
     lang === "vi" ? (scenario.choice_b_vi ?? scenario.choice_b) : scenario.choice_b;
   const emojiA = scenario.side_a_emoji ?? "🅰️";
   const emojiB = scenario.side_b_emoji ?? "🅱️";
+  const context =
+    lang === "vi"
+      ? (scenario.context_vi ?? scenario.context_en)
+      : (scenario.context_en ?? scenario.context_vi);
   const progress = Math.round(((index + (selected ? 1 : 0)) / total) * 100);
 
   return (
@@ -49,6 +53,7 @@ export default function QuizCard({
         <div className="progress-bar" style={{ width: `${progress}%` }} />
       </div>
       <h2 className="dilemma-title">{t("dilemmaTitle")}</h2>
+      {context && <p className="dilemma-context">📜 {context}</p>}
       <div className="vs-grid">
         <button
           type="button"

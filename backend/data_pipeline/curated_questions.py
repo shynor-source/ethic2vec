@@ -7,6 +7,107 @@ choice B saves the other side (scores 0).
 
 from __future__ import annotations
 
+# Situational context (legality, setting, fault) for each dilemma.
+# Adds the "who is right" axis from the original Moral Machine data.
+CONTEXTS: dict[str, tuple[str, str]] = {
+    "age-old-1": (
+        "The 2 elderly people cross on green. The jogger runs a red light.",
+        "2 cụ già qua đường đúng đèn xanh. Người chạy bộ vượt đèn đỏ.",
+    ),
+    "age-old-2": (
+        "The old woman jaywalks. The young man crosses legally.",
+        "Cụ bà sang đường sai chỗ. Thanh niên qua đường đúng luật.",
+    ),
+    "age-young-1": (
+        "School zone, 25 km/h. The children cross legally; the old man jaywalks.",
+        "Khu trường học, 25 km/h. Các em qua đường đúng luật; cụ ông sang đường sai chỗ.",
+    ),
+    "age-young-2": (
+        "The stroller is on the crosswalk. The old woman steps into traffic.",
+        "Xe nôi đang trên vạch qua đường. Cụ bà bước ra giữa dòng xe.",
+    ),
+    "fitness-fat-1": (
+        "Both cross legally — no one is at fault.",
+        "Cả hai đều qua đường đúng luật — không ai sai.",
+    ),
+    "fitness-fat-2": (
+        "A marathon blocks the road. Both groups cross with the walk signal.",
+        "Đường đang có giải marathon. Cả hai nhóm đều qua đường đúng đèn.",
+    ),
+    "fitness-fit-1": (
+        "The athlete sprints across on red. The woman crosses on green.",
+        "Vận động viên lao qua đường khi đèn đỏ. Người phụ nữ qua đường đúng đèn xanh.",
+    ),
+    "fitness-fit-2": (
+        "The overweight man slips onto the road. The athletes cross legally.",
+        "Người đàn ông thừa cân trượt ngã ra đường. Các vận động viên qua đường đúng luật.",
+    ),
+    "gender-female-1": (
+        "Both cross legally — no one is at fault.",
+        "Cả hai qua đường đúng luật — không ai sai.",
+    ),
+    "gender-female-2": (
+        "The doctor rushes to an emergency surgery. The executive jaywalks while texting.",
+        "Nữ bác sĩ đang vội đi mổ cấp cứu. Nam giám đốc vừa đi vừa nhắn tin, sang đường sai chỗ.",
+    ),
+    "gender-male-1": (
+        "Both cross legally — pure chance decides who you meet.",
+        "Cả hai qua đường đúng luật — hoàn toàn là ngẫu nhiên.",
+    ),
+    "gender-male-2": (
+        "Midnight. The homeless man sleeps at the roadside edge; the woman crosses legally.",
+        "Nửa đêm. Người vô gia cư ngủ ở mép đường; người phụ nữ qua đường đúng luật.",
+    ),
+    "status-high-1": (
+        "The executive crosses on green. The homeless man wanders into traffic.",
+        "Giám đốc qua đường đúng đèn xanh. Người vô gia cư lang thang ra giữa đường.",
+    ),
+    "status-high-2": (
+        "The doctor rushes to surgery and crosses on green. The vendor pushes his cart through red.",
+        "Bác sĩ vội đi mổ, qua đường đúng đèn. Người bán hàng đẩy xe qua đèn đỏ.",
+    ),
+    "status-low-1": (
+        "The homeless woman crosses legally. The executive jaywalks while on a call.",
+        "Phụ nữ vô gia cư qua đường đúng luật. Giám đốc vừa gọi điện vừa sang đường sai chỗ.",
+    ),
+    "status-low-2": (
+        "The beggar child chases a ball into the street. The couple crosses legally.",
+        "Em bé ăn xin đuổi theo quả bóng ra đường. Cặp đôi qua đường đúng luật.",
+    ),
+    "species-hoomans-1": (
+        "The dogs slipped their leashes. The man crosses on green.",
+        "2 chú chó tuột xích. Người đàn ông qua đường đúng đèn xanh.",
+    ),
+    "species-hoomans-2": (
+        "The pregnant woman crosses legally. The cat darts under the wheels.",
+        "Thai phụ qua đường đúng luật. Chú mèo lao ra trước bánh xe.",
+    ),
+    "species-pets-1": (
+        "The man jaywalks. The dogs walk with their owner on green.",
+        "Người đàn ông sang đường sai chỗ. 2 chú chó đi cùng chủ, đúng đèn xanh.",
+    ),
+    "species-pets-2": (
+        "The cat crosses with the walk signal. The criminal flees the police across the road.",
+        "Chú mèo qua đường đúng đèn. Tên tội phạm băng qua đường khi đang chạy trốn cảnh sát.",
+    ),
+    "util-less-1": (
+        "The child chases a ball. The workers cross on green.",
+        "Đứa trẻ đuổi bóng. Các công nhân qua đường đúng đèn.",
+    ),
+    "util-less-2": (
+        "The bus runs a red light. The pedestrian crosses legally.",
+        "Xe buýt vượt đèn đỏ. Người đi bộ qua đường đúng luật.",
+    ),
+    "util-more-1": (
+        "The workers repair the road legally. The pedestrian steps out while staring at his phone.",
+        "Công nhân sửa đường đúng quy định. Người đi bộ mải nhìn điện thoại bước ra đường.",
+    ),
+    "util-more-2": (
+        "The children cross on green. Your passenger begs you to stay straight.",
+        "Các em qua đường đúng đèn. Hành khách của bạn van xin bạn đi thẳng.",
+    ),
+}
+
 # Emoji illustrating side A (saved by intervening) vs side B, for VS cards.
 SIDE_EMOJIS: dict[str, tuple[str, str]] = {
     "age-old-1": ("👵👴", "🏃"),
@@ -50,6 +151,7 @@ def _entry(
     if dimension.startswith("Social Status"):
         scenario_type, character_group = "Social Status", dimension.split("_")[-1]
     side_a_emoji, side_b_emoji = SIDE_EMOJIS.get(slug, ("🅰️", "🅱️"))
+    context_en, context_vi = CONTEXTS.get(slug, ("", ""))
     return {
         "dimension": dimension,
         "outcome_id": f"curated-{slug}",
@@ -62,6 +164,8 @@ def _entry(
         "choice_b_vi": choice_b_vi,
         "side_a_emoji": side_a_emoji,
         "side_b_emoji": side_b_emoji,
+        "context_en": context_en,
+        "context_vi": context_vi,
         "crossing_legality": 2,
         "is_passengers": is_passengers,
         "num_characters": 2,

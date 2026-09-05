@@ -33,6 +33,8 @@ REQUIRED_FIELDS = (
     "choice_b",
     "choice_a_vi",
     "choice_b_vi",
+    "context_en",
+    "context_vi",
 )
 
 

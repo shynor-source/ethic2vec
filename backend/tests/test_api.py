@@ -20,6 +20,7 @@ def test_random_scenarios_distinct_dimensions(monkeypatch):
     assert len({s["dimension"] for s in scenarios}) == 6
     assert all(s["choice_a"] and s["choice_b"] for s in scenarios)
     assert all(s["choice_a_vi"] and s["choice_b_vi"] for s in scenarios)
+    assert all(s["context_en"] and s["context_vi"] for s in scenarios)
 
 
 def test_random_scenarios_rejects_invalid_n(monkeypatch):
