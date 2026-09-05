@@ -155,7 +155,11 @@ export function normalizeAnalyzeResponse(raw: unknown): AnalyzeResult {
 }
 
 export async function fetchRandomScenarios(n = 6): Promise<Scenario[]> {
-  const response = await api.get("/api/scenarios/random", { params: { n } });
+  // Generous timeout: free-tier backends can cold-start for ~50s.
+  const response = await api.get("/api/scenarios/random", {
+    params: { n },
+    timeout: 60000,
+  });
   const payload = response.data;
   if (Array.isArray(payload)) return payload as Scenario[];
   if (Array.isArray((payload as { scenarios?: unknown }).scenarios)) {
@@ -167,6 +171,6 @@ export async function fetchRandomScenarios(n = 6): Promise<Scenario[]> {
 export async function analyzeAnswers(
   answers: Answer[],
 ): Promise<AnalyzeResult> {
-  const response = await api.post("/api/analyze", { answers });
+  const response = await api.post("/api/analyze", { answers }, { timeout: 60000 });
   return normalizeAnalyzeResponse(response.data);
 }

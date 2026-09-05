@@ -5,6 +5,8 @@ import { COUNTRY_META } from "../lib/countryMeta";
 interface LandingProps {
   onStart: () => void;
   loading: boolean;
+  waking: boolean;
+  error: string | null;
 }
 
 const MARQUEE_CODES = [
@@ -27,7 +29,7 @@ function MarqueeRow({ codes, reverse }: { codes: string[]; reverse?: boolean }) 
   );
 }
 
-export default function Landing({ onStart, loading }: LandingProps) {
+export default function Landing({ onStart, loading, waking, error }: LandingProps) {
   const { t } = useLang();
   return (
     <div className="landing">
@@ -47,6 +49,8 @@ export default function Landing({ onStart, loading }: LandingProps) {
       <button type="button" className="cta" onClick={onStart} disabled={loading}>
         {loading ? t("loadingDilemmas") : t("startCta")}
       </button>
+      {waking && <p className="muted waking">{t("wakingServer")}</p>}
+      {error && !loading && <p className="error">{error}</p>}
       <div className="stats">
         <div className="stat">
           <strong>6</strong>

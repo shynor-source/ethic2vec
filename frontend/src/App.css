@@ -133,6 +133,21 @@
   cursor: wait;
 }
 
+.waking {
+  animation: pulse 1.4s ease-in-out infinite;
+  margin: 0;
+}
+
+@keyframes pulse {
+  0%,
+  100% {
+    opacity: 0.55;
+  }
+  50% {
+    opacity: 1;
+  }
+}
+
 .steps {
   display: grid;
   grid-template-columns: repeat(3, 1fr);

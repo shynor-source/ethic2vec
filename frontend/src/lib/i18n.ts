@@ -100,8 +100,12 @@ const STRINGS = {
   statsCountries: { en: "countries compared", vi: "quốc gia so sánh" },
   statsGroups: { en: "demographic groups", vi: "nhóm nhân khẩu" },
   loadError: {
-    en: "Could not load scenarios. Check your connection and retry.",
-    vi: "Không tải được tình huống. Kiểm tra mạng rồi thử lại.",
+    en: "Could not load scenarios. The server may be waking up — tap Start to retry.",
+    vi: "Không tải được tình huống. Server có thể đang khởi động — bấm Bắt đầu để thử lại.",
+  },
+  wakingServer: {
+    en: "⏳ Waking up the server (free tier sleeps when idle)…",
+    vi: "⏳ Đang đánh thức server (gói free ngủ khi rảnh)…",
   },
   analyzeError: {
     en: "Analysis failed. Please retry.",
