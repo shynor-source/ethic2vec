@@ -61,6 +61,10 @@ const STRINGS = {
     en: "How closely each country's people answered, compared to you.",
     vi: "Người dân mỗi nước trả lời giống bạn đến mức nào.",
   },
+  matchPool: {
+    en: "Compared across {n} countries with 100+ responses each.",
+    vi: "So sánh với {n} quốc gia có từ 100 lượt trả lời trở lên.",
+  },
   groupsTitle: {
     en: "👥 Groups that think like you",
     vi: "👥 Các nhóm nghĩ giống bạn",

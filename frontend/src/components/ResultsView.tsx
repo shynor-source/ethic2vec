@@ -143,6 +143,9 @@ export default function ResultsView({ result, onRestart }: ResultsViewProps) {
           <section className="card">
             <h2>{t("matchesTitle")}</h2>
             <p className="muted">{t("matchesSub")}</p>
+            <p className="muted tiny">
+              {t("matchPool").replace("{n}", String(result.matchPoolSize))}
+            </p>
             <ul className="rank-list">
               {result.topCountries.slice(0, 5).map((entry, i) => {
                 const code = entry.country ?? entry.label ?? "";

@@ -28,6 +28,7 @@ ASSET_FILES = {
     "pca": "pca.pkl",
     "feature_columns": "feature_columns.json",
     "question_bank": "question_bank.json",
+    "country_sample_sizes": "country_sample_sizes.json",
 }
 
 
@@ -79,6 +80,13 @@ def get_question_bank() -> list[dict]:
     return json.loads(_read_bytes(ASSET_FILES["question_bank"]).decode("utf-8"))
 
 
+@lru_cache(maxsize=1)
+def get_country_sample_sizes() -> dict[str, int]:
+    return json.loads(
+        _read_bytes(ASSET_FILES["country_sample_sizes"]).decode("utf-8")
+    )
+
+
 def clear_cache() -> None:
     """Clear all cached assets. Useful in tests."""
     for loader in (
@@ -88,5 +96,6 @@ def clear_cache() -> None:
         get_pca,
         get_feature_columns,
         get_question_bank,
+        get_country_sample_sizes,
     ):
         loader.cache_clear()

@@ -67,6 +67,7 @@ export interface AnalyzeResult {
   pc12: ScatterPoint[];
   pc13: ScatterPoint[];
   matchName: string;
+  matchPoolSize: number;
 }
 
 function toPercent(value: number): number {
@@ -145,6 +146,12 @@ export function normalizeAnalyzeResponse(raw: unknown): AnalyzeResult {
     typeof data.matchName === "string"
       ? data.matchName
       : (topCountries[0]?.country ?? topCountries[0]?.label ?? "Top match");
+  const matchPoolSize =
+    typeof data.matchPoolSize === "number"
+      ? data.matchPoolSize
+      : typeof data.match_pool_size === "number"
+        ? (data.match_pool_size as number)
+        : topCountries.length;
   return {
     topCountries,
     topDemographics,
@@ -153,6 +160,7 @@ export function normalizeAnalyzeResponse(raw: unknown): AnalyzeResult {
     pc12,
     pc13,
     matchName,
+    matchPoolSize,
   };
 }
 

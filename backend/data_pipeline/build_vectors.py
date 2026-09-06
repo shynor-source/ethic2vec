@@ -64,6 +64,12 @@ def align_columns(
     return country_vectors, demographic_vectors, feature_columns
 
 
+def load_country_sample_sizes() -> dict[str, int]:
+    """Total response outcomes per country, used to filter noisy samples."""
+    df = pd.read_csv(COUNTRY_CSV, usecols=["country", "n_outcomes"])
+    return {k: int(v) for k, v in df.groupby("country")["n_outcomes"].sum().items()}
+
+
 def print_pca_summary(pca: PCA, feature_columns: list[str]) -> None:
     """Print explained variance and top loadings for manual axis naming."""
     print(f"explained_variance_ratio_: {pca.explained_variance_ratio_.tolist()}")
@@ -103,7 +109,10 @@ def main() -> None:
     (OUTPUT_DIR / "feature_columns.json").write_text(
         json.dumps(feature_columns, indent=2), encoding="utf-8"
     )
-    print(f"Saved 5 files to {OUTPUT_DIR}")
+    (OUTPUT_DIR / "country_sample_sizes.json").write_text(
+        json.dumps(load_country_sample_sizes(), indent=2), encoding="utf-8"
+    )
+    print(f"Saved 6 files to {OUTPUT_DIR}")
     _ = demographic_scaled  # fitted for validation; persisted matrices stay unscaled.
 
 

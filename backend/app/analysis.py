@@ -8,6 +8,7 @@ from sklearn.metrics.pairwise import cosine_similarity
 from sklearn.neighbors import NearestNeighbors
 
 from app.assets import (
+    get_country_sample_sizes,
     get_country_vectors,
     get_demographic_vectors,
     get_feature_columns,
@@ -19,6 +20,8 @@ CHOICE_SCORE = {"A": 1.0, "B": 0.0}
 TOP_COUNTRIES = 5
 TOP_DEMOGRAPHICS = 5
 SCATTER_DEMOGRAPHICS = 10
+# Countries below this response count are too noisy to rank (e.g. IOT: 3).
+MIN_COUNTRY_OUTCOMES = 100
 
 # Feature pairs grouped for the 6-axis radar chart.
 RADAR_GROUPS = {
@@ -56,6 +59,18 @@ def build_user_vector(
 def _to_percent(cosine_value: float) -> int:
     """Map cosine similarity [-1, 1] to a 0-100 match percentage."""
     return round((max(-1.0, min(1.0, cosine_value)) + 1.0) / 2.0 * 100.0)
+
+
+def eligible_countries(
+    countries: list[str], sample_sizes: dict[str, int]
+) -> list[str]:
+    """Keep only countries with enough responses to be reliable.
+
+    Micro-territories with a handful of responses have extreme, noisy
+    vectors that spuriously win nearest-neighbor matches.
+    """
+    eligible = [c for c in countries if sample_sizes.get(c, 0) >= MIN_COUNTRY_OUTCOMES]
+    return eligible if len(eligible) >= TOP_COUNTRIES else countries
 
 
 def rank_countries(
@@ -161,7 +176,11 @@ def analyze(answers: list[dict]) -> dict:
 
     countries = list(country_vectors.index)
     demo_keys = list(demographic_vectors.index)
-    top_countries = rank_countries(user_scaled, country_scaled, countries)
+    pool = eligible_countries(countries, get_country_sample_sizes())
+    pool_idx = [countries.index(c) for c in pool]
+    top_countries = rank_countries(
+        user_scaled, country_scaled[pool_idx], pool
+    )
     top_demographics = rank_demographics(user_scaled, demo_scaled, demo_keys)
 
     user_pc = [round(float(v), 4) for v in pca.transform(user_scaled.reshape(1, -1))[0]]
@@ -202,5 +221,6 @@ def analyze(answers: list[dict]) -> dict:
         "scatter_pc13": scatter_pc13,
         "user_pc": user_pc,
         "match_name": match_country,
+        "match_pool_size": len(pool),
         "n_answers": len(answers),
     }
