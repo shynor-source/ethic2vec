@@ -10,7 +10,6 @@ from __future__ import annotations
 from typing import TYPE_CHECKING
 
 if TYPE_CHECKING:  # only for annotations; runtime imports stay lazy
-    import numpy as np
     import pandas as pd
 
 from app.assets import (
@@ -75,11 +74,6 @@ def build_user_vector(
     return pd.Series(values, index=feature_columns), sorted(scores)
 
 
-def _to_percent(cosine_value: float) -> int:
-    """Map cosine similarity [-1, 1] to a 0-100 match percentage."""
-    return round((max(-1.0, min(1.0, cosine_value)) + 1.0) / 2.0 * 100.0)
-
-
 def eligible_countries(
     countries: list[str], sample_sizes: dict[str, int]
 ) -> list[str]:
@@ -98,60 +92,67 @@ def _answered_idx(answered: list[str], feature_columns: list[str]) -> list[int]:
     return idx if idx else list(range(len(feature_columns)))
 
 
-def _masked_cosine(
-    user_scaled: np.ndarray, matrix_scaled: np.ndarray, idx: list[int]
-) -> np.ndarray:
-    """Cosine similarity restricted to the answered subspace.
+def _mean_gap(
+    user_raw, matrix_raw, idx: list[int]
+):
+    """Mean absolute gap on answered dims. Lower is more similar.
 
-    Unanswered dimensions are mean-filled for display, but they must not
-    vote: every candidate shares the same imputed values there, so including
-    them only dilutes the real signal.
+    Raw save-rates are used deliberately: after filtering to well-sampled
+    countries the per-dim spreads are tiny (std 0.06-0.13), so standardizing
+    would amplify noise instead of signal.
     """
-    from sklearn.metrics.pairwise import cosine_similarity
+    import numpy as np
 
-    return cosine_similarity(
-        user_scaled.reshape(1, -1)[:, idx], matrix_scaled[:, idx]
-    )[0]
+    return np.abs(matrix_raw[:, idx] - user_raw[idx]).mean(axis=1)
+
+
+def _gap_to_percent(mean_gap: float) -> int:
+    """Map a mean save-rate gap to a 0-100 match percentage.
+
+    Consistent by construction with the per-dimension bars shown in the UI:
+    82% means an average gap of 18 points.
+    """
+    return round(max(0.0, 1.0 - max(0.0, mean_gap)) * 100.0)
 
 
 def rank_countries(
-    user_scaled: np.ndarray,
-    country_scaled: np.ndarray,
+    user_raw,
+    country_raw,
     countries: list[str],
     answered: list[str],
     feature_columns: list[str],
 ) -> list[dict]:
-    """Rank countries by nearest neighbors in cosine space (k=5).
+    """Rank countries by nearest neighbors under mean absolute gap (k=5).
 
     Distance is measured on answered dimensions only; the similarity score
-    shown to users comes from the same subspace.
+    shown to users comes from the same gaps rendered in the UI.
     """
     import numpy as np
 
     idx = _answered_idx(answered, feature_columns)
-    sims = _masked_cosine(user_scaled, country_scaled, idx)
-    order = np.argsort(sims)[::-1][: min(TOP_COUNTRIES, len(countries))]
+    gaps = _mean_gap(np.asarray(user_raw), np.asarray(country_raw), idx)
+    order = np.argsort(gaps)[: min(TOP_COUNTRIES, len(countries))]
     return [
-        {"country": countries[i], "similarity_pct": _to_percent(float(sims[i]))}
+        {"country": countries[i], "similarity_pct": _gap_to_percent(float(gaps[i]))}
         for i in order
     ]
 
 
 def rank_demographics(
-    user_scaled: np.ndarray,
-    demo_scaled: np.ndarray,
+    user_raw,
+    demo_raw,
     demo_keys: list[str],
     answered: list[str],
     feature_columns: list[str],
 ) -> list[dict]:
-    """Rank demographic groups by cosine similarity on answered dims only."""
+    """Rank demographic groups by mean absolute gap on answered dims only."""
     import numpy as np
 
     idx = _answered_idx(answered, feature_columns)
-    sims = _masked_cosine(user_scaled, demo_scaled, idx)
-    order = np.argsort(sims)[::-1][: min(TOP_DEMOGRAPHICS, len(demo_keys))]
+    gaps = _mean_gap(np.asarray(user_raw), np.asarray(demo_raw), idx)
+    order = np.argsort(gaps)[: min(TOP_DEMOGRAPHICS, len(demo_keys))]
     return [
-        {"group": demo_keys[i], "similarity_pct": _to_percent(float(sims[i]))}
+        {"group": demo_keys[i], "similarity_pct": _gap_to_percent(float(gaps[i]))}
         for i in order
     ]
 
@@ -234,11 +235,14 @@ def analyze(answers: list[dict]) -> dict:
     demo_keys = list(demographic_vectors.index)
     pool = eligible_countries(countries, get_country_sample_sizes())
     pool_idx = [countries.index(c) for c in pool]
+    country_raw = country_vectors[feature_columns].to_numpy()
+    demo_raw = demographic_vectors[feature_columns].to_numpy()
+    user_raw_arr = user_raw[feature_columns].to_numpy()
     top_countries = rank_countries(
-        user_scaled, country_scaled[pool_idx], pool, answered, feature_columns
+        user_raw_arr, country_raw[pool_idx], pool, answered, feature_columns
     )
     top_demographics = rank_demographics(
-        user_scaled, demo_scaled, demo_keys, answered, feature_columns
+        user_raw_arr, demo_raw, demo_keys, answered, feature_columns
     )
 
     user_pc = [round(float(v), 4) for v in pca.transform(user_scaled.reshape(1, -1))[0]]
