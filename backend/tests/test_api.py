@@ -23,6 +23,16 @@ def test_random_scenarios_distinct_dimensions(monkeypatch):
     assert all(s["context_en"] and s["context_vi"] for s in scenarios)
 
 
+def test_random_scenarios_full_coverage(monkeypatch):
+    client = _client(monkeypatch)
+    response = client.get("/api/scenarios/random", params={"n": 12})
+    assert response.status_code == 200
+    scenarios = response.json()["scenarios"]
+    assert len(scenarios) == 12
+    assert len({s["dimension"] for s in scenarios}) == 12
+    assert len({s["outcome_id"] for s in scenarios}) == 12
+
+
 def test_random_scenarios_rejects_invalid_n(monkeypatch):
     client = _client(monkeypatch)
     assert client.get("/api/scenarios/random", params={"n": 0}).status_code == 422

@@ -1,5 +1,6 @@
 import { useCallback, useEffect, useMemo, useState } from "react";
 import Landing from "./components/Landing";
+import { MODE_QUESTIONS, type QuizMode } from "./lib/quiz";
 import QuizCard from "./components/QuizCard";
 import ResultsView from "./components/ResultsView";
 import {
@@ -14,8 +15,8 @@ import {
 import { LangContext, translate, type Lang } from "./lib/i18n";
 import "./App.css";
 
-const QUESTION_COUNT = 6;
 const LANG_KEY = "e2v-lang";
+const MODE_KEY = "e2v-mode";
 // Backoff between load attempts; free-tier servers need time to wake up.
 const RETRY_DELAYS = [0, 3000, 8000];
 
@@ -38,6 +39,15 @@ function sleep(ms: number): Promise<void> {
 
 export default function App() {
   const [lang, setLang] = useState<Lang>(initialLang);
+  const [mode, setMode] = useState<QuizMode>(() => {
+    try {
+      const saved = localStorage.getItem(MODE_KEY);
+      if (saved === "quick" || saved === "standard") return saved;
+    } catch {
+      /* ignore storage errors */
+    }
+    return "standard";
+  });
   const [scenarios, setScenarios] = useState<Scenario[]>([]);
   const [answers, setAnswers] = useState<
     Record<string, { choice: Choice; strength?: Strength }>
@@ -65,8 +75,20 @@ export default function App() {
     }
   };
 
+  const changeMode = (next: QuizMode) => {
+    setMode(next);
+    setScenarios([]);
+    setErrorKey(null);
+    try {
+      localStorage.setItem(MODE_KEY, next);
+    } catch {
+      /* ignore storage errors */
+    }
+  };
+
   /** Load scenarios with retries. Returns true only when questions exist. */
-  const ensureScenarios = useCallback(async (): Promise<boolean> => {
+  const ensureScenarios = useCallback(
+    async (count: number): Promise<boolean> => {
     setLoading(true);
     setErrorKey(null);
     try {
@@ -76,7 +98,7 @@ export default function App() {
           await sleep(RETRY_DELAYS[attempt]);
         }
         try {
-          const data = await fetchRandomScenarios(QUESTION_COUNT);
+          const data = await fetchRandomScenarios(count);
           if (data.length > 0) {
             setScenarios(data);
             setAnswers({});
@@ -96,13 +118,13 @@ export default function App() {
     }
   }, []);
 
-  // Silent warm-up on mount; failures stay invisible until Start is pressed.
+  // Silent warm-up (also refills when the mode changes on landing).
   useEffect(() => {
     let cancelled = false;
     (async () => {
       setLoading(true);
       try {
-        const data = await fetchRandomScenarios(QUESTION_COUNT);
+        const data = await fetchRandomScenarios(MODE_QUESTIONS[mode]);
         if (!cancelled && data.length > 0) {
           setScenarios(data);
           setAnswers({});
@@ -117,19 +139,20 @@ export default function App() {
     return () => {
       cancelled = true;
     };
-  }, []);
+  }, [mode]);
 
   const handleStart = async () => {
-    if (scenarios.length > 0) {
+    const want = MODE_QUESTIONS[mode];
+    if (scenarios.length === want) {
       setStage("quiz");
       return;
     }
-    const ok = await ensureScenarios();
+    const ok = await ensureScenarios(want);
     if (ok) setStage("quiz");
   };
 
   const handleRestart = () => {
-    void ensureScenarios();
+    void ensureScenarios(MODE_QUESTIONS[mode]);
     setStage("landing");
   };
 
@@ -183,6 +206,8 @@ export default function App() {
             loading={loading}
             waking={waking}
             error={errorKey === "loadError" ? t("loadError") : null}
+            mode={mode}
+            onModeChange={changeMode}
           />
         )}
 

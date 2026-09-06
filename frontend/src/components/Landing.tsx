@@ -1,12 +1,15 @@
 import Flag from "./Flag";
 import { useLang } from "../lib/i18n";
 import { COUNTRY_META } from "../lib/countryMeta";
+import type { QuizMode } from "../lib/quiz";
 
 interface LandingProps {
   onStart: () => void;
   loading: boolean;
   waking: boolean;
   error: string | null;
+  mode: QuizMode;
+  onModeChange: (mode: QuizMode) => void;
 }
 
 const MARQUEE_CODES = [
@@ -29,7 +32,14 @@ function MarqueeRow({ codes, reverse }: { codes: string[]; reverse?: boolean }) 
   );
 }
 
-export default function Landing({ onStart, loading, waking, error }: LandingProps) {
+export default function Landing({
+  onStart,
+  loading,
+  waking,
+  error,
+  mode,
+  onModeChange,
+}: LandingProps) {
   const { t } = useLang();
   return (
     <div className="landing">
@@ -46,6 +56,24 @@ export default function Landing({ onStart, loading, waking, error }: LandingProp
         {t("landingTitleB")} <span className="highlight">{t("landingTitleYou")}</span>?
       </h1>
       <p className="landing-sub">{t("landingSub")}</p>
+      <div className="mode-row" role="group" aria-label="Quiz length">
+        <button
+          type="button"
+          className={mode === "quick" ? "mode selected" : "mode"}
+          onClick={() => onModeChange("quick")}
+        >
+          <strong>{t("modeQuick")}</strong>
+          <span>{t("modeQuickSub")}</span>
+        </button>
+        <button
+          type="button"
+          className={mode === "standard" ? "mode selected" : "mode"}
+          onClick={() => onModeChange("standard")}
+        >
+          <strong>{t("modeStandard")}</strong>
+          <span>{t("modeStandardSub")}</span>
+        </button>
+      </div>
       <button type="button" className="cta" onClick={onStart} disabled={loading}>
         {loading ? t("loadingDilemmas") : t("startCta")}
       </button>

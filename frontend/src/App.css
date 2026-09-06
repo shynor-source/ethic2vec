@@ -133,6 +133,48 @@
   cursor: wait;
 }
 
+.mode-row {
+  display: flex;
+  gap: 12px;
+  width: 100%;
+  max-width: 520px;
+}
+
+.mode {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  gap: 2px;
+  padding: 14px 16px;
+  border-radius: 16px;
+  border: 2px solid var(--border);
+  background: rgba(255, 255, 255, 0.03);
+  backdrop-filter: blur(10px);
+  color: inherit;
+  cursor: pointer;
+  text-align: center;
+  transition: border-color 0.15s ease, transform 0.15s ease;
+}
+
+.mode:hover {
+  border-color: var(--accent-border);
+  transform: translateY(-2px);
+}
+
+.mode.selected {
+  border-color: var(--accent);
+  background: var(--accent-bg);
+}
+
+.mode strong {
+  font-size: 16px;
+}
+
+.mode span {
+  font-size: 13px;
+  color: var(--text);
+}
+
 .waking {
   animation: pulse 1.4s ease-in-out infinite;
   margin: 0;
