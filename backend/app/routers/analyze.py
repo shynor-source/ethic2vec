@@ -17,6 +17,7 @@ class AnswerItem(BaseModel):
     outcome_id: str
     dimension: str
     choice: Literal["A", "B"]
+    strength: Literal["strong", "lean"] = "strong"
 
 
 class AnalyzeRequest(BaseModel):

@@ -795,6 +795,44 @@
   box-shadow: 0 6px 18px rgba(168, 85, 247, 0.45);
 }
 
+.strength {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+  align-items: center;
+  animation: fade-in 0.25s ease;
+}
+
+.strength-row {
+  display: flex;
+  gap: 12px;
+  width: 100%;
+}
+
+.pill {
+  flex: 1;
+  padding: 12px 16px;
+  border-radius: 999px;
+  border: 2px solid var(--border);
+  background: transparent;
+  color: inherit;
+  font-size: 15px;
+  font-weight: 600;
+  cursor: pointer;
+  transition: border-color 0.15s ease, transform 0.15s ease;
+}
+
+.pill:hover {
+  border-color: var(--accent-border);
+  transform: translateY(-1px);
+}
+
+.pill.selected {
+  border-color: var(--accent);
+  background: var(--accent-bg);
+  color: var(--text-h);
+}
+
 /* ---------- Blind-spot comparison bars ---------- */
 
 .spot {

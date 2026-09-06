@@ -23,6 +23,13 @@ from app.assets import (
 )
 
 CHOICE_SCORE = {"A": 1.0, "B": 0.0}
+# Graded answers: (choice, strength) -> save-rate score.
+GRADE_SCORE = {
+    ("A", "strong"): 1.0,
+    ("A", "lean"): 0.75,
+    ("B", "lean"): 0.25,
+    ("B", "strong"): 0.0,
+}
 TOP_COUNTRIES = 5
 TOP_DEMOGRAPHICS = 5
 SCATTER_DEMOGRAPHICS = 10
@@ -43,11 +50,11 @@ RADAR_GROUPS = {
 def build_user_vector(
     answers: list[dict], feature_columns: list[str], country_means: pd.Series
 ) -> tuple[pd.Series, list[str]]:
-    """Map A/B answers to a 12-dim save-rate vector.
+    """Map graded A/B answers to a 12-dim save-rate vector.
 
-    Choice A (save) scores 1, choice B scores 0. Answered dimensions take the
-    mean of their answers; unanswered dimensions fall back to the global
-    country column mean, mirroring the pipeline fill strategy.
+    Strong answers score 1/0, lean answers 0.75/0.25. Answered dimensions
+    take the mean of their answers; unanswered dimensions fall back to the
+    global country column mean, mirroring the pipeline fill strategy.
     """
     import numpy as np
     import pandas as pd
@@ -57,7 +64,10 @@ def build_user_vector(
         dimension = answer["dimension"]
         if dimension not in feature_columns:
             continue
-        scores.setdefault(dimension, []).append(CHOICE_SCORE[answer["choice"]])
+        key = (answer["choice"], answer.get("strength", "strong"))
+        scores.setdefault(dimension, []).append(
+            GRADE_SCORE.get(key, CHOICE_SCORE[answer["choice"]])
+        )
     values = {
         dim: (float(np.mean(scores[dim])) if dim in scores else country_means[dim])
         for dim in feature_columns

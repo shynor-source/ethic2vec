@@ -25,10 +25,13 @@ export interface Scenario {
 
 export type Choice = "A" | "B";
 
+export type Strength = "strong" | "lean";
+
 export interface Answer {
   outcome_id: string;
   dimension: string;
   choice: Choice;
+  strength: Strength;
 }
 
 export interface TopMatch {

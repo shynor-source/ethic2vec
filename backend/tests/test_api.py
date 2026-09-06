@@ -101,6 +101,42 @@ def test_analyze_deterministic(monkeypatch):
     assert first["user_pc"] == second["user_pc"]
 
 
+def test_analyze_graded_strength(monkeypatch):
+    client = _client(monkeypatch)
+    scenarios = client.get("/api/scenarios/random", params={"n": 6}).json()[
+        "scenarios"
+    ]
+    payload = {
+        "answers": [
+            {
+                "outcome_id": s["outcome_id"],
+                "dimension": s["dimension"],
+                "choice": "A" if i % 2 == 0 else "B",
+                "strength": "lean" if i % 2 == 0 else "strong",
+            }
+            for i, s in enumerate(scenarios)
+        ]
+    }
+    response = client.post("/api/analyze", json=payload)
+    assert response.status_code == 200
+    assert len(response.json()["top_countries"]) == 5
+
+
+def test_analyze_rejects_bad_strength(monkeypatch):
+    client = _client(monkeypatch)
+    payload = {
+        "answers": [
+            {
+                "outcome_id": "x",
+                "dimension": "Age_Old",
+                "choice": "A",
+                "strength": "maybe",
+            },
+        ]
+    }
+    assert client.post("/api/analyze", json=payload).status_code == 422
+
+
 def test_analyze_rejects_bad_choice(monkeypatch):
     client = _client(monkeypatch)
     payload = {

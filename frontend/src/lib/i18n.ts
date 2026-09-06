@@ -35,6 +35,9 @@ const STRINGS = {
     vi: "Xe buộc phải đâm vào ai đó. Bạn chọn:",
   },
   back: { en: "← Back", vi: "← Quay lại" },
+  strengthAsk: { en: "How strongly do you feel?", vi: "Bạn chắc chắn đến mức nào?" },
+  intensitySure: { en: "💯 Sure", vi: "💯 Chắc chắn" },
+  intensityLean: { en: "🤏 Leaning", vi: "🤏 Hơi nghiêng" },
   next: { en: "Next →", vi: "Tiếp →" },
   seeResult: { en: "See my result ✨", vi: "Xem kết quả ✨" },
   analyzingTitle: {

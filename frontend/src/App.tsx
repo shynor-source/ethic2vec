@@ -9,6 +9,7 @@ import {
   type Answer,
   type Choice,
   type Scenario,
+  type Strength,
 } from "./lib/api";
 import { LangContext, translate, type Lang } from "./lib/i18n";
 import "./App.css";
@@ -38,7 +39,9 @@ function sleep(ms: number): Promise<void> {
 export default function App() {
   const [lang, setLang] = useState<Lang>(initialLang);
   const [scenarios, setScenarios] = useState<Scenario[]>([]);
-  const [answers, setAnswers] = useState<Record<string, Choice>>({});
+  const [answers, setAnswers] = useState<
+    Record<string, { choice: Choice; strength?: Strength }>
+  >({});
   const [step, setStep] = useState(0);
   const [stage, setStage] = useState<Stage>("landing");
   const [result, setResult] = useState<AnalyzeResult | null>(null);
@@ -136,7 +139,8 @@ export default function App() {
     const payload: Answer[] = scenarios.map((scenario) => ({
       outcome_id: scenario.outcome_id,
       dimension: scenario.dimension,
-      choice: answers[scenario.outcome_id],
+      choice: answers[scenario.outcome_id].choice,
+      strength: answers[scenario.outcome_id].strength ?? "strong",
     }));
     try {
       const data = await analyzeAnswers(payload);
@@ -187,9 +191,25 @@ export default function App() {
             scenario={current}
             index={step}
             total={scenarios.length}
-            selected={answers[current.outcome_id]}
-            onSelect={(choice) =>
-              setAnswers((prev) => ({ ...prev, [current.outcome_id]: choice }))
+            selectedChoice={answers[current.outcome_id]?.choice}
+            selectedStrength={answers[current.outcome_id]?.strength}
+            onSelectChoice={(choice) =>
+              setAnswers((prev) => ({
+                ...prev,
+                [current.outcome_id]: {
+                  choice,
+                  strength: prev[current.outcome_id]?.strength,
+                },
+              }))
+            }
+            onSelectStrength={(strength) =>
+              setAnswers((prev) => ({
+                ...prev,
+                [current.outcome_id]: {
+                  choice: prev[current.outcome_id]?.choice ?? "A",
+                  strength,
+                },
+              }))
             }
             onBack={() => setStep((s) => Math.max(0, s - 1))}
             onNext={() => {

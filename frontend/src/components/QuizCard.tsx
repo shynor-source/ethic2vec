@@ -1,4 +1,4 @@
-import type { Choice, Scenario } from "../lib/api";
+import type { Choice, Scenario, Strength } from "../lib/api";
 import { scenarioEmoji, scenarioName } from "../lib/format";
 import { useLang } from "../lib/i18n";
 
@@ -6,8 +6,10 @@ interface QuizCardProps {
   scenario: Scenario;
   index: number;
   total: number;
-  selected?: Choice;
-  onSelect: (choice: Choice) => void;
+  selectedChoice?: Choice;
+  selectedStrength?: Strength;
+  onSelectChoice: (choice: Choice) => void;
+  onSelectStrength: (strength: Strength) => void;
   onBack: () => void;
   onNext: () => void;
   isFirst: boolean;
@@ -18,8 +20,10 @@ export default function QuizCard({
   scenario,
   index,
   total,
-  selected,
-  onSelect,
+  selectedChoice,
+  selectedStrength,
+  onSelectChoice,
+  onSelectStrength,
   onBack,
   onNext,
   isFirst,
@@ -36,7 +40,8 @@ export default function QuizCard({
     lang === "vi"
       ? (scenario.context_vi ?? scenario.context_en)
       : (scenario.context_en ?? scenario.context_vi);
-  const progress = Math.round(((index + (selected ? 1 : 0)) / total) * 100);
+  const answered = selectedChoice !== undefined && selectedStrength !== undefined;
+  const progress = Math.round(((index + (answered ? 1 : 0)) / total) * 100);
 
   return (
     <section className="quiz">
@@ -57,8 +62,8 @@ export default function QuizCard({
       <div className="vs-grid">
         <button
           type="button"
-          className={selected === "A" ? "vs-card selected" : "vs-card"}
-          onClick={() => onSelect("A")}
+          className={selectedChoice === "A" ? "vs-card selected" : "vs-card"}
+          onClick={() => onSelectChoice("A")}
         >
           <span className="vs-emoji">{emojiA}</span>
           <span className="vs-text">{textA}</span>
@@ -67,14 +72,37 @@ export default function QuizCard({
         <div className="vs-badge">VS</div>
         <button
           type="button"
-          className={selected === "B" ? "vs-card selected" : "vs-card"}
-          onClick={() => onSelect("B")}
+          className={selectedChoice === "B" ? "vs-card selected" : "vs-card"}
+          onClick={() => onSelectChoice("B")}
         >
           <span className="vs-emoji">{emojiB}</span>
           <span className="vs-text">{textB}</span>
           <span className="vs-key">B</span>
         </button>
       </div>
+      {selectedChoice !== undefined && (
+        <div className="strength">
+          <span className="muted">{t("strengthAsk")}</span>
+          <div className="strength-row">
+            <button
+              type="button"
+              className={
+                selectedStrength === "strong" ? "pill selected" : "pill"
+              }
+              onClick={() => onSelectStrength("strong")}
+            >
+              {t("intensitySure")}
+            </button>
+            <button
+              type="button"
+              className={selectedStrength === "lean" ? "pill selected" : "pill"}
+              onClick={() => onSelectStrength("lean")}
+            >
+              {t("intensityLean")}
+            </button>
+          </div>
+        </div>
+      )}
       <div className="quiz-nav">
         <button
           type="button"
@@ -88,7 +116,7 @@ export default function QuizCard({
           type="button"
           className="primary"
           onClick={onNext}
-          disabled={!selected}
+          disabled={!answered}
         >
           {isLast ? t("seeResult") : t("next")}
         </button>
