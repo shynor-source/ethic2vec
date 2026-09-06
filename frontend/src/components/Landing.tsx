@@ -57,7 +57,7 @@ export default function Landing({ onStart, loading, waking, error }: LandingProp
           <span>{t("statsDilemmas")}</span>
         </div>
         <div className="stat">
-          <strong>228</strong>
+          <strong>139</strong>
           <span>{t("statsCountries")}</span>
         </div>
         <div className="stat">

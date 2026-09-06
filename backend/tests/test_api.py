@@ -63,6 +63,41 @@ def test_analyze_returns_full_payload(monkeypatch):
     assert any(p["kind"] == "user" for p in data["scatter_pc13"])
 
 
+def test_analyze_single_answer(monkeypatch):
+    client = _client(monkeypatch)
+    payload = {
+        "answers": [
+            {"outcome_id": "probe-1", "dimension": "Species_Pets", "choice": "A"},
+        ]
+    }
+    response = client.post("/api/analyze", json=payload)
+    assert response.status_code == 200
+    data = response.json()
+    assert len(data["top_countries"]) == 5
+    assert data["match_pool_size"] >= 100
+
+
+def test_analyze_deterministic(monkeypatch):
+    client = _client(monkeypatch)
+    scenarios = client.get("/api/scenarios/random", params={"n": 6}).json()[
+        "scenarios"
+    ]
+    payload = {
+        "answers": [
+            {
+                "outcome_id": s["outcome_id"],
+                "dimension": s["dimension"],
+                "choice": "A",
+            }
+            for s in scenarios
+        ]
+    }
+    first = client.post("/api/analyze", json=payload).json()
+    second = client.post("/api/analyze", json=payload).json()
+    assert first["top_countries"] == second["top_countries"]
+    assert first["user_pc"] == second["user_pc"]
+
+
 def test_analyze_rejects_bad_choice(monkeypatch):
     client = _client(monkeypatch)
     payload = {

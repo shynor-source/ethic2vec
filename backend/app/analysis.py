@@ -5,7 +5,6 @@ from __future__ import annotations
 import numpy as np
 import pandas as pd
 from sklearn.metrics.pairwise import cosine_similarity
-from sklearn.neighbors import NearestNeighbors
 
 from app.assets import (
     get_country_sample_sizes,
@@ -73,28 +72,57 @@ def eligible_countries(
     return eligible if len(eligible) >= TOP_COUNTRIES else countries
 
 
+def _answered_idx(answered: list[str], feature_columns: list[str]) -> list[int]:
+    """Column indices the user actually answered. Falls back to all dims."""
+    idx = [feature_columns.index(d) for d in answered if d in feature_columns]
+    return idx if idx else list(range(len(feature_columns)))
+
+
+def _masked_cosine(
+    user_scaled: np.ndarray, matrix_scaled: np.ndarray, idx: list[int]
+) -> np.ndarray:
+    """Cosine similarity restricted to the answered subspace.
+
+    Unanswered dimensions are mean-filled for display, but they must not
+    vote: every candidate shares the same imputed values there, so including
+    them only dilutes the real signal.
+    """
+    return cosine_similarity(
+        user_scaled.reshape(1, -1)[:, idx], matrix_scaled[:, idx]
+    )[0]
+
+
 def rank_countries(
-    user_scaled: np.ndarray, country_scaled: np.ndarray, countries: list[str]
+    user_scaled: np.ndarray,
+    country_scaled: np.ndarray,
+    countries: list[str],
+    answered: list[str],
+    feature_columns: list[str],
 ) -> list[dict]:
-    """Rank countries by KNN (cosine distance, k=5), scored by similarity."""
-    k = min(TOP_COUNTRIES, len(countries))
-    knn = NearestNeighbors(n_neighbors=k, metric="cosine")
-    knn.fit(country_scaled)
-    distances, indices = knn.kneighbors(user_scaled.reshape(1, -1))
+    """Rank countries by nearest neighbors in cosine space (k=5).
+
+    Distance is measured on answered dimensions only; the similarity score
+    shown to users comes from the same subspace.
+    """
+    idx = _answered_idx(answered, feature_columns)
+    sims = _masked_cosine(user_scaled, country_scaled, idx)
+    order = np.argsort(sims)[::-1][: min(TOP_COUNTRIES, len(countries))]
     return [
-        {
-            "country": countries[idx],
-            "similarity_pct": _to_percent(1.0 - dist),
-        }
-        for idx, dist in zip(indices[0], distances[0])
+        {"country": countries[i], "similarity_pct": _to_percent(float(sims[i]))}
+        for i in order
     ]
 
 
 def rank_demographics(
-    user_scaled: np.ndarray, demo_scaled: np.ndarray, demo_keys: list[str]
+    user_scaled: np.ndarray,
+    demo_scaled: np.ndarray,
+    demo_keys: list[str],
+    answered: list[str],
+    feature_columns: list[str],
 ) -> list[dict]:
-    """Rank demographic groups by cosine similarity to the user."""
-    sims = cosine_similarity(user_scaled.reshape(1, -1), demo_scaled)[0]
+    """Rank demographic groups by cosine similarity on answered dims only."""
+    idx = _answered_idx(answered, feature_columns)
+    sims = _masked_cosine(user_scaled, demo_scaled, idx)
     order = np.argsort(sims)[::-1][: min(TOP_DEMOGRAPHICS, len(demo_keys))]
     return [
         {"group": demo_keys[i], "similarity_pct": _to_percent(float(sims[i]))}
@@ -179,9 +207,11 @@ def analyze(answers: list[dict]) -> dict:
     pool = eligible_countries(countries, get_country_sample_sizes())
     pool_idx = [countries.index(c) for c in pool]
     top_countries = rank_countries(
-        user_scaled, country_scaled[pool_idx], pool
+        user_scaled, country_scaled[pool_idx], pool, answered, feature_columns
     )
-    top_demographics = rank_demographics(user_scaled, demo_scaled, demo_keys)
+    top_demographics = rank_demographics(
+        user_scaled, demo_scaled, demo_keys, answered, feature_columns
+    )
 
     user_pc = [round(float(v), 4) for v in pca.transform(user_scaled.reshape(1, -1))[0]]
     country_pc = pca.transform(country_scaled)

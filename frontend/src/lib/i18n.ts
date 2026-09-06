@@ -11,8 +11,8 @@ const STRINGS = {
   landingTitleB: { en: "thinks like", vi: "nghĩ giống" },
   landingTitleYou: { en: "you", vi: "bạn" },
   landingSub: {
-    en: "Face 6 impossible driving dilemmas — the same ones scientists used to map the morals of 228 countries. We will find your moral twin.",
-    vi: "Đối mặt 6 tình huống lái xe bất khả thi — chính những tình huống các nhà khoa học đã dùng để lập bản đồ đạo đức của 228 quốc gia. Chúng tôi sẽ tìm ra bản sao đạo đức của bạn.",
+    en: "Face 6 impossible driving dilemmas — the same ones scientists used to map the morals of 228 countries. We match you against the 139 with enough responses to trust.",
+    vi: "Đối mặt 6 tình huống lái xe bất khả thi — chính những tình huống các nhà khoa học đã dùng để lập bản đồ đạo đức của 228 quốc gia. Chúng tôi so bạn với 139 nước có đủ dữ liệu đáng tin.",
   },
   startCta: { en: "🚗 Start the test", vi: "🚗 Bắt đầu kiểm tra" },
   loadingDilemmas: { en: "Loading dilemmas...", vi: "Đang tải tình huống..." },
@@ -20,8 +20,8 @@ const STRINGS = {
   step1Sub: { en: "Who lives? You decide.", vi: "Ai sống? Bạn quyết định." },
   step2Title: { en: "Moral twin", vi: "Bản sao đạo đức" },
   step2Sub: {
-    en: "Matched against 228 countries.",
-    vi: "So khớp với 228 quốc gia.",
+    en: "Matched against 139 reliable countries.",
+    vi: "So khớp với 139 quốc gia đủ dữ liệu.",
   },
   step3Title: { en: "Explore", vi: "Khám phá" },
   step3Sub: {
@@ -42,8 +42,8 @@ const STRINGS = {
     vi: "Đang đọc la bàn đạo đức của bạn…",
   },
   analyzingSub: {
-    en: "Comparing you with 228 countries.",
-    vi: "Đang so sánh bạn với 228 quốc gia.",
+    en: "Comparing you with 139 countries.",
+    vi: "Đang so sánh bạn với 139 quốc gia.",
   },
   verdictKicker: {
     en: "Your moral twin is…",
