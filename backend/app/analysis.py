@@ -1,10 +1,17 @@
-"""Core analysis: user vector, country/demographic matches, PCA, blind spots."""
+"""Core analysis: user vector, country/demographic matches, PCA, blind spots.
+
+Heavy dependencies (numpy/pandas/sklearn) are imported lazily inside
+functions so uvicorn boots fast for quiz-only traffic; only /api/analyze
+pays the import cost, once per process.
+"""
 
 from __future__ import annotations
 
-import numpy as np
-import pandas as pd
-from sklearn.metrics.pairwise import cosine_similarity
+from typing import TYPE_CHECKING
+
+if TYPE_CHECKING:  # only for annotations; runtime imports stay lazy
+    import numpy as np
+    import pandas as pd
 
 from app.assets import (
     get_country_sample_sizes,
@@ -42,6 +49,9 @@ def build_user_vector(
     mean of their answers; unanswered dimensions fall back to the global
     country column mean, mirroring the pipeline fill strategy.
     """
+    import numpy as np
+    import pandas as pd
+
     scores: dict[str, list[float]] = {}
     for answer in answers:
         dimension = answer["dimension"]
@@ -87,6 +97,8 @@ def _masked_cosine(
     vote: every candidate shares the same imputed values there, so including
     them only dilutes the real signal.
     """
+    from sklearn.metrics.pairwise import cosine_similarity
+
     return cosine_similarity(
         user_scaled.reshape(1, -1)[:, idx], matrix_scaled[:, idx]
     )[0]
@@ -104,6 +116,8 @@ def rank_countries(
     Distance is measured on answered dimensions only; the similarity score
     shown to users comes from the same subspace.
     """
+    import numpy as np
+
     idx = _answered_idx(answered, feature_columns)
     sims = _masked_cosine(user_scaled, country_scaled, idx)
     order = np.argsort(sims)[::-1][: min(TOP_COUNTRIES, len(countries))]
@@ -121,6 +135,8 @@ def rank_demographics(
     feature_columns: list[str],
 ) -> list[dict]:
     """Rank demographic groups by cosine similarity on answered dims only."""
+    import numpy as np
+
     idx = _answered_idx(answered, feature_columns)
     sims = _masked_cosine(user_scaled, demo_scaled, idx)
     order = np.argsort(sims)[::-1][: min(TOP_DEMOGRAPHICS, len(demo_keys))]

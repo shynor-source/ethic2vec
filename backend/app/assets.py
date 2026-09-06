@@ -12,10 +12,6 @@ import json
 from functools import lru_cache
 from pathlib import Path
 
-import joblib
-import pandas as pd
-import requests
-
 from app.config import settings
 
 BACKEND_ROOT = Path(__file__).resolve().parent.parent
@@ -34,6 +30,8 @@ ASSET_FILES = {
 
 def _download(filename: str) -> bytes:
     """Download one asset file from the public GitHub raw base URL."""
+    import requests  # lazy: keeps uvicorn boot fast for quiz-only traffic
+
     url = f"{settings.assets_base_url.rstrip('/')}/{filename}"
     response = requests.get(url, timeout=30)
     response.raise_for_status()
@@ -49,12 +47,16 @@ def _read_bytes(filename: str) -> bytes:
 
 
 @lru_cache(maxsize=1)
-def get_country_vectors() -> pd.DataFrame:
+def get_country_vectors():  # lazy pandas: keeps uvicorn boot fast
+    import pandas as pd
+
     return pd.read_parquet(io.BytesIO(_read_bytes(ASSET_FILES["country_vectors"])))
 
 
 @lru_cache(maxsize=1)
-def get_demographic_vectors() -> pd.DataFrame:
+def get_demographic_vectors():
+    import pandas as pd
+
     return pd.read_parquet(
         io.BytesIO(_read_bytes(ASSET_FILES["demographic_vectors"]))
     )
@@ -62,11 +64,15 @@ def get_demographic_vectors() -> pd.DataFrame:
 
 @lru_cache(maxsize=1)
 def get_scaler():
+    import joblib
+
     return joblib.load(io.BytesIO(_read_bytes(ASSET_FILES["scaler"])))
 
 
 @lru_cache(maxsize=1)
 def get_pca():
+    import joblib
+
     return joblib.load(io.BytesIO(_read_bytes(ASSET_FILES["pca"])))
 
 

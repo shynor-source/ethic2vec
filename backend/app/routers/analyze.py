@@ -6,11 +6,7 @@ import logging
 from typing import Literal
 
 from fastapi import APIRouter
-from firebase_admin.firestore import SERVER_TIMESTAMP
 from pydantic import BaseModel, Field
-
-from app.analysis import analyze
-from app.firebase_client import get_db
 
 logger = logging.getLogger(__name__)
 
@@ -29,6 +25,10 @@ class AnalyzeRequest(BaseModel):
 
 def save_session(answers: list[dict], result: dict) -> str | None:
     """Persist one quiz session. Returns the document id, or None on failure."""
+    from firebase_admin.firestore import SERVER_TIMESTAMP
+
+    from app.firebase_client import get_db
+
     try:
         _, ref = (
             get_db()
@@ -53,6 +53,8 @@ def save_session(answers: list[dict], result: dict) -> str | None:
 @router.post("/analyze")
 def analyze_answers(request: AnalyzeRequest) -> dict:
     """Score answers and return matches, charts data, and blind spots."""
+    from app.analysis import analyze  # lazy: sklearn loads only here
+
     answers = [item.model_dump() for item in request.answers]
     result = analyze(answers)
     session_id = save_session(answers, result)
