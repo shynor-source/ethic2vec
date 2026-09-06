@@ -56,9 +56,12 @@ def test_analyze_returns_full_payload(monkeypatch):
     assert len(data["radar"]) == 6
     assert len(data["user_pc"]) == 3
     assert all(
-        {"dimension", "user_pct", "match_pct", "global_pct"} <= set(s)
+        {"dimension", "user_pct", "match_pct", "global_pct", "gap"} <= set(s)
         for s in data["blind_spots"]
     )
+    assert len(data["blind_spots"]) == 6
+    gaps = [s["gap"] for s in data["blind_spots"]]
+    assert gaps == sorted(gaps, reverse=True)
     assert any(p["kind"] == "user" for p in data["scatter_pc12"])
     assert any(p["kind"] == "user" for p in data["scatter_pc13"])
 

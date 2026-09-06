@@ -545,6 +545,11 @@
   line-height: 1.55;
 }
 
+.spots li.agreed {
+  border-left-color: #4ade80;
+  background: rgba(74, 222, 128, 0.08);
+}
+
 .nerd summary {
   cursor: pointer;
   font-size: 17px;

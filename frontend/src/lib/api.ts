@@ -56,6 +56,7 @@ export interface BlindSpot {
   user_pct?: number;
   match_pct?: number;
   global_pct?: number;
+  gap?: number;
   note?: string;
 }
 
@@ -112,7 +113,7 @@ function normalizeBlindSpots(raw: unknown): BlindSpot[] {
       dimension:
         typeof entry.dimension === "string" ? entry.dimension : "Unknown",
     };
-    for (const key of ["user_pct", "match_pct", "global_pct"] as const) {
+    for (const key of ["user_pct", "match_pct", "global_pct", "gap"] as const) {
       if (typeof entry[key] === "number") spot[key] = entry[key] as number;
     }
     if (typeof entry.note === "string") spot.note = entry.note;

@@ -212,6 +212,7 @@ export function scenarioName(lang: Lang, scenarioType?: string): string {
 export interface BlindSpotCard {
   title: string;
   verdict: string;
+  agreed: boolean;
   userPct: number | null;
   matchPct: number | null;
   globalPct: number | null;
@@ -227,28 +228,31 @@ export function blindSpotCard(
   const title = `${info.emoji} ${label}`;
   const userPct = spot.user_pct ?? null;
   const matchPct = spot.match_pct ?? null;
+  const gap = spot.gap ?? null;
+  const agreed = gap !== null && gap < 25;
   let verdict = spot.note ?? "";
-  if (userPct !== null && matchPct !== null) {
+  if (agreed) {
+    verdict =
+      lang === "vi"
+        ? `Bạn và ${twinName} gần như đồng thuận ở đây. ✅`
+        : `You and ${twinName} are nearly in sync here. ✅`;
+  } else if (userPct !== null && matchPct !== null) {
     if (userPct > matchPct) {
       verdict =
         lang === "vi"
           ? `Bạn ra tay cứu giúp ở nơi ${twinName} thường đứng nhìn.`
           : `You step in where ${twinName} holds back.`;
-    } else if (userPct < matchPct) {
+    } else {
       verdict =
         lang === "vi"
           ? `Bạn đứng nhìn ở nơi ${twinName} sẽ ra tay cứu giúp.`
           : `You hold back where ${twinName} would step in.`;
-    } else {
-      verdict =
-        lang === "vi"
-          ? `Bạn và ${twinName} đồng thuận ở đây — nhưng cả hai đều lệch khỏi thế giới.`
-          : `You and ${twinName} agree here — but both differ from the world.`;
     }
   }
   return {
     title,
     verdict,
+    agreed,
     userPct,
     matchPct,
     globalPct: spot.global_pct ?? null,

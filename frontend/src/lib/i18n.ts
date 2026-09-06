@@ -71,8 +71,8 @@ const STRINGS = {
   },
   spotsTitle: { en: "👁️ Your moral blind spots", vi: "👁️ Điểm mù đạo đức của bạn" },
   spotsSub: {
-    en: "Where you stand out from the rest of the world.",
-    vi: "Nơi bạn khác biệt với phần còn lại của thế giới.",
+    en: "Every theme you answered, head-to-head with your twin. ✅ marks where you agree.",
+    vi: "Từng chủ đề bạn đã trả lời, đối đầu với bản sao. ✅ là nơi đồng thuận.",
   },
   noSpots: {
     en: "No blind spots detected — you are very average.",

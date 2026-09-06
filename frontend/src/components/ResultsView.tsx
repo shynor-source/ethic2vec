@@ -108,7 +108,10 @@ export default function ResultsView({ result, onRestart }: ResultsViewProps) {
                     },
                   ];
                   return (
-                    <li key={spot.dimension} className="spot">
+                    <li
+                      key={spot.dimension}
+                      className={card.agreed ? "spot agreed" : "spot"}
+                    >
                       <strong className="spot-title">{card.title}</strong>
                       <p className="spot-verdict">{card.verdict}</p>
                       <div className="spot-bars">

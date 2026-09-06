@@ -155,17 +155,18 @@ def detect_blind_spots(
     country_means: pd.Series,
     answered: list[str],
 ) -> list[dict]:
-    """Find answered dimensions where the user differs most from their twin.
+    """Compare you vs your twin on every answered dimension.
 
-    Each spot carries save-rate percentages for you, your top match, and the
-    global average so the frontend can render a side-by-side comparison.
+    Returns all answered dims sorted by gap (largest first), each with
+    save-rate percentages for you, your top match, and the global average.
+    Showing agreements alongside gaps is what makes the twin credible.
     """
     candidates = [dim for dim in answered if dim in user_raw.index]
     gaps = sorted(
         candidates,
         key=lambda d: abs(float(user_raw[d] - match_raw[d])),
         reverse=True,
-    )[:3]
+    )
     spots = []
     for dim in gaps:
         user_pct = round(float(user_raw[dim]) * 100)
@@ -177,6 +178,7 @@ def detect_blind_spots(
                 "user_pct": user_pct,
                 "match_pct": match_pct,
                 "global_pct": global_pct,
+                "gap": abs(user_pct - match_pct),
                 # Legacy note kept for backward compatibility.
                 "note": (
                     f"You {user_pct}% vs match {match_pct}% "
