@@ -10,6 +10,7 @@ from __future__ import annotations
 from typing import TYPE_CHECKING
 
 if TYPE_CHECKING:  # only for annotations; runtime imports stay lazy
+    import numpy as np
     import pandas as pd
 
 from app.assets import (
@@ -29,6 +30,8 @@ GRADE_SCORE = {
     ("B", "lean"): 0.25,
     ("B", "strong"): 0.0,
 }
+# Floor weight so no answered dimension is ever fully ignored.
+SIGNATURE_FLOOR = 0.25
 TOP_COUNTRIES = 5
 TOP_DEMOGRAPHICS = 5
 SCATTER_DEMOGRAPHICS = 10
@@ -92,18 +95,32 @@ def _answered_idx(answered: list[str], feature_columns: list[str]) -> list[int]:
     return idx if idx else list(range(len(feature_columns)))
 
 
-def _mean_gap(
-    user_raw, matrix_raw, idx: list[int]
+def _signature_weights(
+    user_arr, means_arr: np.ndarray, idx: list[int]
 ):
-    """Mean absolute gap on answered dims. Lower is more similar.
+    """Weight each answered dim by how distinctive the user's answer is.
 
-    Raw save-rates are used deliberately: after filtering to well-sampled
-    countries the per-dim spreads are tiny (std 0.06-0.13), so standardizing
-    would amplify noise instead of signal.
+    Dimensions where the user stands far from the global mean are their
+    signature and count more; ordinary answers count at floor weight.
+    Returns normalized weights summing to 1.
     """
     import numpy as np
 
-    return np.abs(matrix_raw[:, idx] - user_raw[idx]).mean(axis=1)
+    dev = np.abs(user_arr[idx] - means_arr[idx])
+    peak = dev.max()
+    if peak <= 1e-9:
+        return np.ones_like(dev) / len(dev)
+    w = SIGNATURE_FLOOR + (1.0 - SIGNATURE_FLOOR) * dev / peak
+    return w / w.sum()
+
+
+def _weighted_gap(
+    user_arr, matrix_arr, weights, idx: list[int]
+):
+    """Signature-weighted mean absolute gap. Lower is more similar."""
+    import numpy as np
+
+    return np.abs(matrix_arr[:, idx] - user_arr[idx]) @ weights
 
 
 def _gap_to_percent(mean_gap: float) -> int:
@@ -121,16 +138,22 @@ def rank_countries(
     countries: list[str],
     answered: list[str],
     feature_columns: list[str],
+    global_means,
 ) -> list[dict]:
-    """Rank countries by nearest neighbors under mean absolute gap (k=5).
+    """Rank countries by signature-weighted gap nearest neighbors (k=5).
 
-    Distance is measured on answered dimensions only; the similarity score
-    shown to users comes from the same gaps rendered in the UI.
+    Distance is measured on answered dimensions only, weighted by how
+    distinctive each answer is; the similarity score shown to users comes
+    from the same gaps rendered in the UI.
     """
     import numpy as np
 
     idx = _answered_idx(answered, feature_columns)
-    gaps = _mean_gap(np.asarray(user_raw), np.asarray(country_raw), idx)
+    user_arr = np.asarray(user_raw, dtype=float)
+    weights = _signature_weights(
+        user_arr, np.asarray(global_means, dtype=float), idx
+    )
+    gaps = _weighted_gap(user_arr, np.asarray(country_raw, dtype=float), weights, idx)
     order = np.argsort(gaps)[: min(TOP_COUNTRIES, len(countries))]
     return [
         {"country": countries[i], "similarity_pct": _gap_to_percent(float(gaps[i]))}
@@ -144,12 +167,17 @@ def rank_demographics(
     demo_keys: list[str],
     answered: list[str],
     feature_columns: list[str],
+    global_means,
 ) -> list[dict]:
-    """Rank demographic groups by mean absolute gap on answered dims only."""
+    """Rank demographic groups by signature-weighted gap, answered dims only."""
     import numpy as np
 
     idx = _answered_idx(answered, feature_columns)
-    gaps = _mean_gap(np.asarray(user_raw), np.asarray(demo_raw), idx)
+    user_arr = np.asarray(user_raw, dtype=float)
+    weights = _signature_weights(
+        user_arr, np.asarray(global_means, dtype=float), idx
+    )
+    gaps = _weighted_gap(user_arr, np.asarray(demo_raw, dtype=float), weights, idx)
     order = np.argsort(gaps)[: min(TOP_DEMOGRAPHICS, len(demo_keys))]
     return [
         {"group": demo_keys[i], "similarity_pct": _gap_to_percent(float(gaps[i]))}
@@ -238,11 +266,13 @@ def analyze(answers: list[dict]) -> dict:
     country_raw = country_vectors[feature_columns].to_numpy()
     demo_raw = demographic_vectors[feature_columns].to_numpy()
     user_raw_arr = user_raw[feature_columns].to_numpy()
+    means_arr = country_means[feature_columns].to_numpy()
     top_countries = rank_countries(
-        user_raw_arr, country_raw[pool_idx], pool, answered, feature_columns
+        user_raw_arr, country_raw[pool_idx], pool, answered, feature_columns,
+        means_arr,
     )
     top_demographics = rank_demographics(
-        user_raw_arr, demo_raw, demo_keys, answered, feature_columns
+        user_raw_arr, demo_raw, demo_keys, answered, feature_columns, means_arr
     )
 
     user_pc = [round(float(v), 4) for v in pca.transform(user_scaled.reshape(1, -1))[0]]
