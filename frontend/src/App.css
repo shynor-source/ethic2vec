@@ -444,6 +444,19 @@
   font-weight: 700;
 }
 
+.verdict-agree {
+  margin: 0;
+  font-size: 16px;
+  font-weight: 600;
+}
+
+.verdict-strength {
+  margin: 0;
+  font-size: 15px;
+  opacity: 0.85;
+  max-width: 420px;
+}
+
 .verdict .ghost {
   border-color: rgba(255, 255, 255, 0.5);
   color: #fff;

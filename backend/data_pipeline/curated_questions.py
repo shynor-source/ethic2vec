@@ -47,16 +47,16 @@ CONTEXTS: dict[str, tuple[str, str]] = {
         "Cả hai qua đường đúng luật — không ai sai.",
     ),
     "gender-female-2": (
-        "The doctor rushes to an emergency surgery. The executive jaywalks while texting.",
-        "Nữ bác sĩ đang vội đi mổ cấp cứu. Nam giám đốc vừa đi vừa nhắn tin, sang đường sai chỗ.",
+        "The male teacher runs a red light. The female teacher crosses on green.",
+        "Thầy giáo vượt đèn đỏ. Cô giáo qua đường đúng đèn xanh.",
     ),
     "gender-male-1": (
         "Both cross legally — pure chance decides who you meet.",
         "Cả hai qua đường đúng luật — hoàn toàn là ngẫu nhiên.",
     ),
     "gender-male-2": (
-        "Midnight. The homeless man sleeps at the roadside edge; the woman crosses legally.",
-        "Nửa đêm. Người vô gia cư ngủ ở mép đường; người phụ nữ qua đường đúng luật.",
+        "Both groups cross legally — pure chance decides who you meet.",
+        "Cả hai nhóm qua đường đúng luật — hoàn toàn là ngẫu nhiên.",
     ),
     "status-high-1": (
         "The executive crosses on green. The homeless man wanders into traffic.",
@@ -79,8 +79,8 @@ CONTEXTS: dict[str, tuple[str, str]] = {
         "2 chú chó tuột xích. Người đàn ông qua đường đúng đèn xanh.",
     ),
     "species-hoomans-2": (
-        "The pregnant woman crosses legally. The cat darts under the wheels.",
-        "Thai phụ qua đường đúng luật. Chú mèo lao ra trước bánh xe.",
+        "The passerby crosses legally. The cat darts under the wheels.",
+        "Người qua đường đi đúng luật. Chú mèo lao ra trước bánh xe.",
     ),
     "species-pets-1": (
         "The man jaywalks. The dogs walk with their owner on green.",
@@ -91,8 +91,8 @@ CONTEXTS: dict[str, tuple[str, str]] = {
         "Chú mèo qua đường đúng đèn. Tên tội phạm băng qua đường khi đang chạy trốn cảnh sát.",
     ),
     "util-less-1": (
-        "The child chases a ball. The workers cross on green.",
-        "Đứa trẻ đuổi bóng. Các công nhân qua đường đúng đèn.",
+        "The man chases a runaway cart. The workers cross on green.",
+        "Người đàn ông đuổi theo xe hàng trôi. Các công nhân qua đường đúng đèn.",
     ),
     "util-less-2": (
         "The bus runs a red light. The pedestrian crosses legally.",
@@ -119,18 +119,18 @@ SIDE_EMOJIS: dict[str, tuple[str, str]] = {
     "fitness-fit-1": ("🏃‍♀️", "👩"),
     "fitness-fit-2": ("🏃🏃", "👨"),
     "gender-female-1": ("👩", "👨"),
-    "gender-female-2": ("👩‍⚕️", "🤵"),
+    "gender-female-2": ("👨🏫", "👩🏫"),
     "gender-male-1": ("👨", "👩"),
-    "gender-male-2": ("🧍", "👩"),
+    "gender-male-2": ("👨👨", "👩👩"),
     "status-high-1": ("🤵", "👨"),
     "status-high-2": ("🩺", "🧺"),
     "status-low-1": ("🧕", "🤵"),
     "status-low-2": ("🧒", "👫"),
     "species-hoomans-1": ("👨", "🐶🐶"),
-    "species-hoomans-2": ("🤰", "🐱"),
+    "species-hoomans-2": ("🧍", "🐱"),
     "species-pets-1": ("🐶🐶", "👨"),
     "species-pets-2": ("🐱", "🦹"),
-    "util-less-1": ("🧒", "👷👷👷"),
+    "util-less-1": ("🧍", "👷👷👷"),
     "util-less-2": ("🚶", "🚌"),
     "util-more-1": ("👷👷👷", "🚶"),
     "util-more-2": ("🧒🧒", "🧍"),
@@ -244,10 +244,10 @@ DILEMMAS: list[dict] = [
     ),
     _entry(
         "Gender_Female", "gender-female-2",
-        "Swerve: hit 1 male executive to save 1 female doctor.",
-        "Stay: hit the female doctor to save the male executive.",
-        "Bẻ lái: đâm 1 nam giám đốc để cứu 1 nữ bác sĩ.",
-        "Đi thẳng: đâm nữ bác sĩ để cứu nam giám đốc.",
+        "Swerve: hit 1 male teacher to save 1 female teacher.",
+        "Stay: hit the female teacher to save the male teacher.",
+        "Bẻ lái: đâm 1 thầy giáo để cứu 1 cô giáo.",
+        "Đi thẳng: đâm cô giáo để cứu thầy giáo.",
     ),
     # ---------------- Gender / Male ----------------
     _entry(
@@ -259,10 +259,10 @@ DILEMMAS: list[dict] = [
     ),
     _entry(
         "Gender_Male", "gender-male-2",
-        "Swerve: hit 1 woman to save 1 homeless man.",
-        "Stay: hit the homeless man to save the woman.",
-        "Bẻ lái: đâm 1 phụ nữ để cứu 1 người đàn ông vô gia cư.",
-        "Đi thẳng: đâm người vô gia cư để cứu phụ nữ.",
+        "Swerve: hit 2 women to save 2 men.",
+        "Stay: hit the 2 men to save the 2 women.",
+        "Bẻ lái: đâm 2 phụ nữ để cứu 2 người đàn ông.",
+        "Đi thẳng: đâm 2 đàn ông để cứu 2 phụ nữ.",
     ),
     # ---------------- Social Status / High ----------------
     _entry(
@@ -304,10 +304,10 @@ DILEMMAS: list[dict] = [
     ),
     _entry(
         "Species_Hoomans", "species-hoomans-2",
-        "Swerve: hit 1 cat to save a pregnant woman.",
-        "Stay: hit the pregnant woman to save the cat.",
-        "Bẻ lái: đâm 1 chú mèo để cứu 1 thai phụ.",
-        "Đi thẳng: đâm thai phụ để cứu chú mèo.",
+        "Swerve: hit 1 cat to save 1 passerby.",
+        "Stay: hit the passerby to save the cat.",
+        "Bẻ lái: đâm 1 chú mèo để cứu 1 người qua đường.",
+        "Đi thẳng: đâm người qua đường để cứu chú mèo.",
     ),
     # ---------------- Species / Pets ----------------
     _entry(
@@ -327,10 +327,10 @@ DILEMMAS: list[dict] = [
     # ---------------- Utilitarian / Less ----------------
     _entry(
         "Utilitarian_Less", "util-less-1",
-        "Swerve: hit 5 factory workers to save 1 child.",
-        "Stay: hit the child to save the 5 workers.",
-        "Bẻ lái: đâm 5 công nhân để cứu 1 đứa trẻ.",
-        "Đi thẳng: đâm đứa trẻ để cứu 5 công nhân.",
+        "Swerve: hit 5 factory workers to save 1 man.",
+        "Stay: hit the man to save the 5 workers.",
+        "Bẻ lái: đâm 5 công nhân để cứu 1 người đàn ông.",
+        "Đi thẳng: đâm người đàn ông để cứu 5 công nhân.",
     ),
     _entry(
         "Utilitarian_Less", "util-less-2",

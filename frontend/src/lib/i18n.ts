@@ -50,6 +50,22 @@ const STRINGS = {
     vi: "Bản sao đạo đức của bạn là…",
   },
   matchSuffix: { en: "match", vi: "tương đồng" },
+  agreeCount: {
+    en: "✅ Agree on {a} of {t} themes",
+    vi: "✅ Đồng thuận {a}/{t} chủ đề",
+  },
+  strengthStrong: {
+    en: "A remarkably close twin.",
+    vi: "Bản sao hợp đến ngạc nhiên.",
+  },
+  strengthClose: {
+    en: "Close overall, with a few sharp differences below.",
+    vi: "Nhìn chung khá hợp, chỉ lệch vài điểm gắt bên dưới.",
+  },
+  strengthWeak: {
+    en: "No country thinks quite like you — this is the nearest available.",
+    vi: "Chẳng nước nào nghĩ giống hệt bạn — đây là gần nhất có thể.",
+  },
   share: { en: "📋 Share my result", vi: "📋 Chia sẻ kết quả" },
   copied: { en: "Copied! ✅", vi: "Đã copy! ✅" },
   profileTitle: {

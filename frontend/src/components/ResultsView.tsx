@@ -37,6 +37,10 @@ export default function ResultsView({ result, onRestart }: ResultsViewProps) {
   const top = result.topCountries[0];
   const topScore = top?.score ?? 0;
   const traits = traitSentences(lang, result.radar);
+  const agreed = result.blindSpots.filter((s) => (s.gap ?? 100) < 25).length;
+  const total = result.blindSpots.length;
+  const strengthKey =
+    agreed >= 4 ? "strengthStrong" : agreed >= 2 ? "strengthClose" : "strengthWeak";
 
   const handleShare = async () => {
     const text = shareText(lang, result.matchName, topScore, result.topCountries);
@@ -63,6 +67,14 @@ export default function ResultsView({ result, onRestart }: ResultsViewProps) {
         <p className="verdict-score">
           {topScore}% {t("matchSuffix")}
         </p>
+        {total > 0 && (
+          <p className="verdict-agree">
+            {t("agreeCount")
+              .replace("{a}", String(agreed))
+              .replace("{t}", String(total))}
+          </p>
+        )}
+        <p className="verdict-strength">{t(strengthKey)}</p>
         <button type="button" className="ghost" onClick={handleShare}>
           {copied ? t("copied") : t("share")}
         </button>
