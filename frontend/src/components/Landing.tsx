@@ -85,7 +85,7 @@ export default function Landing({
           <span>{t("statsDilemmas")}</span>
         </div>
         <div className="stat">
-          <strong>139</strong>
+          <strong>98</strong>
           <span>{t("statsCountries")}</span>
         </div>
         <div className="stat">

@@ -11,8 +11,8 @@ const STRINGS = {
   landingTitleB: { en: "thinks like", vi: "nghĩ giống" },
   landingTitleYou: { en: "you", vi: "bạn" },
   landingSub: {
-    en: "Face impossible driving dilemmas — the same ones scientists used to map the morals of 228 countries. We match you against the 139 with enough responses to trust.",
-    vi: "Đối mặt các tình huống lái xe bất khả thi — chính những tình huống các nhà khoa học đã dùng để lập bản đồ đạo đức của 228 quốc gia. Chúng tôi so bạn với 139 nước có đủ dữ liệu đáng tin.",
+    en: "Face impossible driving dilemmas — the same ones scientists used to map the morals of 228 countries. We match you against the 98 with enough responses to trust.",
+    vi: "Đối mặt các tình huống lái xe bất khả thi — chính những tình huống các nhà khoa học đã dùng để lập bản đồ đạo đức của 228 quốc gia. Chúng tôi so bạn với 98 nước có đủ dữ liệu đáng tin.",
   },
   modeQuick: { en: "⚡ Quick", vi: "⚡ Nhanh" },
   modeQuickSub: { en: "6 questions · 1 min", vi: "6 câu · 1 phút" },
@@ -24,8 +24,8 @@ const STRINGS = {
   step1Sub: { en: "Who lives? You decide.", vi: "Ai sống? Bạn quyết định." },
   step2Title: { en: "Moral twin", vi: "Bản sao đạo đức" },
   step2Sub: {
-    en: "Matched against 139 reliable countries.",
-    vi: "So khớp với 139 quốc gia đủ dữ liệu.",
+    en: "Matched against 98 reliable countries.",
+    vi: "So khớp với 98 quốc gia đủ dữ liệu.",
   },
   step3Title: { en: "Explore", vi: "Khám phá" },
   step3Sub: {
@@ -49,8 +49,8 @@ const STRINGS = {
     vi: "Đang đọc la bàn đạo đức của bạn…",
   },
   analyzingSub: {
-    en: "Comparing you with 139 countries.",
-    vi: "Đang so sánh bạn với 139 quốc gia.",
+    en: "Comparing you with 98 countries.",
+    vi: "Đang so sánh bạn với 98 quốc gia.",
   },
   verdictKicker: {
     en: "Your moral twin is…",
@@ -85,8 +85,8 @@ const STRINGS = {
     vi: "Người dân mỗi nước trả lời giống bạn đến mức nào.",
   },
   matchPool: {
-    en: "Compared across {n} countries with 100+ responses each.",
-    vi: "So sánh với {n} quốc gia có từ 100 lượt trả lời trở lên.",
+    en: "Compared across {n} countries with 500+ responses each.",
+    vi: "So sánh với {n} quốc gia có từ 500 lượt trả lời trở lên.",
   },
   groupsTitle: {
     en: "👥 Groups that think like you",

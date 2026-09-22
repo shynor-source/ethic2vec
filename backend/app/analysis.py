@@ -35,8 +35,11 @@ SIGNATURE_FLOOR = 0.25
 TOP_COUNTRIES = 5
 TOP_DEMOGRAPHICS = 5
 SCATTER_DEMOGRAPHICS = 10
-# Countries below this response count are too noisy to rank (e.g. IOT: 3).
-MIN_COUNTRY_OUTCOMES = 100
+# Countries below this response count are too noisy to rank.
+# Raised from 100 to 500: micro-states/territories with 100-500 total responses
+# have extreme per-dimension values (0.0/1.0) from tiny per-dimension samples
+# that spuriously win signature-weighted matching.
+MIN_COUNTRY_OUTCOMES = 500
 
 # Feature pairs grouped for the 6-axis radar chart.
 RADAR_GROUPS = {

@@ -60,7 +60,7 @@ def test_analyze_returns_full_payload(monkeypatch):
     assert data["session_id"] == "test-id"
     assert len(data["top_countries"]) == 5
     assert len(data["top_demographics"]) == 5
-    assert data["match_pool_size"] >= 100
+    assert data["match_pool_size"] >= 98
     tiny_noisy = {"IOT", "ATA", "YEM", "TON", "CAF", "NIU"}
     assert not (tiny_noisy & {c["country"] for c in data["top_countries"]})
     assert len(data["radar"]) == 6
@@ -87,7 +87,7 @@ def test_analyze_single_answer(monkeypatch):
     assert response.status_code == 200
     data = response.json()
     assert len(data["top_countries"]) == 5
-    assert data["match_pool_size"] >= 100
+    assert data["match_pool_size"] >= 98
 
 
 def test_analyze_deterministic(monkeypatch):
